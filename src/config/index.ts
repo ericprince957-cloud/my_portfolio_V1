@@ -9,16 +9,9 @@
  * HOW TO USE:
  * - Replace placeholder URLs with your actual URLs
  * - Replace "PASTE_IMAGE_URL_HERE" with your image URLs
- * - Replace "YOUR_EMAIL_HERE" with your email
- * - Replace "YOUR_LINKEDIN_URL" with your LinkedIn URL
+ * - All contact info is centralized here
  * 
  * IMAGE URLS:
- * You can use direct image URLs from:
- * - Google Drive (use direct download link format)
- * - Imgur
- * - GitHub
- * - Any image hosting service
- * 
  * For Google Drive images, convert the sharing URL:
  * FROM: https://drive.google.com/file/d/FILE_ID/view?usp=drive_link
  * TO:   https://drive.google.com/uc?export=view&id=FILE_ID
@@ -27,7 +20,9 @@
 
 export const portfolioConfig = {
   // ─── PERSONAL INFO ───────────────────────────────────────
-  name: "Prince Eric",
+  // Working name (used throughout the portfolio)
+  name: "Vector",
+  // Brand / company name
   brandName: "Vector Codes",
   title: "Web Developer",
   subtitle: "Web Developer & Software Developer",
@@ -40,12 +35,23 @@ export const portfolioConfig = {
   // Fallback shows "VC" initials if empty
   profileImage: "https://drive.google.com/uc?export=view&id=1PPDb8fuH5DjHQad5PqBm91RylMnY6ZEx",
 
+  // ─── CONTACT INFO ────────────────────────────────────────
+  contactInfo: {
+    email: "vectorcodes15@gmail.com",
+    whatsapp: "+2347084547988",
+    telegram: "Vectorcodes",
+  },
+
   // ─── SOCIAL LINKS ────────────────────────────────────────
   social: {
     github: "https://github.com/ericprince957-cloud",
     linkedin: "", // PASTE_YOUR_LINKEDIN_URL_HERE
     twitter: "",  // PASTE_YOUR_TWITTER_URL_HERE
-    email: "",    // PASTE_YOUR_EMAIL_HERE
+    email: "vectorcodes15@gmail.com",
+    // Pre-built contact links with custom messages
+    whatsappLink: "https://wa.me/2347084547988?text=Hi%20Vector%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you.",
+    telegramLink: "https://t.me/Vectorcodes",
+    emailLink: "mailto:vectorcodes15@gmail.com?subject=Project%20Inquiry&body=Hi%20Vector%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you.%0A%0AHere%20are%20the%20details%3A%0A-%20Project%20type%3A%20%0A-%20Brief%20description%3A%20%0A-%20Timeline%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you.",
   },
 
   // ─── HERO SECTION ────────────────────────────────────────
@@ -64,7 +70,7 @@ export const portfolioConfig = {
   about: {
     heading: "Building, Learning, and Shipping.",
     paragraphs: [
-      "I'm Prince Eric from Vector Codes, a web developer and software development student focused on turning ideas into functional digital products.",
+      "I'm Vector from Vector Codes, a web developer and software development student focused on turning ideas into functional digital products.",
       "I enjoy building websites, experimenting with APIs, working with Python, creating practical web applications, and learning how different parts of modern software systems fit together.",
       "My approach is simple: learn the fundamentals, build real projects, identify what doesn't work, fix it, and keep improving.",
     ],
@@ -74,7 +80,7 @@ export const portfolioConfig = {
   contact: {
     heading: "Have a Project in Mind?",
     description:
-      "Tell me what you're building, what problem you're trying to solve, or what you need improved.",
+      "Tell me what you're building, what problem you're trying to solve, or what you need improved. Let's build something great together.",
     // Form service endpoint - connect Formspree, EmailJS, or your own backend
     // Example: "https://formspree.io/f/YOUR_FORM_ID"
     formEndpoint: "",

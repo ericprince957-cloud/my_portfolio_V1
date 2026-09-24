@@ -29,7 +29,7 @@ export default function About() {
           <ScrollReveal delay={100}>
             <div className="space-y-6">
               <div className="rounded-xl overflow-hidden border border-slate-700 bg-slate-800 aspect-[4/3]">
-                <ImageWithFallback src={images.about} alt="About Prince Eric" fallbackText="VC" className="w-full h-full object-cover" fallbackClassName="w-full h-full" />
+                <ImageWithFallback src={images.about} alt="About Vector" fallbackText="VC" className="w-full h-full object-cover" fallbackClassName="w-full h-full" />
               </div>
               <div className="grid grid-cols-2 gap-3">
                 {infoCards.map((card) => (

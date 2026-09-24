@@ -43,7 +43,7 @@ export default function Hero() {
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 blur-xl scale-110" aria-hidden="true" />
               <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full border-2 border-slate-700 overflow-hidden bg-slate-800">
-                <ImageWithFallback src={portfolioConfig.profileImage} alt={`${portfolioConfig.name} - ${portfolioConfig.title}`} fallbackText="VC" className="w-full h-full object-cover" fallbackClassName="w-full h-full rounded-full" />
+                <ImageWithFallback src={portfolioConfig.profileImage} alt={`Vector - Web Developer`} fallbackText="VC" className="w-full h-full object-cover" fallbackClassName="w-full h-full rounded-full" />
               </div>
               <div className="absolute -bottom-2 -right-2 px-3 py-1.5 bg-slate-900 border border-slate-700 rounded-lg text-xs font-medium text-indigo-400 animate-float">
                 ● Active
