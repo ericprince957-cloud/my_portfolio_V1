@@ -4,6 +4,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import { GitHubSection, CurrentlyBuilding, Experience, Services, WhyWorkWithMe } from "./components/Sections";
+import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -27,6 +28,8 @@ export default function App() {
         <Experience />
         <div className="section-divider" />
         <Services />
+        <div className="section-divider" />
+        <Pricing />
         <div className="section-divider" />
         <WhyWorkWithMe />
         <div className="section-divider" />
