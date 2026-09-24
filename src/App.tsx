@@ -3,39 +3,13 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import {
-  GitHubSection,
-  CurrentlyBuilding,
-  Experience,
-  Services,
-  WhyWorkWithMe,
-} from "./components/Sections";
+import { GitHubSection, CurrentlyBuilding, Experience, Services, WhyWorkWithMe } from "./components/Sections";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-/**
- * ============================================================
- * PRINCE ERIC - PORTFOLIO
- * ============================================================
- * 
- * A premium personal developer portfolio.
- * 
- * ARCHITECTURE:
- * - src/config/index.ts    → Personal info, URLs, images (EDIT HERE FIRST)
- * - src/config/projects.ts → Project data (add projects here)
- * - src/components/        → All UI components
- * 
- * TO CUSTOMIZE:
- * 1. Edit src/config/index.ts for personal info and image URLs
- * 2. Edit src/config/projects.ts to add/update projects
- * 3. All external URLs are centralized in config files
- * 
- * ============================================================
- */
-
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-text overflow-x-hidden">
+    <div className="min-h-screen bg-[#0a0a0f] text-slate-100 overflow-x-hidden">
       <Navbar />
       <main>
         <Hero />

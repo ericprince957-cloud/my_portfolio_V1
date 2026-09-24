@@ -1,8 +1,13 @@
 import { ScrollReveal, SectionHeading } from "./ui";
 
+interface Skill {
+  name: string;
+  level: "Learning" | "Building With" | "Comfortable" | "Familiar";
+}
+
 interface SkillGroup {
   title: string;
-  skills: { name: string; level: "Learning" | "Building With" | "Comfortable" | "Familiar" }[];
+  skills: Skill[];
 }
 
 const skillGroups: SkillGroup[] = [
@@ -61,63 +66,40 @@ const skillGroups: SkillGroup[] = [
   },
 ];
 
-const levelColors: Record<string, string> = {
+const levelStyles: Record<string, string> = {
   Learning: "text-yellow-400 bg-yellow-400/10 border-yellow-400/30",
-  "Building With": "text-primary bg-primary/10 border-primary/30",
+  "Building With": "text-indigo-400 bg-indigo-400/10 border-indigo-400/30",
   Comfortable: "text-green-400 bg-green-400/10 border-green-400/30",
-  Familiar: "text-text-dim bg-surface-lighter border-border",
+  Familiar: "text-slate-500 bg-slate-800 border-slate-700",
 };
 
 export default function Skills() {
   return (
     <section id="skills" className="py-20 md:py-28 relative">
-      {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" aria-hidden="true" />
-
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/[0.02] to-transparent" aria-hidden="true" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <SectionHeading
-            badge="Skills"
-            title="Tools I Build With"
-            description="Technologies and tools I'm currently working with, learning, or comfortable using. Skill levels are represented honestly."
-          />
+          <SectionHeading badge="Skills" title="Tools I Build With" description="Technologies and tools I'm currently working with, learning, or comfortable using. Skill levels are represented honestly." />
         </ScrollReveal>
-
-        {/* Skill Level Legend */}
         <ScrollReveal delay={100}>
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {Object.entries(levelColors).map(([level, classes]) => (
-              <span
-                key={level}
-                className={`px-3 py-1 text-xs font-medium rounded-full border ${classes}`}
-              >
-                {level}
-              </span>
+            {Object.entries(levelStyles).map(([level, classes]) => (
+              <span key={level} className={`px-3 py-1 text-xs font-medium rounded-full border ${classes}`}>{level}</span>
             ))}
           </div>
         </ScrollReveal>
-
-        {/* Skill Groups */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillGroups.map((group, gi) => (
             <ScrollReveal key={group.title} delay={gi * 80}>
-              <div className="p-6 rounded-xl border border-border bg-surface/40 hover:border-primary/20 transition-colors h-full">
-                <h3 className="text-lg font-semibold text-text mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary" />
-                  {group.title}
+              <div className="p-6 rounded-xl border border-slate-700 bg-slate-900/40 hover:border-indigo-400/20 transition-colors h-full">
+                <h3 className="text-lg font-semibold text-slate-100 mb-4 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-indigo-500" />{group.title}
                 </h3>
                 <div className="space-y-2">
                   {group.skills.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-surface-light/50 transition-colors"
-                    >
-                      <span className="text-sm text-text-muted">{skill.name}</span>
-                      <span
-                        className={`text-xs px-2 py-0.5 rounded-full border ${levelColors[skill.level]}`}
-                      >
-                        {skill.level}
-                      </span>
+                    <div key={skill.name} className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-slate-800/50 transition-colors">
+                      <span className="text-sm text-slate-400">{skill.name}</span>
+                      <span className={`text-xs px-2 py-0.5 rounded-full border ${levelStyles[skill.level]}`}>{skill.level}</span>
                     </div>
                   ))}
                 </div>

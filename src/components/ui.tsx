@@ -1,12 +1,7 @@
 import { useState, useRef, useEffect, type ReactNode } from "react";
 
 /**
- * ============================================================
- * IMAGE WITH FALLBACK
- * ============================================================
- * Displays an image from URL with a professional fallback
- * if the URL is empty or fails to load.
- * ============================================================
+ * Image with fallback - shows initials if image fails to load
  */
 interface ImageWithFallbackProps {
   src: string;
@@ -29,11 +24,11 @@ export function ImageWithFallback({
   if (!src || hasError) {
     return (
       <div
-        className={`flex items-center justify-center bg-surface-lighter border border-border ${fallbackClassName}`}
+        className={`flex items-center justify-center bg-slate-800 border border-slate-700 ${fallbackClassName}`}
         role="img"
         aria-label={alt}
       >
-        <span className="text-primary font-mono font-bold text-lg">{fallbackText}</span>
+        <span className="text-indigo-400 font-mono font-bold text-lg">{fallbackText}</span>
       </div>
     );
   }
@@ -51,11 +46,7 @@ export function ImageWithFallback({
 }
 
 /**
- * ============================================================
- * SCROLL REVEAL
- * ============================================================
- * Reveals content when it scrolls into view.
- * ============================================================
+ * Scroll reveal animation
  */
 interface ScrollRevealProps {
   children: ReactNode;
@@ -95,9 +86,7 @@ export function ScrollReveal({ children, className = "", delay = 0 }: ScrollReve
 }
 
 /**
- * ============================================================
- * SECTION HEADING
- * ============================================================
+ * Section heading component
  */
 interface SectionHeadingProps {
   badge?: string;
@@ -110,22 +99,20 @@ export function SectionHeading({ badge, title, description, align = "center" }: 
   return (
     <div className={`mb-12 ${align === "center" ? "text-center" : "text-left"}`}>
       {badge && (
-        <span className="inline-block px-3 py-1 text-xs font-medium text-primary border border-primary/30 rounded-full mb-4 bg-primary/5">
+        <span className="inline-block px-3 py-1 text-xs font-medium text-indigo-400 border border-indigo-400/30 rounded-full mb-4 bg-indigo-400/5">
           {badge}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">{title}</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">{title}</h2>
       {description && (
-        <p className="text-text-muted max-w-2xl mx-auto leading-relaxed">{description}</p>
+        <p className="text-slate-400 max-w-2xl mx-auto leading-relaxed">{description}</p>
       )}
     </div>
   );
 }
 
 /**
- * ============================================================
- * STATUS INDICATOR
- * ============================================================
+ * Status indicator with popup
  */
 interface StatusIndicatorProps {
   label: string;
@@ -139,15 +126,15 @@ export function StatusIndicator({ label, message }: StatusIndicatorProps) {
     <div className="relative inline-block">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-surface/80 hover:border-primary/50 transition-colors text-sm cursor-pointer"
+        className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-700 bg-slate-900/80 hover:border-indigo-400/50 transition-colors text-sm cursor-pointer"
         aria-expanded={isOpen}
         aria-label="Developer status"
       >
         <span className="status-dot" />
-        <span className="text-text-muted">{label}</span>
+        <span className="text-slate-400">{label}</span>
       </button>
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 p-3 rounded-lg glass-card text-sm text-text-muted w-64 z-50 animate-fade-in">
+        <div className="absolute top-full left-0 mt-2 p-3 rounded-lg glass-card text-sm text-slate-400 w-64 z-50 animate-fade-in">
           {message}
         </div>
       )}
@@ -156,25 +143,21 @@ export function StatusIndicator({ label, message }: StatusIndicatorProps) {
 }
 
 /**
- * ============================================================
- * CODE DECORATION
- * ============================================================
- * Subtle developer-themed code snippet for visual decoration.
- * ============================================================
+ * Code decoration element
  */
 export function CodeDecoration() {
   return (
-    <div className="code-block text-text-dim hidden md:block" aria-hidden="true">
-      <span className="text-primary">const</span>{" "}
-      <span className="text-accent">developer</span> = {"{"}
+    <div className="code-block text-slate-500 hidden md:block" aria-hidden="true">
+      <span className="text-indigo-400">const</span>{" "}
+      <span className="text-cyan-400">developer</span> = {"{"}
       <br />
-      &nbsp;&nbsp;<span className="text-text-muted">name</span>:{" "}
+      &nbsp;&nbsp;<span className="text-slate-400">name</span>:{" "}
       <span className="text-green-400">"Prince Eric"</span>,
       <br />
-      &nbsp;&nbsp;<span className="text-text-muted">role</span>:{" "}
+      &nbsp;&nbsp;<span className="text-slate-400">role</span>:{" "}
       <span className="text-green-400">"Web Developer"</span>,
       <br />
-      &nbsp;&nbsp;<span className="text-text-muted">focus</span>:{" "}
+      &nbsp;&nbsp;<span className="text-slate-400">focus</span>:{" "}
       <span className="text-green-400">"Building"</span>
       <br />
       {"}"};
