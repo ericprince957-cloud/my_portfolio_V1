@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { portfolioConfig } from "../config";
+import { portfolioConfig, images } from "../config";
 import { ScrollReveal, SectionHeading } from "./ui";
 import { Send, Github, Mail, Linkedin, Loader2, CheckCircle, AlertCircle, MessageCircle, Phone } from "lucide-react";
 
@@ -79,6 +79,11 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 md:py-28 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/[0.02] to-transparent" aria-hidden="true" />
+      {images.contact && (
+        <div className="absolute inset-0 opacity-5" aria-hidden="true">
+          <img src={images.contact} alt="" className="w-full h-full object-cover" />
+        </div>
+      )}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeading badge="Contact" title={contact.heading} description={contact.description} />
