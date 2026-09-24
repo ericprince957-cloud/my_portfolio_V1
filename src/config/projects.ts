@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "PixelVault",
     description:
       "A modern image management and gallery application with responsive design and interactive features.",
-    image: "https://image.qwenlm.ai/generated-images/6218e97d-2c77-44ee-ab54-29e340c2a31b/_result.png",
+    image: "[placeholder]",
     problem:
       "Need for an organized, visually appealing way to manage and display image collections.",
     solution:
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     title: "Solar Review Nigeria",
     description:
       "A platform for reviewing and comparing solar energy solutions available in Nigeria.",
-    image: "https://image.qwenlm.ai/generated-images/e2f617f1-45d5-40ec-908f-b89dbc3ed024/_result.png",
+    image: "[placeholder]",
     problem:
       "Lack of accessible information for comparing solar energy products and services in Nigeria.",
     solution:
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     title: "Python Command Shell",
     description:
       "A custom command-line shell built with Python, implementing basic OS commands and file operations.",
-    image: "https://image.qwenlm.ai/generated-images/79274a30-5d62-4c84-82a9-41557ad92400/_result.png",
+    image: "[placeholder]",
     problem:
       "Understanding how operating system shells work and building practical Python applications.",
     solution:
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     title: "Upcoming Project",
     description:
       "A new project currently in development. Details will be added soon.",
-    image: "https://image.qwenlm.ai/generated-images/3c31cd92-5564-4f34-8a87-69d2936f8da1/_result.png",
+    image: "[placeholder]",
     problem: "",
     solution: "",
     features: [],

@@ -31,8 +31,8 @@ export const portfolioConfig = {
   currentDirection: "Full-Stack Development",
 
   // ─── PROFILE IMAGE ───────────────────────────────────────
-  // Samurai developer profile image
-  profileImage: "https://image.qwenlm.ai/generated-images/0d54fa74-9882-48c4-8ed1-ca4de2d08083/_result.png",
+  // Replace [placeholder] with your profile image URL
+  profileImage: "[placeholder]",
 
   // ─── CONTACT INFO ────────────────────────────────────────
   contactInfo: {
@@ -111,9 +111,9 @@ export const portfolioConfig = {
  * ============================================================
  */
 export const images = {
-  // About section image - samurai developer workspace
-  about: "https://image.qwenlm.ai/generated-images/73360e76-6abf-4299-8c9b-4399a126a4af/_result.png",
+  // About section image
+  about: "[placeholder]",
 
   // Contact section background/decoration
-  contact: "https://image.qwenlm.ai/generated-images/bfa3ebe6-eca9-4c81-9e98-78fd5b1d22d5/_result.png",
+  contact: "[placeholder]",
 };
