@@ -31,9 +31,8 @@ export const portfolioConfig = {
   currentDirection: "Full-Stack Development",
 
   // ─── PROFILE IMAGE ───────────────────────────────────────
-  // Replace with your profile image URL
-  // Fallback shows "VC" initials if empty
-  profileImage: "",
+  // Replace [placeholder] with your profile image URL
+  profileImage: "[placeholder]",
 
   // ─── CONTACT INFO ────────────────────────────────────────
   contactInfo: {
@@ -113,8 +112,8 @@ export const portfolioConfig = {
  */
 export const images = {
   // About section image
-  about: "",
+  about: "[placeholder]",
 
   // Contact section background/decoration
-  contact: "",
+  contact: "[placeholder]",
 };

@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "PixelVault",
     description:
       "A modern image management and gallery application with responsive design and interactive features.",
-    image: "",
+    image: "[placeholder]",
     problem:
       "Need for an organized, visually appealing way to manage and display image collections.",
     solution:
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     title: "Solar Review Nigeria",
     description:
       "A platform for reviewing and comparing solar energy solutions available in Nigeria.",
-    image: "",
+    image: "[placeholder]",
     problem:
       "Lack of accessible information for comparing solar energy products and services in Nigeria.",
     solution:
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     title: "Python Command Shell",
     description:
       "A custom command-line shell built with Python, implementing basic OS commands and file operations.",
-    image: "",
+    image: "[placeholder]",
     problem:
       "Understanding how operating system shells work and building practical Python applications.",
     solution:
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     title: "Upcoming Project",
     description:
       "A new project currently in development. Details will be added soon.",
-    image: "",
+    image: "[placeholder]",
     problem: "",
     solution: "",
     features: [],
