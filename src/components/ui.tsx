@@ -152,7 +152,10 @@ export function CodeDecoration() {
       <span className="text-cyan-400">developer</span> = {"{"}
       <br />
       &nbsp;&nbsp;<span className="text-slate-400">name</span>:{" "}
-      <span className="text-green-400">"Prince Eric"</span>,
+      <span className="text-green-400">"Vector"</span>,
+      <br />
+      &nbsp;&nbsp;<span className="text-slate-400">brand</span>:{" "}
+      <span className="text-green-400">"Vector Codes"</span>,
       <br />
       &nbsp;&nbsp;<span className="text-slate-400">role</span>:{" "}
       <span className="text-green-400">"Web Developer"</span>,

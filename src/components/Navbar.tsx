@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <a href="#home" className="flex items-center gap-2 text-lg font-bold text-slate-100 hover:text-indigo-400 transition-colors">
-              <span className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-mono text-sm">PE</span>
+              <span className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-mono text-sm">VC</span>
               <span className="hidden sm:inline">{portfolioConfig.brandName}</span>
             </a>
             <div className="hidden md:flex items-center gap-1">
