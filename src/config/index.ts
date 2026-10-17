@@ -1,95 +1,117 @@
 /**
  * ============================================================
- * PORTFOLIO CONFIGURATION
+ * PORTFOLIO CONFIGURATION — VECTOR CODES
  * ============================================================
  * 
- * This is the central configuration file for the portfolio.
- * Edit the values below to update your portfolio.
+ * Central configuration file. Edit values here to update
+ * the entire portfolio.
  * 
- * HOW TO USE:
- * - Replace placeholder URLs with your actual URLs
- * - Replace "PASTE_IMAGE_URL_HERE" with your image URLs
- * - All contact info is centralized here
- * 
- * IMAGE URLS:
- * For Google Drive images, convert the sharing URL:
- * FROM: https://drive.google.com/file/d/FILE_ID/view?usp=drive_link
- * TO:   https://drive.google.com/uc?export=view&id=FILE_ID
+ * For images, replace [placeholder] with direct image URLs.
+ * For Google Drive: convert to https://drive.google.com/uc?export=view&id=FILE_ID
  * ============================================================
  */
 
 export const portfolioConfig = {
   // ─── PERSONAL INFO ───────────────────────────────────────
-  // Working name (used throughout the portfolio)
   name: "Vector",
-  // Brand / company name
+  fullName: "Uche Prince Eric",
   brandName: "Vector Codes",
-  title: "Web Developer",
+  title: "Full-Stack Developer",
   subtitle: "Web Developer & Software Developer",
-  location: "Nigeria",
-  focus: "Web Development & Software",
+  location: "Abia State, Nigeria",
+  school: "ABSU Student",
+  focus: "Fashion, Logistics & Tech Brands",
   currentDirection: "Full-Stack Development",
+  specialty: "High-converting websites for Fashion, Logistics, and Tech brands using Glassmorphism & Mobile-First design.",
 
   // ─── PROFILE IMAGE ───────────────────────────────────────
-  // Replace [placeholder] with your profile image URL
   profileImage: "[placeholder]",
 
   // ─── CONTACT INFO ────────────────────────────────────────
   contactInfo: {
     email: "vectorcodes15@gmail.com",
     whatsapp: "+2347084547988",
-    telegram: "Vectorcodes",
+    telegram: "vector_codes",
   },
 
   // ─── SOCIAL LINKS ────────────────────────────────────────
   social: {
     github: "https://github.com/ericprince957-cloud",
-    linkedin: "", // PASTE_YOUR_LINKEDIN_URL_HERE
-    twitter: "",  // PASTE_YOUR_TWITTER_URL_HERE
+    linkedin: "",
+    twitter: "",
     email: "vectorcodes15@gmail.com",
-    // Pre-built contact links with custom messages
-    whatsappLink: "https://wa.me/2347084547988?text=Hi%20Vector%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you.",
-    telegramLink: "https://t.me/Vectorcodes",
-    emailLink: "mailto:vectorcodes15@gmail.com?subject=Project%20Inquiry&body=Hi%20Vector%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you.%0A%0AHere%20are%20the%20details%3A%0A-%20Project%20type%3A%20%0A-%20Brief%20description%3A%20%0A-%20Timeline%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you.",
+    whatsappLink: "https://wa.me/2347084547988",
+    telegramLink: "https://t.me/vector_codes",
+    whatsappChannel: "https://whatsapp.com/channel/0029Vb97CMQBA1f4Chcdlm0g",
+    telegramChannel: "https://t.me/vector_codes",
+    emailLink: "mailto:vectorcodes15@gmail.com",
   },
+
+  // ─── STATS ───────────────────────────────────────────────
+  stats: [
+    { value: "194+", label: "Pitches Sent" },
+    { value: "5+", label: "Live Projects" },
+    { value: "₦25k+", label: "Revenue Generated" },
+  ],
 
   // ─── HERO SECTION ────────────────────────────────────────
   hero: {
-    badge: "BUILDING DIGITAL PRODUCTS",
-    heading: "Vector Codes",
-    statement: "Web Developer Building Digital Products That Actually Work.",
-    description:
-      "I design and build responsive websites, web applications, and digital experiences with a focus on clean interfaces, useful functionality, and continuous improvement.",
+    headline: "Building Premium Digital Experiences for Nigerian Businesses.",
+    subheadline: "From 194 pitches to paid clients. I help Fashion, Logistics & Tech brands scale with high-speed, mobile-first websites.",
     primaryCTA: "View My Work",
-    secondaryCTA: "Contact Me",
-    githubCTA: "GitHub",
+    secondaryCTA: "Contact on WhatsApp",
+    secondaryCTALink: "https://wa.me/2347084547988",
   },
 
   // ─── ABOUT SECTION ───────────────────────────────────────
   about: {
-    heading: "Building, Learning, and Shipping.",
-    paragraphs: [
-      "I'm Vector from Vector Codes, a web developer and software development student focused on turning ideas into functional digital products.",
-      "I enjoy building websites, experimenting with APIs, working with Python, creating practical web applications, and learning how different parts of modern software systems fit together.",
-      "My approach is simple: learn the fundamentals, build real projects, identify what doesn't work, fix it, and keep improving.",
+    heading: "About Me",
+    bio: "I'm Vector, a Full-Stack Developer based in Abia State. I specialize in turning ideas into revenue-generating assets using modern tools like Tailwind, Firebase, and WordPress.",
+  },
+
+  // ─── COMMUNITY SECTION ───────────────────────────────────
+  community: {
+    heading: "Join My Builder Community",
+    description: "Follow my journey, get free web tips, and see behind-the-scenes builds.",
+    channels: [
+      {
+        platform: "WhatsApp Channel",
+        title: "Daily Updates & Tips",
+        description: "Get daily web development tips, project updates, and behind-the-scenes content.",
+        link: "https://whatsapp.com/channel/0029Vb97CMQBA1f4Chcdlm0g",
+        icon: "whatsapp",
+      },
+      {
+        platform: "Telegram Channel",
+        title: "Exclusive Demos & Insights",
+        description: "Access exclusive demos, technical insights, and early previews of upcoming projects.",
+        link: "https://t.me/vector_codes",
+        icon: "telegram",
+      },
     ],
+  },
+
+  // ─── TRUST SECTION ───────────────────────────────────────
+  trust: {
+    verified: "Verified Business on Google Maps",
+    testimonial: {
+      quote: "Professional and fast service.",
+      author: "Chukwuemeka Samuel",
+      company: "Techlaza",
+    },
   },
 
   // ─── CONTACT SECTION ─────────────────────────────────────
   contact: {
     heading: "Have a Project in Mind?",
-    description:
-      "Tell me what you're building, what problem you're trying to solve, or what you need improved. Let's build something great together.",
-    // Form service endpoint - connect Formspree, EmailJS, or your own backend
-    // Example: "https://formspree.io/f/YOUR_FORM_ID"
+    description: "Tell me what you're building, what problem you're trying to solve, or what you need improved. Let's build something great together.",
     formEndpoint: "",
   },
 
   // ─── STATUS INDICATOR ────────────────────────────────────
   status: {
-    label: "Currently Building",
-    message:
-      "Working on web applications, Python development, APIs, and improving full-stack development skills.",
+    label: "Available for Projects",
+    message: "Currently accepting new clients for web development projects. Response time: under 24 hours.",
   },
 };
 
@@ -97,23 +119,8 @@ export const portfolioConfig = {
  * ============================================================
  * IMAGE URLS CONFIGURATION
  * ============================================================
- * 
- * Paste your image URLs below. The portfolio will automatically
- * display them. If a URL is empty or fails to load, a professional
- * placeholder will be shown instead.
- * 
- * SUPPORTED FORMATS: JPG, PNG, WebP
- * 
- * FOR GOOGLE DRIVE IMAGES:
- * Convert your sharing link to a direct link:
- * FROM: https://drive.google.com/file/d/FILE_ID/view?usp=drive_link
- * TO:   https://drive.google.com/uc?export=view&id=FILE_ID
- * ============================================================
  */
 export const images = {
-  // About section image
   about: "[placeholder]",
-
-  // Contact section background/decoration
   contact: "[placeholder]",
 };

@@ -1,5 +1,5 @@
 import { portfolioConfig } from "../config";
-import { Github, Heart, MessageCircle, Send, Mail } from "lucide-react";
+import { Github, Heart, MessageCircle, Send, Mail, Twitter, Linkedin } from "lucide-react";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
@@ -14,18 +14,18 @@ export default function Footer() {
   const { social, contactInfo } = portfolioConfig;
 
   return (
-    <footer className="border-t border-slate-800 bg-slate-900/30" role="contentinfo">
+    <footer className="border-t border-white/10 bg-slate-950/80 backdrop-blur-xl" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-mono text-sm font-bold">VC</span>
+              <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono text-sm font-bold">VC</span>
               <div>
                 <p className="font-semibold text-slate-100">{portfolioConfig.name}</p>
                 <p className="text-xs text-slate-500">{portfolioConfig.brandName}</p>
               </div>
             </div>
-            <p className="text-sm text-slate-400 mt-3 max-w-xs">Building modern websites and web applications with clean interfaces and practical functionality.</p>
+            <p className="text-sm text-slate-400 mt-3 max-w-xs">Building premium digital experiences for Nigerian businesses. High-speed, mobile-first websites that convert.</p>
           </div>
           <div>
             <h3 className="text-sm font-semibold text-slate-100 mb-4">Navigation</h3>
@@ -33,7 +33,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {footerLinks.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} className="text-sm text-slate-400 hover:text-indigo-400 transition-colors">{link.label}</a>
+                    <a href={link.href} className="text-sm text-slate-400 hover:text-cyan-400 transition-colors">{link.label}</a>
                   </li>
                 ))}
               </ul>
@@ -51,9 +51,19 @@ export default function Footer() {
               <a href={`https://t.me/${contactInfo.telegram}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-slate-400 hover:text-sky-400 transition-colors">
                 <Send size={14} /> Telegram
               </a>
-              <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 text-sm text-slate-400 hover:text-indigo-400 transition-colors">
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors">
                 <Mail size={14} /> Email
               </a>
+              {social.twitter && (
+                <a href={social.twitter} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-slate-400 hover:text-slate-100 transition-colors">
+                  <Twitter size={14} /> X (Twitter)
+                </a>
+              )}
+              {social.linkedin && (
+                <a href={social.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-slate-400 hover:text-blue-400 transition-colors">
+                  <Linkedin size={14} /> LinkedIn
+                </a>
+              )}
             </div>
             <div className="mt-4 flex items-center gap-2">
               <span className="status-dot" />
@@ -61,9 +71,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-6 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500">© 2026 {portfolioConfig.brandName}. All rights reserved.</p>
-          <p className="text-xs text-slate-500 flex items-center gap-1">Built with <Heart size={10} className="text-indigo-400" /> code, curiosity, and continuous improvement.</p>
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-slate-500">© 2026 {portfolioConfig.brandName}. Built with <Heart size={10} className="text-cyan-400 inline" /> & ☕.</p>
+          <p className="text-xs text-slate-500">All rights reserved.</p>
         </div>
       </div>
     </footer>

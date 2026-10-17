@@ -99,7 +99,7 @@ export function SectionHeading({ badge, title, description, align = "center" }: 
   return (
     <div className={`mb-12 ${align === "center" ? "text-center" : "text-left"}`}>
       {badge && (
-        <span className="inline-block px-3 py-1 text-xs font-medium text-indigo-400 border border-indigo-400/30 rounded-full mb-4 bg-indigo-400/5">
+        <span className="inline-block px-3 py-1 text-xs font-medium text-cyan-400 border border-cyan-400/30 rounded-full mb-4 bg-cyan-400/5">
           {badge}
         </span>
       )}
@@ -126,15 +126,15 @@ export function StatusIndicator({ label, message }: StatusIndicatorProps) {
     <div className="relative inline-block">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-700 bg-slate-900/80 hover:border-indigo-400/50 transition-colors text-sm cursor-pointer"
+        className="flex items-center gap-2 px-4 py-2 rounded-full glass-card hover:border-cyan-400/50 transition-colors text-sm cursor-pointer"
         aria-expanded={isOpen}
         aria-label="Developer status"
       >
         <span className="status-dot" />
-        <span className="text-slate-400">{label}</span>
+        <span className="text-slate-300">{label}</span>
       </button>
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 p-3 rounded-lg glass-card text-sm text-slate-400 w-64 z-50 animate-fade-in">
+        <div className="absolute top-full left-0 mt-2 p-4 rounded-xl glass-card text-sm text-slate-400 w-72 z-50 animate-fade-in">
           {message}
         </div>
       )}
@@ -147,9 +147,9 @@ export function StatusIndicator({ label, message }: StatusIndicatorProps) {
  */
 export function CodeDecoration() {
   return (
-    <div className="code-block text-slate-500 hidden md:block" aria-hidden="true">
-      <span className="text-indigo-400">const</span>{" "}
-      <span className="text-cyan-400">developer</span> = {"{"}
+    <div className="code-block text-slate-500 hidden md:inline-block mx-auto text-left" aria-hidden="true">
+      <span className="text-cyan-400">const</span>{" "}
+      <span className="text-indigo-400">developer</span> = {"{"}
       <br />
       &nbsp;&nbsp;<span className="text-slate-400">name</span>:{" "}
       <span className="text-green-400">"Vector"</span>,
@@ -157,11 +157,11 @@ export function CodeDecoration() {
       &nbsp;&nbsp;<span className="text-slate-400">brand</span>:{" "}
       <span className="text-green-400">"Vector Codes"</span>,
       <br />
-      &nbsp;&nbsp;<span className="text-slate-400">role</span>:{" "}
-      <span className="text-green-400">"Web Developer"</span>,
+      &nbsp;&nbsp;<span className="text-slate-400">specialty</span>:{" "}
+      <span className="text-green-400">"Premium Digital Experiences"</span>,
       <br />
-      &nbsp;&nbsp;<span className="text-slate-400">focus</span>:{" "}
-      <span className="text-green-400">"Building"</span>
+      &nbsp;&nbsp;<span className="text-slate-400">location</span>:{" "}
+      <span className="text-green-400">"Abia State, Nigeria"</span>
       <br />
       {"}"};
     </div>
