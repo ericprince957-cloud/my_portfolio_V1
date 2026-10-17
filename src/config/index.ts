@@ -51,7 +51,7 @@ export const portfolioConfig = {
   stats: [
     { value: "194+", label: "Pitches Sent" },
     { value: "5+", label: "Live Projects" },
-    { value: "₦25k+", label: "Revenue Generated" },
+    { value: "4+", label: "Paid Clients" },
   ],
 
   // ─── HERO SECTION ────────────────────────────────────────
@@ -66,7 +66,7 @@ export const portfolioConfig = {
   // ─── ABOUT SECTION ───────────────────────────────────────
   about: {
     heading: "About Me",
-    bio: "I'm Vector, a Full-Stack Developer based in Abia State. I specialize in turning ideas into revenue-generating assets using modern tools like Tailwind, Firebase, and WordPress.",
+    bio: "I'm Vector, a Full-Stack Developer based in Abia State. I specialize in turning ideas into powerful digital solutions using modern tools like Tailwind, Firebase, and WordPress.",
   },
 
   // ─── COMMUNITY SECTION ───────────────────────────────────

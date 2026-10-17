@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { portfolioConfig } from "../config";
 import { Menu, X, Github } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Reviews", href: "#reviews" },
   { label: "Pricing", href: "#pricing" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
@@ -31,7 +33,7 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-slate-800" : "bg-transparent"
+          isScrolled ? "bg-[#0a0a0f]/80 dark:bg-[#0a0a0f]/80 light:bg-white/80 backdrop-blur-xl border-b border-slate-800 dark:border-slate-800 light:border-slate-200" : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,6 +50,7 @@ export default function Navbar() {
               ))}
             </div>
             <div className="flex items-center gap-3">
+              <ThemeToggle />
               <a href={portfolioConfig.social.github} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-slate-100 transition-colors rounded-lg hover:bg-slate-800/50" aria-label="GitHub">
                 <Github size={18} />
               </a>
@@ -59,16 +62,19 @@ export default function Navbar() {
         </div>
       </nav>
       {isMobileOpen && (
-        <div className="fixed inset-0 z-40 bg-[#0a0a0f]/95 backdrop-blur-xl md:hidden animate-fade-in">
+        <div className="fixed inset-0 z-40 bg-[#0a0a0f]/95 dark:bg-[#0a0a0f]/95 light:bg-white/95 backdrop-blur-xl md:hidden animate-fade-in">
           <div className="flex flex-col items-center justify-center h-full gap-6">
             {navLinks.map((link, i) => (
               <a key={link.href} href={link.href} onClick={() => setIsMobileOpen(false)} className="text-2xl font-medium text-slate-400 hover:text-indigo-400 transition-colors animate-fade-in-up" style={{ animationDelay: `${i * 0.05}s` }}>
                 {link.label}
               </a>
             ))}
-            <a href={portfolioConfig.social.github} target="_blank" rel="noopener noreferrer" className="mt-4 flex items-center gap-2 px-6 py-3 border border-slate-700 rounded-lg text-slate-400 hover:text-slate-100 hover:border-indigo-400/50 transition-colors">
-              <Github size={18} /> GitHub
-            </a>
+            <div className="flex items-center gap-4 mt-4">
+              <ThemeToggle />
+              <a href={portfolioConfig.social.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 border border-slate-700 rounded-lg text-slate-400 hover:text-slate-100 hover:border-indigo-400/50 transition-colors">
+                <Github size={18} /> GitHub
+              </a>
+            </div>
           </div>
         </div>
       )}
