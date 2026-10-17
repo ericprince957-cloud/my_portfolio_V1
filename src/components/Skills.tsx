@@ -91,13 +91,13 @@ export default function Skills() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillGroups.map((group, gi) => (
             <ScrollReveal key={group.title} delay={gi * 80}>
-              <div className="p-6 rounded-xl border border-slate-700 bg-slate-900/40 hover:border-indigo-400/20 transition-colors h-full">
+              <div className="glass-card rounded-2xl p-6 h-full">
                 <h3 className="text-lg font-semibold text-slate-100 mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-indigo-500" />{group.title}
+                  <span className="w-2 h-2 rounded-full bg-cyan-400" />{group.title}
                 </h3>
                 <div className="space-y-2">
                   {group.skills.map((skill) => (
-                    <div key={skill.name} className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-slate-800/50 transition-colors">
+                    <div key={skill.name} className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-white/5 transition-colors">
                       <span className="text-sm text-slate-400">{skill.name}</span>
                       <span className={`text-xs px-2 py-0.5 rounded-full border ${levelStyles[skill.level]}`}>{skill.level}</span>
                     </div>

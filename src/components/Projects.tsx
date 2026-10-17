@@ -18,7 +18,7 @@ export default function Projects() {
         <ScrollReveal delay={100}>
           <div className="flex flex-wrap justify-center gap-2 mb-12">
             {filterCategories.map((cat) => (
-              <button key={cat.value} onClick={() => setActiveFilter(cat.value)} className={`px-4 py-2 text-sm rounded-lg transition-all cursor-pointer ${activeFilter === cat.value ? "bg-indigo-500 text-white shadow-lg shadow-indigo-500/20" : "text-slate-400 border border-slate-700 hover:border-indigo-400/30 hover:text-slate-100"}`}>
+              <button key={cat.value} onClick={() => setActiveFilter(cat.value)} className={`px-4 py-2 text-sm rounded-xl transition-all cursor-pointer ${activeFilter === cat.value ? "bg-gradient-to-r from-cyan-500 to-indigo-500 text-white shadow-lg shadow-cyan-500/20" : "glass-card text-slate-400 hover:text-slate-100"}`}>
                 {cat.label}
               </button>
             ))}
@@ -44,39 +44,47 @@ function ProjectCard({ project, onViewDetails }: { project: Project; onViewDetai
   const statusColors: Record<string, string> = {
     Completed: "text-green-400 bg-green-400/10 border-green-400/30",
     "In Progress": "text-yellow-400 bg-yellow-400/10 border-yellow-400/30",
+    "Deploying Soon": "text-cyan-400 bg-cyan-400/10 border-cyan-400/30",
     Planning: "text-slate-500 bg-slate-800 border-slate-700",
   };
 
   return (
-    <div className="group rounded-xl border border-slate-700 bg-slate-900/40 overflow-hidden hover:border-indigo-400/30 transition-all hover:shadow-lg hover:shadow-indigo-500/5">
-      <div className="aspect-video bg-slate-800 relative overflow-hidden">
+    <div className="group glass-card rounded-2xl overflow-hidden hover:scale-[1.02] transition-all">
+      <div className="aspect-video bg-slate-800/50 relative overflow-hidden">
         <ImageWithFallback src={project.image} alt={project.title} fallbackText={project.title.substring(0, 2).toUpperCase()} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fallbackClassName="w-full h-full" />
-        <div className="absolute top-3 right-3">
-          <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${statusColors[project.status]}`}>{project.status}</span>
+        <div className="absolute top-3 right-3 flex gap-2">
+          {project.tag && (
+            <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-white/10 border border-white/20 text-slate-200 backdrop-blur-sm">
+              {project.tag}
+            </span>
+          )}
+          <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${statusColors[project.status]}`}>
+            {project.status}
+          </span>
         </div>
       </div>
       <div className="p-5">
-        <h3 className="text-lg font-semibold text-slate-100 mb-2 group-hover:text-indigo-400 transition-colors">{project.title}</h3>
+        <h3 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
         <p className="text-sm text-slate-400 leading-relaxed mb-4 line-clamp-2">{project.description}</p>
         {project.technologies.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-4">
             {project.technologies.slice(0, 4).map((tech) => (
-              <span key={tech} className="px-2 py-0.5 text-xs text-slate-500 bg-slate-800 rounded border border-slate-700">{tech}</span>
+              <span key={tech} className="px-2 py-0.5 text-xs text-slate-400 bg-white/5 rounded border border-white/10">{tech}</span>
             ))}
             {project.technologies.length > 4 && <span className="px-2 py-0.5 text-xs text-slate-500">+{project.technologies.length - 4}</span>}
           </div>
         )}
-        <div className="flex items-center gap-2 pt-2 border-t border-slate-700/50">
-          <button onClick={onViewDetails} className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm text-indigo-400 hover:bg-indigo-400/10 rounded-lg transition-colors cursor-pointer">
+        <div className="flex items-center gap-2 pt-2 border-t border-white/10">
+          <button onClick={onViewDetails} className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-colors cursor-pointer">
             View Details <ChevronRight size={14} />
           </button>
           {project.github && (
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-slate-100 hover:bg-slate-800 rounded-lg transition-colors" aria-label={`${project.title} GitHub`}>
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-slate-100 hover:bg-white/10 rounded-lg transition-colors" aria-label={`${project.title} GitHub`}>
               <Github size={16} />
             </a>
           )}
           {project.live && (
-            <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-slate-100 hover:bg-slate-800 rounded-lg transition-colors" aria-label={`${project.title} live demo`}>
+            <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-slate-100 hover:bg-white/10 rounded-lg transition-colors" aria-label={`${project.title} live demo`}>
               <ExternalLink size={16} />
             </a>
           )}

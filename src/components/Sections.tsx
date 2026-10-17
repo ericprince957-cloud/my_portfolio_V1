@@ -12,7 +12,7 @@ export function GitHubSection() {
             <span className="inline-block px-3 py-1 text-xs font-medium text-indigo-400 border border-indigo-400/30 rounded-full mb-4 bg-indigo-400/5">Open Source</span>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">Code. Build. Commit. Repeat.</h2>
             <p className="text-slate-400 leading-relaxed mb-8">My GitHub contains experiments, learning projects, applications, and ongoing development work. Every commit represents progress.</p>
-            <a href={portfolioConfig.social.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 border border-slate-700 hover:border-indigo-400/50 text-slate-100 font-medium rounded-lg transition-all hover:shadow-lg">
+            <a href={portfolioConfig.social.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 glass-card hover:bg-white/15 text-slate-100 font-medium rounded-xl transition-all hover:scale-105">
               <Github size={18} /> View GitHub Profile
             </a>
           </div>
@@ -20,8 +20,8 @@ export function GitHubSection() {
         <ScrollReveal delay={200}>
           <div className="mt-12 grid grid-cols-3 gap-4 max-w-md mx-auto">
             {[{ label: "Repositories", value: "Active" }, { label: "Contributions", value: "Growing" }, { label: "Status", value: "Building" }].map((stat) => (
-              <div key={stat.label} className="text-center p-4 rounded-lg border border-slate-700 bg-slate-900/40">
-                <p className="text-lg font-semibold text-indigo-400">{stat.value}</p>
+              <div key={stat.label} className="text-center p-4 glass-card rounded-xl">
+                <p className="text-lg font-semibold text-cyan-400">{stat.value}</p>
                 <p className="text-xs text-slate-500 mt-1">{stat.label}</p>
               </div>
             ))}
@@ -50,9 +50,9 @@ export function CurrentlyBuilding() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {currentlyBuildingItems.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 80}>
-              <div className="p-6 rounded-xl border border-slate-700 bg-slate-900/40 hover:border-indigo-400/30 transition-all group h-full">
-                <div className="w-10 h-10 rounded-lg bg-indigo-400/10 border border-indigo-400/20 flex items-center justify-center mb-4 group-hover:bg-indigo-400/20 transition-colors">
-                  <item.icon size={20} className="text-indigo-400" />
+              <div className="glass-card rounded-2xl p-6 h-full group hover:scale-[1.02] transition-all">
+                <div className="w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mb-4 group-hover:bg-cyan-400/20 transition-colors">
+                  <item.icon size={20} className="text-cyan-400" />
                 </div>
                 <h3 className="text-base font-semibold text-slate-100 mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
@@ -81,15 +81,15 @@ export function Experience() {
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {experienceItems.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 100}>
-              <div className="p-6 rounded-xl border border-slate-700 bg-slate-900/40 hover:border-indigo-400/30 transition-colors h-full">
+              <div className="glass-card rounded-2xl p-6 h-full hover:scale-[1.02] transition-all">
                 <div className="flex items-center gap-2 mb-3">
-                  <TrendingUp size={16} className="text-indigo-400" />
+                  <TrendingUp size={16} className="text-cyan-400" />
                   <h3 className="font-semibold text-slate-100">{item.title}</h3>
                 </div>
                 <p className="text-sm text-slate-400 leading-relaxed mb-4">{item.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {item.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-0.5 text-xs text-slate-500 bg-slate-800 rounded border border-slate-700">{tag}</span>
+                    <span key={tag} className="px-2 py-0.5 text-xs text-slate-400 bg-white/5 rounded border border-white/10">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -121,9 +121,9 @@ export function Services() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 80}>
-              <div className="p-6 rounded-xl border border-slate-700 bg-slate-900/40 hover:border-indigo-400/30 transition-all group h-full">
-                <div className="w-10 h-10 rounded-lg bg-indigo-400/10 border border-indigo-400/20 flex items-center justify-center mb-4 group-hover:bg-indigo-400/20 transition-colors">
-                  <service.icon size={20} className="text-indigo-400" />
+              <div className="glass-card rounded-2xl p-6 h-full group hover:scale-[1.02] transition-all">
+                <div className="w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mb-4 group-hover:bg-cyan-400/20 transition-colors">
+                  <service.icon size={20} className="text-cyan-400" />
                 </div>
                 <h3 className="text-base font-semibold text-slate-100 mb-2">{service.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{service.description}</p>
@@ -154,8 +154,8 @@ export function WhyWorkWithMe() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {whyWorkWithMe.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 80}>
-              <div className="p-5 rounded-xl border border-slate-700 bg-slate-900/40 hover:border-indigo-400/30 transition-colors h-full">
-                <item.icon size={18} className="text-indigo-400 mb-3" />
+              <div className="glass-card rounded-2xl p-5 h-full hover:scale-[1.02] transition-all">
+                <item.icon size={18} className="text-cyan-400 mb-3" />
                 <h3 className="font-semibold text-slate-100 mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
               </div>

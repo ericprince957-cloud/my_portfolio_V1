@@ -278,10 +278,10 @@ export default function Pricing() {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2.5 text-sm rounded-lg transition-all cursor-pointer flex items-center gap-2 ${
+                className={`px-4 py-2.5 text-sm rounded-xl transition-all cursor-pointer flex items-center gap-2 ${
                   activeCategory === cat.id
-                    ? "bg-indigo-500 text-white shadow-lg shadow-indigo-500/20"
-                    : "text-slate-400 border border-slate-700 hover:border-indigo-400/30 hover:text-slate-100"
+                    ? "bg-gradient-to-r from-cyan-500 to-indigo-500 text-white shadow-lg shadow-cyan-500/20"
+                    : "glass-card text-slate-400 hover:text-slate-100"
                 }`}
               >
                 <span>{cat.icon}</span>
@@ -295,7 +295,7 @@ export default function Pricing() {
         <div className="grid md:grid-cols-2 gap-6">
           {currentCategory.services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 80}>
-              <div className={`relative h-full rounded-xl border bg-slate-900/40 overflow-hidden transition-all hover:shadow-lg hover:shadow-indigo-500/5 ${service.popular ? "border-indigo-400/50" : "border-slate-700 hover:border-indigo-400/30"}`}>
+              <div className={`relative h-full rounded-2xl glass-card overflow-hidden transition-all hover:scale-[1.02] ${service.popular ? "border-cyan-400/50" : ""}`}>
                 {/* Popular badge */}
                 {service.popular && (
                   <div className="absolute top-0 right-0 px-3 py-1 bg-indigo-500 text-white text-xs font-medium rounded-bl-lg">

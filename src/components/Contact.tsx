@@ -94,25 +94,25 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-100 mb-1.5">Name <span className="text-red-400">*</span></label>
-                <input id="name" type="text" value={formData.name} onChange={(e) => handleChange("name", e.target.value)} className={`w-full px-4 py-3 rounded-lg bg-slate-800 border ${errors.name ? "border-red-400/50" : "border-slate-700"} text-slate-100 placeholder-slate-500 focus:border-indigo-400/50 focus:outline-none transition-colors`} placeholder="Your name" aria-invalid={!!errors.name} />
+                <input id="name" type="text" value={formData.name} onChange={(e) => handleChange("name", e.target.value)} className={`w-full px-4 py-3 rounded-xl bg-white/5 border ${errors.name ? "border-red-400/50" : "border-white/10"} text-slate-100 placeholder-slate-500 focus:border-cyan-400/50 focus:outline-none transition-colors backdrop-blur-sm`} placeholder="Your name" aria-invalid={!!errors.name} />
                 {errors.name && <p className="mt-1 text-xs text-red-400">{errors.name}</p>}
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-slate-100 mb-1.5">Email <span className="text-red-400">*</span></label>
-                <input id="email" type="email" value={formData.email} onChange={(e) => handleChange("email", e.target.value)} className={`w-full px-4 py-3 rounded-lg bg-slate-800 border ${errors.email ? "border-red-400/50" : "border-slate-700"} text-slate-100 placeholder-slate-500 focus:border-indigo-400/50 focus:outline-none transition-colors`} placeholder="your@email.com" aria-invalid={!!errors.email} />
+                <input id="email" type="email" value={formData.email} onChange={(e) => handleChange("email", e.target.value)} className={`w-full px-4 py-3 rounded-xl bg-white/5 border ${errors.email ? "border-red-400/50" : "border-white/10"} text-slate-100 placeholder-slate-500 focus:border-cyan-400/50 focus:outline-none transition-colors backdrop-blur-sm`} placeholder="your@email.com" aria-invalid={!!errors.email} />
                 {errors.email && <p className="mt-1 text-xs text-red-400">{errors.email}</p>}
               </div>
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-slate-100 mb-1.5">Subject <span className="text-red-400">*</span></label>
-                <input id="subject" type="text" value={formData.subject} onChange={(e) => handleChange("subject", e.target.value)} className={`w-full px-4 py-3 rounded-lg bg-slate-800 border ${errors.subject ? "border-red-400/50" : "border-slate-700"} text-slate-100 placeholder-slate-500 focus:border-indigo-400/50 focus:outline-none transition-colors`} placeholder="What's this about?" aria-invalid={!!errors.subject} />
+                <input id="subject" type="text" value={formData.subject} onChange={(e) => handleChange("subject", e.target.value)} className={`w-full px-4 py-3 rounded-xl bg-white/5 border ${errors.subject ? "border-red-400/50" : "border-white/10"} text-slate-100 placeholder-slate-500 focus:border-cyan-400/50 focus:outline-none transition-colors backdrop-blur-sm`} placeholder="What's this about?" aria-invalid={!!errors.subject} />
                 {errors.subject && <p className="mt-1 text-xs text-red-400">{errors.subject}</p>}
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-slate-100 mb-1.5">Message <span className="text-red-400">*</span></label>
-                <textarea id="message" rows={5} value={formData.message} onChange={(e) => handleChange("message", e.target.value)} className={`w-full px-4 py-3 rounded-lg bg-slate-800 border ${errors.message ? "border-red-400/50" : "border-slate-700"} text-slate-100 placeholder-slate-500 focus:border-indigo-400/50 focus:outline-none transition-colors resize-none`} placeholder="Tell me about your project..." aria-invalid={!!errors.message} />
+                <textarea id="message" rows={5} value={formData.message} onChange={(e) => handleChange("message", e.target.value)} className={`w-full px-4 py-3 rounded-xl bg-white/5 border ${errors.message ? "border-red-400/50" : "border-white/10"} text-slate-100 placeholder-slate-500 focus:border-cyan-400/50 focus:outline-none transition-colors resize-none backdrop-blur-sm`} placeholder="Tell me about your project..." aria-invalid={!!errors.message} />
                 {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message}</p>}
               </div>
-              <button type="submit" disabled={status === "loading"} className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-indigo-500 hover:bg-indigo-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-all hover:shadow-lg hover:shadow-indigo-500/20 cursor-pointer">
+              <button type="submit" disabled={status === "loading"} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-600 hover:to-indigo-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-[1.02] cursor-pointer">
                 {status === "loading" ? (<><Loader2 size={16} className="animate-spin" /> Sending...</>) : (<><Send size={16} /> Start a Conversation</>)}
               </button>
               {status === "success" && (
@@ -135,7 +135,7 @@ export default function Contact() {
           <ScrollReveal delay={200} className="lg:col-span-2">
             <div className="space-y-4">
               {/* Quick Contact Buttons */}
-              <div className="p-6 rounded-xl border border-slate-700 bg-slate-900/40">
+              <div className="glass-card rounded-2xl p-6">
                 <h3 className="text-lg font-semibold text-slate-100 mb-4">Quick Contact</h3>
                 <p className="text-sm text-slate-400 mb-4">Reach out instantly through your preferred channel. Messages are pre-filled for you.</p>
                 <div className="space-y-3">
@@ -188,7 +188,7 @@ export default function Contact() {
               </div>
 
               {/* Social Links */}
-              <div className="p-6 rounded-xl border border-slate-700 bg-slate-900/40">
+              <div className="glass-card rounded-2xl p-6">
                 <h3 className="text-sm font-semibold text-slate-100 mb-4">Find Me Online</h3>
                 <div className="space-y-3">
                   <a href={social.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate-400 hover:text-slate-100 transition-colors">
@@ -211,7 +211,7 @@ export default function Contact() {
               </div>
 
               {/* Location */}
-              <div className="p-6 rounded-xl border border-slate-700 bg-slate-900/40">
+              <div className="glass-card rounded-2xl p-6">
                 <h3 className="text-sm font-semibold text-slate-100 mb-3">Based in</h3>
                 <p className="text-slate-400 text-sm">{portfolioConfig.location}</p>
                 <p className="text-slate-500 text-xs mt-2">Available for remote work worldwide</p>
