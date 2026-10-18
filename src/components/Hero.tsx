@@ -20,10 +20,10 @@ export default function Hero() {
           
           <div className="mt-8 animate-fade-in-up opacity-0 stagger-2">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-slate-100">
-              {hero.headline}
+              Professional Web Developer in Abia State
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto">
-              {hero.subheadline}
+              Vector Codes is a premier digital agency providing custom web development, mobile-friendly website design, and software solutions for growing businesses in Aba, Umuahia, and across Abia State. We turn your ideas into high-performing digital platforms that attract customers and scale your operations.
             </p>
           </div>
 
