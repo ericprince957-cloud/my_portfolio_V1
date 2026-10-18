@@ -102,10 +102,10 @@ export function Experience() {
 }
 
 const services = [
-  { icon: Globe, title: "Website Development", description: "Modern responsive websites for businesses, personal brands and organizations." },
-  { icon: Layers, title: "Landing Pages", description: "Conversion-focused landing pages for products, services and campaigns." },
-  { icon: Code2, title: "Frontend Development", description: "Responsive interfaces built from designs or ideas." },
-  { icon: Database, title: "Web Application Development", description: "Functional web applications with interactive interfaces and backend integration." },
+  { icon: Globe, title: "Custom Website Design", description: "Beautiful, fast-loading, and responsive websites tailored to your brand." },
+  { icon: Layers, title: "E-commerce Development", description: "Secure online stores built to help Abia merchants sell products smoothly." },
+  { icon: Code2, title: "Web Automation & Software", description: "Smart tools and custom coding to streamline your business workflows." },
+  { icon: Database, title: "Digital Branding & Strategy", description: "Full-scale digital identities that make your business stand out online." },
   { icon: Wrench, title: "API Integration", description: "Connecting websites and applications to external APIs and services." },
   { icon: Lightbulb, title: "Website Improvements", description: "Fixing layout problems, responsiveness issues, broken components and frontend functionality." },
 ];
@@ -116,7 +116,7 @@ export function Services() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/[0.02] to-transparent" aria-hidden="true" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <SectionHeading badge="Services" title="What I Can Build For You" description="Practical development services focused on delivering functional, well-built digital products." />
+          <SectionHeading badge="Services" title="Our Web Development Services in Abia" description="Professional web development services for businesses in Aba, Umuahia, and across Abia State." />
         </ScrollReveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
