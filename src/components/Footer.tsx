@@ -21,7 +21,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               {portfolioConfig.logo ? (
-                <img src={portfolioConfig.logo} alt="Vector Codes logo" width={40} height={40} className="w-10 h-10 rounded-lg object-contain" />
+                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400/15 to-yellow-500/10 border border-amber-400/30 shadow-[0_0_16px_rgba(251,191,36,0.15)] p-1">
+                  <img src={portfolioConfig.logo} alt="Vector Codes logo" width={32} height={32} className="w-8 h-8 rounded-lg object-contain" />
+                </span>
               ) : (
                 <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400/20 to-yellow-500/20 border border-amber-400/30 flex items-center justify-center text-amber-400 font-mono text-sm font-bold">VC</span>
               )}

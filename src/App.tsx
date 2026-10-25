@@ -38,7 +38,7 @@ export default function App() {
   const isLibrary = hash === "#/library";
 
   return (
-    <div className="min-h-screen bg-slate-950 dark:bg-slate-950 light:bg-slate-50 text-slate-100 dark:text-slate-100 light:text-slate-900 overflow-x-hidden transition-colors duration-300">
+    <div className="min-h-screen bg-slate-950 dark:bg-slate-950 light:bg-slate-50 text-slate-100 dark:text-slate-100 light:text-slate-900 overflow-x-hidden transition-colors duration-300 pb-24 md:pb-0">
       <Navbar />
       <main>
         {isLibrary ? (
