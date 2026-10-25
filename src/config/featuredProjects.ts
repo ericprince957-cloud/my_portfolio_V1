@@ -46,7 +46,7 @@ export const featuredProjects: FeaturedProject[] = [
     title: "Premium Legal Website for Port Harcourt Firm",
     tags: ["Next.js", "Tailwind CSS", "Vercel", ".com.ng Domain"],
     description:
-      "Built a secure, mobile-first digital chambers for a 30-year law practice. Integrated professional email (info@ugoouzoho.com.ng), WhatsApp consultation booking, and precise location mapping.",
+      "Built a secure, mobile-first digital chambers for a 30-year law practice. Integrated professional email (info@ugoouzoho.com.ng), WhatsApp consultation booking, and precise location mapping. Configured enterprise-grade email routing via Cloudflare for Ugoo Uzoho & Co., ensuring 100% deliverability and zero spam issues.",
     result: "Client secured full payment within 48 hours of launch.",
     link: "https://www.ugoouzoho.com.ng/",
     linkLabel: "View Live Site",
