@@ -4,7 +4,7 @@ import {
   type FeaturedProject,
 } from "../config/featuredProjects";
 import { ScrollReveal } from "./ui";
-import { ExternalLink, Quote, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Quote, CheckCircle2, Star } from "lucide-react";
 
 /**
  * ============================================================
@@ -95,12 +95,11 @@ function ProjectCard({ project, delay }: { project: FeaturedProject; delay: numb
 
 /**
  * ============================================================
- * CLIENT TESTIMONIAL (PLACEHOLDER)
+ * CLIENT TESTIMONIAL
  * ============================================================
- * Subtle quote block rendered directly under the projects
- * grid. Replace `featuredTestimonial` in
- * src/config/featuredProjects.ts once the formal
- * testimonial is received.
+ * Real 5-star Google review from Samuel Chukwuemeka
+ * (Techlaza). Edit `featuredTestimonial` in
+ * src/config/featuredProjects.ts to change the copy.
  * ============================================================
  */
 function Testimonial() {
@@ -112,6 +111,14 @@ function Testimonial() {
           "{featuredTestimonial.quote}"
         </blockquote>
         <figcaption className="mt-4">
+          <div
+            className="flex justify-center gap-1 mb-2"
+            aria-label={`${featuredTestimonial.stars} out of 5 stars`}
+          >
+            {Array.from({ length: featuredTestimonial.stars }).map((_, i) => (
+              <Star key={i} size={16} className="fill-amber-400 text-amber-400" aria-hidden="true" />
+            ))}
+          </div>
           <span className="text-sm font-semibold text-amber-300">{featuredTestimonial.author}</span>
           <span className="block text-xs text-slate-500 mt-0.5">{featuredTestimonial.role}</span>
         </figcaption>
@@ -125,7 +132,8 @@ function Testimonial() {
  * "RECENT SUCCESS STORIES" SECTION
  * ============================================================
  * Positioned directly below the Hero. 2-column grid on
- * desktop (md+), 1 column on mobile.
+ * desktop (md+), 1 column on mobile — four projects render
+ * as a clean 2x2 grid on desktop.
  * ============================================================
  */
 export default function FeaturedProjects() {
@@ -162,7 +170,7 @@ export default function FeaturedProjects() {
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {featuredProjects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} delay={i * 120} />
+            <ProjectCard key={project.id} project={project} delay={(i % 2) * 120} />
           ))}
         </div>
 
