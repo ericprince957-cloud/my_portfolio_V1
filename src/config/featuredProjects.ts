@@ -40,8 +40,9 @@ export const featuredProjects: FeaturedProject[] = [
     id: "ugouzoho",
     client: "Ugoo Uzoho & Company",
     industry: "Legal",
-    // TODO: Replace with "/projects/ugouzoho-home.webp" (screenshot of https://www.ugoouzoho.com.ng/ homepage)
-    thumbnail: "",
+    // Hosted homepage screenshot (PNG). TODO: convert to WebP and self-host at /projects/ugouzoho-home.webp for optimal load time.
+    thumbnail:
+      "https://i.supaimg.com/44a76b26-2555-4351-81a0-26a85156346b/39cfba5b-d94e-408c-9758-1caee2d9bc59.png",
     title: "Premium Legal Website for Port Harcourt Firm",
     tags: ["Next.js", "Tailwind CSS", "Vercel", ".com.ng Domain"],
     description:
