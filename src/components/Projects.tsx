@@ -1,171 +1,54 @@
-import { useState } from "react";
-import { projects, filterCategories, type Project } from "../config/projects";
-import { ImageWithFallback, ScrollReveal, SectionHeading } from "./ui";
-import { Github, ExternalLink, X, FolderGit2, ChevronRight } from "lucide-react";
+import { projects } from "../config/projects";
+import { ScrollReveal, SectionHeading } from "./ui";
+import { LibraryBig, ArrowRight } from "lucide-react";
 
+/**
+ * ============================================================
+ * "THINGS I'VE BUILT" — HOME CTA SECTION
+ * ============================================================
+ * The full project grid now lives on its own dedicated
+ * library page (hash route: #/library). This section is a
+ * clean teaser that sends visitors there via the gold
+ * "View Things I've Built" button.
+ * ============================================================
+ */
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("all");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const filteredProjects = activeFilter === "all" ? projects : projects.filter((p) => p.category === activeFilter);
-
   return (
     <section id="projects" className="py-20 md:py-28 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/[0.02] to-transparent" aria-hidden="true" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <SectionHeading badge="Projects" title="Things I've Built" description="Real projects, real code. Each project represents learning, problem-solving, and practical development." />
+          <SectionHeading
+            badge="Projects"
+            title="Things I've Built"
+            description="Real projects, real code. Each project represents learning, problem-solving, and practical development."
+          />
         </ScrollReveal>
-        <ScrollReveal delay={100}>
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {filterCategories.map((cat) => (
-              <button key={cat.value} onClick={() => setActiveFilter(cat.value)} className={`px-4 py-2 text-sm rounded-xl transition-all cursor-pointer ${activeFilter === cat.value ? "bg-gradient-to-r from-cyan-500 to-indigo-500 text-white shadow-lg shadow-cyan-500/20" : "glass-card text-slate-400 hover:text-slate-100"}`}>
-                {cat.label}
-              </button>
-            ))}
+
+        <ScrollReveal delay={150}>
+          <div className="max-w-2xl mx-auto mt-10 text-center glass-card rounded-2xl p-8 md:p-10">
+            <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center">
+              <LibraryBig size={26} className="text-amber-400" aria-hidden="true" />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-100 mb-3">Explore the full project library</h3>
+            <p className="text-sm md:text-base text-slate-400 leading-relaxed mb-7">
+              Browse every build — e-commerce, fashion, logistics, services, frontend and Python — with
+              full details: the problem, the solution, key features, tech stack, live demos and source code.
+            </p>
+
+            <a
+              href="#/library"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm md:text-base font-semibold text-slate-950 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-amber-400/20"
+            >
+              View Things I've Built <ArrowRight size={18} />
+            </a>
+
+            <p className="mt-4 text-xs text-slate-500">
+              {projects.length}+ projects in the library — updated as new work ships.
+            </p>
           </div>
         </ScrollReveal>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, i) => (
-            <ScrollReveal key={project.id} delay={i * 80}>
-              <ProjectCard project={project} onViewDetails={() => setSelectedProject(project)} />
-            </ScrollReveal>
-          ))}
-        </div>
-        {filteredProjects.length === 0 && (
-          <div className="text-center py-12 text-slate-400">No projects in this category yet. Check back soon.</div>
-        )}
       </div>
-      {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
     </section>
-  );
-}
-
-function ProjectCard({ project, onViewDetails }: { project: Project; onViewDetails: () => void }) {
-  const statusColors: Record<string, string> = {
-    Completed: "text-green-400 bg-green-400/10 border-green-400/30",
-    "In Progress": "text-yellow-400 bg-yellow-400/10 border-yellow-400/30",
-    "Deploying Soon": "text-cyan-400 bg-cyan-400/10 border-cyan-400/30",
-    Planning: "text-slate-500 bg-slate-800 border-slate-700",
-  };
-
-  return (
-    <div className="group glass-card rounded-2xl overflow-hidden hover:scale-[1.02] transition-all">
-      <div className="aspect-video bg-slate-800/50 relative overflow-hidden">
-        <ImageWithFallback src={project.image} alt={project.title} fallbackText={project.title.substring(0, 2).toUpperCase()} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fallbackClassName="w-full h-full" />
-        <div className="absolute top-3 right-3 flex gap-2">
-          {project.tag && (
-            <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-white/10 border border-white/20 text-slate-200 backdrop-blur-sm">
-              {project.tag}
-            </span>
-          )}
-          <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${statusColors[project.status]}`}>
-            {project.status}
-          </span>
-        </div>
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
-        <p className="text-sm text-slate-400 leading-relaxed mb-4 line-clamp-2">{project.description}</p>
-        {project.technologies.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mb-4">
-            {project.technologies.slice(0, 4).map((tech) => (
-              <span key={tech} className="px-2 py-0.5 text-xs text-slate-400 bg-white/5 rounded border border-white/10">{tech}</span>
-            ))}
-            {project.technologies.length > 4 && <span className="px-2 py-0.5 text-xs text-slate-500">+{project.technologies.length - 4}</span>}
-          </div>
-        )}
-        <div className="flex items-center gap-2 pt-2 border-t border-white/10">
-          <button onClick={onViewDetails} className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-colors cursor-pointer">
-            View Details <ChevronRight size={14} />
-          </button>
-          {project.github && (
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-slate-100 hover:bg-white/10 rounded-lg transition-colors" aria-label={`${project.title} GitHub`}>
-              <Github size={16} />
-            </a>
-          )}
-          {project.live && (
-            <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-slate-100 hover:bg-white/10 rounded-lg transition-colors" aria-label={`${project.title} live demo`}>
-              <ExternalLink size={16} />
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fade-in" role="dialog" aria-modal="true">
-      <div className="absolute inset-0 bg-[#0a0a0f]/90 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl border border-slate-700 bg-slate-900 shadow-2xl animate-fade-in-up">
-        <button onClick={onClose} className="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-slate-100 bg-slate-900/80 rounded-lg transition-colors cursor-pointer" aria-label="Close">
-          <X size={18} />
-        </button>
-        <div className="aspect-video bg-slate-800 relative">
-          <ImageWithFallback src={project.image} alt={project.title} fallbackText={project.title.substring(0, 2).toUpperCase()} className="w-full h-full object-cover" fallbackClassName="w-full h-full" />
-        </div>
-        <div className="p-6 md:p-8 space-y-6">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <h3 className="text-2xl font-bold text-slate-100">{project.title}</h3>
-              <span className="px-2 py-0.5 text-xs font-medium rounded-full border border-slate-700 text-slate-500">{project.status}</span>
-            </div>
-            <p className="text-slate-400">{project.description}</p>
-          </div>
-          {(project.problem || project.solution) && (
-            <div className="grid md:grid-cols-2 gap-4">
-              {project.problem && (
-                <div className="p-4 rounded-lg border border-slate-700 bg-slate-800/30">
-                  <h4 className="text-sm font-semibold text-indigo-400 mb-2">Problem</h4>
-                  <p className="text-sm text-slate-400">{project.problem}</p>
-                </div>
-              )}
-              {project.solution && (
-                <div className="p-4 rounded-lg border border-slate-700 bg-slate-800/30">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h4>
-                  <p className="text-sm text-slate-400">{project.solution}</p>
-                </div>
-              )}
-            </div>
-          )}
-          {project.features.length > 0 && (
-            <div>
-              <h4 className="text-sm font-semibold text-slate-100 mb-3">Key Features</h4>
-              <ul className="space-y-2">
-                {project.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-slate-400">
-                    <span className="text-indigo-400 mt-0.5">•</span>{feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {project.technologies.length > 0 && (
-            <div>
-              <h4 className="text-sm font-semibold text-slate-100 mb-3">Technologies</h4>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <span key={tech} className="px-3 py-1 text-sm text-slate-400 bg-slate-800 rounded-lg border border-slate-700">{tech}</span>
-                ))}
-              </div>
-            </div>
-          )}
-          <div className="flex flex-wrap gap-3 pt-4 border-t border-slate-700">
-            {project.github && (
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 border border-slate-700 hover:border-indigo-400/50 text-slate-100 rounded-lg transition-colors">
-                <FolderGit2 size={16} /> View Code
-              </a>
-            )}
-            {project.live && (
-              <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg transition-colors">
-                <ExternalLink size={16} /> Live Demo
-              </a>
-            )}
-            {!project.github && !project.live && <p className="text-sm text-slate-500">Project links coming soon.</p>}
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

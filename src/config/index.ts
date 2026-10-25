@@ -49,7 +49,7 @@ export const portfolioConfig = {
 
   // ─── STATS ───────────────────────────────────────────────
   stats: [
-    { value: "194+", label: "Pitches Sent" },
+    { value: "5+", label: "Happy Clients" },
     { value: "5+", label: "Live Projects" },
     { value: "4+", label: "Paid Clients" },
   ],
@@ -57,7 +57,7 @@ export const portfolioConfig = {
   // ─── HERO SECTION ────────────────────────────────────────
   hero: {
     headline: "Building Premium Digital Experiences for Nigerian Businesses.",
-    subheadline: "From 194 pitches to paid clients. I help Fashion, Logistics & Tech brands scale with high-speed, mobile-first websites.",
+    subheadline: "Trusted by 5+ happy clients. I help Fashion, Logistics & Tech brands scale with high-speed, mobile-first websites.",
     primaryCTA: "View My Work",
     secondaryCTA: "Contact on WhatsApp",
     secondaryCTALink: "https://wa.me/2347084547988",
