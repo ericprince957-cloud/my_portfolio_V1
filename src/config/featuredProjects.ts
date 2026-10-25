@@ -11,11 +11,14 @@
  * 2. Convert it to WebP and compress (~100-150KB) to keep
  *    page load under 2s. E.g. https://squoosh.app (WebP, q=75).
  * 3. Save as: public/projects/ugouzoho-home.webp
- *            public/projects/zizi-milarge.webp
  *            public/projects/techlaza.webp
  *            public/projects/cumberland-hvac.webp
  * 4. Set `thumbnail` below to the matching path.
  *    Until then, an elegant gold placeholder is shown.
+ *
+ * NOTE: The Zizi Milarge thumbnail currently uses a hosted
+ * PNG (supaimg). For best load times, convert it to WebP and
+ * self-host it at /public/projects/zizi-milarge.webp.
  * ============================================================
  */
 
@@ -51,8 +54,9 @@ export const featuredProjects: FeaturedProject[] = [
     id: "zizi-milarge",
     client: "Zizi Milarge",
     industry: "Automotive",
-    // TODO: Replace with "/projects/zizi-milarge.webp" (screenshot of ZIZI MILARGE mockup)
-    thumbnail: "",
+    // Hosted mockup screenshot (PNG). TODO: convert to WebP and self-host at /projects/zizi-milarge.webp for optimal load time.
+    thumbnail:
+      "https://i.supaimg.com/44a76b26-2555-4351-81a0-26a85156346b/4f9a1223-def3-4d0f-b74b-43727223a909.png",
     title: "Digital Showroom Concept for Abuja Auto Dealer",
     tags: ["UI/UX Design", "Mobile-First", "WhatsApp Integration", "Lead Gen"],
     description:
