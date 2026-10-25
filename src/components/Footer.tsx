@@ -20,7 +20,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono text-sm font-bold">VC</span>
+              {portfolioConfig.logo ? (
+                <img src={portfolioConfig.logo} alt="Vector Codes logo" width={40} height={40} className="w-10 h-10 rounded-lg object-contain" />
+              ) : (
+                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400/20 to-yellow-500/20 border border-amber-400/30 flex items-center justify-center text-amber-400 font-mono text-sm font-bold">VC</span>
+              )}
               <div>
                 <p className="font-semibold text-slate-100">{portfolioConfig.name}</p>
                 <p className="text-xs text-slate-500">{portfolioConfig.brandName}</p>

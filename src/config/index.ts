@@ -27,6 +27,10 @@ export const portfolioConfig = {
   // ─── PROFILE IMAGE ───────────────────────────────────────
   profileImage: "[placeholder]",
 
+  // ─── BRAND LOGO ──────────────────────────────────────────
+  // TODO: convert to WebP and self-host at /public/logo.webp for optimal load time.
+  logo: "https://i.supaimg.com/44a76b26-2555-4351-81a0-26a85156346b/9cc8cbfb-dc2d-4336-8337-ec698ba9050f.png",
+
   // ─── CONTACT INFO ────────────────────────────────────────
   contactInfo: {
     email: "vectorcodes15@gmail.com",
