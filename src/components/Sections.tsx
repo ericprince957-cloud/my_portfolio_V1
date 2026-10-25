@@ -101,13 +101,15 @@ export function Experience() {
   );
 }
 
+// Services refined to highlight OUTCOMES for Nigerian SMEs
+// and professional service providers (not just features).
 const services = [
-  { icon: Globe, title: "Custom Website Design", description: "Beautiful, fast-loading, and responsive websites tailored to your brand." },
+  { icon: Globe, title: "Web Development", description: "Building fast, secure websites that convert visitors into WhatsApp inquiries." },
+  { icon: Lightbulb, title: "Digital Strategy", description: "Helping Nigerian businesses move from social media chaos to professional digital assets." },
+  { icon: MessageSquare, title: "Email Solutions", description: "Setting up professional domain emails that build instant trust with clients." },
   { icon: Layers, title: "E-commerce Development", description: "Secure online stores built to help Abia merchants sell products smoothly." },
-  { icon: Code2, title: "Web Automation & Software", description: "Smart tools and custom coding to streamline your business workflows." },
   { icon: Database, title: "Digital Branding & Strategy", description: "Full-scale digital identities that make your business stand out online." },
-  { icon: Wrench, title: "API Integration", description: "Connecting websites and applications to external APIs and services." },
-  { icon: Lightbulb, title: "Website Improvements", description: "Fixing layout problems, responsiveness issues, broken components and frontend functionality." },
+  { icon: Wrench, title: "Website Improvements", description: "Fixing layout problems, responsiveness issues, broken components and frontend functionality." },
 ];
 
 export function Services() {
@@ -166,3 +168,4 @@ export function WhyWorkWithMe() {
     </section>
   );
 }
+

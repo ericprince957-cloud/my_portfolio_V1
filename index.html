@@ -36,6 +36,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     
+    <!-- ============================================================
+         STRUCTURED DATA — Portfolio + Professional Service
+         Boosts SEO / rich results. Update the URLs and names
+         if the live domain changes.
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://vectorcodes.dev/#business",
+          "name": "Vector Codes",
+          "alternateName": "Vector Codes (Uche Prince Eric)",
+          "description": "Web development, digital strategy and professional email solutions for Nigerian SMEs and professional service providers.",
+          "url": "https://vectorcodes.dev",
+          "email": "vectorcodes15@gmail.com",
+          "telephone": "+2347084547988",
+          "areaServed": { "@type": "Country", "name": "Nigeria" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Abia State",
+            "addressCountry": "NG"
+          },
+          "priceRange": "₦₦",
+          "sameAs": [
+            "https://github.com/ericprince957-cloud",
+            "https://wa.me/2347084547988"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development", "description": "Fast, secure websites that convert visitors into WhatsApp inquiries." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Strategy", "description": "Helping Nigerian businesses move from social media chaos to professional digital assets." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email Solutions", "description": "Professional domain emails that build instant trust with clients." } }
+            ]
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://vectorcodes.dev/#portfolio",
+          "name": "Vector Codes Portfolio — Recent Success Stories",
+          "url": "https://vectorcodes.dev/#success-stories",
+          "about": { "@id": "https://vectorcodes.dev/#business" },
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "CreativeWork",
+                "position": 1,
+                "name": "Premium Legal Website for Port Harcourt Firm",
+                "description": "Secure, mobile-first digital chambers for Ugoo Uzoho & Company with professional email, WhatsApp consultation booking and location mapping. Client secured full payment within 48 hours of launch.",
+                "url": "https://www.ugoouzoho.com.ng/",
+                "creator": { "@id": "https://vectorcodes.dev/#business" }
+              },
+              {
+                "@type": "CreativeWork",
+                "position": 2,
+                "name": "Digital Showroom Concept for Abuja Auto Dealer",
+                "description": "Premium digital showroom concept for Zizi Milarge with dynamic inventory gallery, 'Book Inspection' CTAs and WhatsApp lead generation.",
+                "url": "https://zizi-milarge.vercel.app/",
+                "creator": { "@id": "https://vectorcodes.dev/#business" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+    
     <style>
       html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; }
       html { background-color: #0a0a0f; color: #f0f0f5; }

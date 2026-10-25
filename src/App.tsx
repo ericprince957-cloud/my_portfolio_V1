@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import FeaturedProjects from "./components/FeaturedProjects";
 import { GitHubSection, CurrentlyBuilding, Experience, Services, WhyWorkWithMe } from "./components/Sections";
 import { Community, Trust } from "./components/CommunityTrust";
 import Reviews from "./components/Reviews";
@@ -16,6 +17,8 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <div className="section-divider" />
+        <FeaturedProjects />
         <div className="section-divider" />
         <About />
         <div className="section-divider" />
@@ -47,3 +50,4 @@ export default function App() {
     </div>
   );
 }
+
