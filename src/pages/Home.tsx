@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import FeaturedProjects from "../components/FeaturedProjects";
 import Reviews from "../components/Reviews";
 import ChannelUpdates from "../components/ChannelUpdates";
+import CaseStudies from "../components/CaseStudies";
 import { ArrowRight } from "lucide-react";
 
 /**
@@ -20,6 +21,8 @@ export default function Home() {
       <FeaturedProjects />
       <div className="section-divider" />
       <Reviews />
+      <div className="section-divider" />
+      <CaseStudies />
       <div className="section-divider" />
       <ChannelUpdates />
       <div className="section-divider" />
