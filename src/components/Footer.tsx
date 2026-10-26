@@ -2,13 +2,11 @@ import { portfolioConfig } from "../config";
 import { Github, Heart, MessageCircle, Send, Mail, Twitter, Linkedin } from "lucide-react";
 
 const footerLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#/" },
+  { label: "About", href: "#/about" },
+  { label: "Services & Pricing", href: "#/services" },
+  { label: "Portfolio", href: "#/library" },
+  { label: "Contact", href: "#/contact" },
 ];
 
 export default function Footer() {

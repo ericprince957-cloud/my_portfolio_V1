@@ -1,68 +1,30 @@
-import { useState, useEffect } from "react";
 import { portfolioConfig } from "../config";
-import { Home, Star, FolderGit2, Tag, Mail, MessageCircle, Github } from "lucide-react";
+import { Home, User, Wrench, FolderGit2, Mail, MessageCircle, Github } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 /**
  * ============================================================
- * NAVIGATION — "BUBBLE" STYLE
+ * NAVIGATION — MULTI-PAGE "BUBBLE" STYLE
  * ============================================================
  * Desktop (md+): floating pill bar at the top — glass,
- * rounded-full, centered, with the gold-lit logo, links,
- * theme toggle and GitHub.
+ * rounded-full, centered. Links switch PAGES (hash routes).
  *
- * Mobile: minimal top strip (logo + toggles) and a floating
- * bubble dock fixed at the BOTTOM of the screen with icon
- * buttons: Home, Work (Success Stories), Library, Pricing,
- * Contact — plus an elevated gold WhatsApp bubble in the
- * middle. The old hamburger menu is replaced entirely.
+ * Mobile: slim top strip (logo + toggles) and a floating
+ * bubble dock fixed at the BOTTOM with icon buttons for
+ * each page, plus an elevated blue WhatsApp bubble in the
+ * middle. Active page highlights automatically.
  * ============================================================
  */
 
-const desktopLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Portfolio", href: "#success-stories" },
-  { label: "Library", href: "#projects" },
-  { label: "Testimonials", href: "#reviews" },
-  { label: "Contact", href: "#contact" },
+const pages = [
+  { route: "#/", label: "Home", icon: Home },
+  { route: "#/about", label: "About", icon: User },
+  { route: "#/services", label: "Services", icon: Wrench },
+  { route: "#/library", label: "Portfolio", icon: FolderGit2 },
+  { route: "#/contact", label: "Contact", icon: Mail },
 ];
 
-const dockItems = [
-  { id: "home", label: "Home", href: "#home", icon: Home },
-  { id: "success-stories", label: "Work", href: "#success-stories", icon: Star },
-  { id: "projects", label: "Library", href: "#projects", icon: FolderGit2 },
-  { id: "reviews", label: "Reviews", href: "#reviews", icon: Tag },
-  { id: "contact", label: "Contact", href: "#contact", icon: Mail },
-];
-
-/** Scroll-spy: highlights the dock item for the section in view. */
-function useActiveSection() {
-  const [active, setActive] = useState("home");
-  useEffect(() => {
-    let raf = 0;
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        let current = "home";
-        for (const item of dockItems) {
-          const el = document.getElementById(item.id);
-          if (el && el.getBoundingClientRect().top <= 140) current = item.id;
-        }
-        setActive(current);
-      });
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
-  return active;
-}
-
-/** Gold-lit logo mark (keeps the hosted logo image, restyled). */
+/** Gold-lit logo mark → now blue-lit (keeps the hosted logo image). */
 function LogoMark({ size = 32 }: { size?: number }) {
   return portfolioConfig.logo ? (
     <span
@@ -89,38 +51,35 @@ function LogoMark({ size = 32 }: { size?: number }) {
   );
 }
 
-export default function Navbar() {
-  const active = useActiveSection();
+export default function Navbar({ activeRoute }: { activeRoute: string }) {
+  const normalize = (h: string) => (h.startsWith("#/") ? h : "#/");
+  const active = normalize(activeRoute);
 
   return (
     <>
-      {/* ── TOP BAR (both breakpoints) ─────────────────────── */}
-      {/* Desktop: floating pill. Mobile: slim strip. */}
-      <nav
-        className="fixed top-0 left-0 right-0 z-50 px-3 pt-3 md:px-4 md:pt-4 pointer-events-none"
-        aria-label="Main navigation"
-      >
+      {/* ── TOP BAR ─────────────────────────────────────────── */}
+      <nav className="fixed top-0 left-0 right-0 z-50 px-3 pt-3 md:px-4 md:pt-4 pointer-events-none" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto flex justify-center">
           <div className="pointer-events-auto w-full md:w-auto md:px-2 md:py-1.5 glass-card rounded-full flex items-center justify-between md:justify-start md:gap-6 h-14 px-4">
-            {/* Logo + brand */}
-            <a href="#home" className="flex items-center gap-2.5 text-lg font-bold text-slate-100 hover:text-blue-300 transition-colors">
+            {/* Logo + brand → Home */}
+            <a href="#/" className="flex items-center gap-2.5 text-lg font-bold text-slate-100 hover:text-blue-300 transition-colors">
               <LogoMark size={30} />
               <span className="hidden sm:inline">{portfolioConfig.brandName}</span>
             </a>
 
-            {/* Desktop links inside the pill */}
+            {/* Desktop page links inside the pill */}
             <div className="hidden md:flex items-center gap-0.5">
-              {desktopLinks.map((link) => (
+              {pages.map((page) => (
                 <a
-                  key={link.href}
-                  href={link.href}
+                  key={page.route}
+                  href={page.route}
                   className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
-                    active === link.href.slice(1)
+                    active === page.route
                       ? "text-slate-950 bg-gradient-to-r from-blue-400 to-sky-400 font-semibold"
                       : "text-slate-400 hover:text-slate-100 hover:bg-white/10"
                   }`}
                 >
-                  {link.label}
+                  {page.label}
                 </a>
               ))}
             </div>
@@ -142,17 +101,14 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* ── MOBILE BUBBLE DOCK (bottom) ────────────────────── */}
-      <nav
-        className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden animate-fade-in-up"
-        aria-label="Quick navigation"
-      >
+      {/* ── MOBILE BUBBLE DOCK (bottom) ────────────────────────── */}
+      <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden animate-fade-in-up" aria-label="Page navigation">
         <div className="glass-card rounded-full flex items-center gap-1 px-2 py-2 shadow-2xl">
-          {dockItems.slice(0, 2).map((item) => (
-            <DockButton key={item.id} item={item} active={active === item.id} />
+          {pages.slice(0, 2).map((page) => (
+            <DockButton key={page.route} item={page} active={active === page.route} />
           ))}
 
-          {/* Elevated gold WhatsApp bubble */}
+          {/* Elevated blue WhatsApp bubble */}
           <a
             href={portfolioConfig.social.whatsappLink}
             target="_blank"
@@ -163,8 +119,8 @@ export default function Navbar() {
             <MessageCircle size={24} />
           </a>
 
-          {dockItems.slice(2).map((item) => (
-            <DockButton key={item.id} item={item} active={active === item.id} />
+          {pages.slice(2).map((page) => (
+            <DockButton key={page.route} item={page} active={active === page.route} />
           ))}
         </div>
       </nav>
@@ -176,12 +132,12 @@ function DockButton({
   item,
   active,
 }: {
-  item: { id: string; label: string; href: string; icon: typeof Home };
+  item: { route: string; label: string; icon: typeof Home };
   active: boolean;
 }) {
   return (
     <a
-      href={item.href}
+      href={item.route}
       aria-label={item.label}
       aria-current={active ? "true" : undefined}
       className={`relative flex flex-col items-center justify-center w-12 h-12 rounded-full transition-all ${
