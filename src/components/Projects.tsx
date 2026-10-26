@@ -15,7 +15,7 @@ import { LibraryBig, ArrowRight } from "lucide-react";
 export default function Projects() {
   return (
     <section id="projects" className="py-20 md:py-28 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/[0.02] to-transparent" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/[0.02] to-transparent" aria-hidden="true" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <SectionHeading
@@ -27,8 +27,8 @@ export default function Projects() {
 
         <ScrollReveal delay={150}>
           <div className="max-w-2xl mx-auto mt-10 text-center glass-card rounded-2xl p-8 md:p-10">
-            <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center">
-              <LibraryBig size={26} className="text-amber-400" aria-hidden="true" />
+            <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-blue-400/10 border border-blue-400/20 flex items-center justify-center">
+              <LibraryBig size={26} className="text-blue-400" aria-hidden="true" />
             </div>
             <h3 className="text-xl font-semibold text-slate-100 mb-3">Explore the full project library</h3>
             <p className="text-sm md:text-base text-slate-400 leading-relaxed mb-7">
@@ -38,7 +38,7 @@ export default function Projects() {
 
             <a
               href="#/library"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm md:text-base font-semibold text-slate-950 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-amber-400/20"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm md:text-base font-semibold text-slate-950 bg-gradient-to-r from-blue-400 to-sky-400 hover:from-blue-300 hover:to-sky-300 rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-400/20"
             >
               View Things I've Built <ArrowRight size={18} />
             </a>

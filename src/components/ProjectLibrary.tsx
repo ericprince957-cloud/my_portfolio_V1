@@ -40,11 +40,11 @@ export default function ProjectLibrary() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <a
               href="#"
-              className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-amber-300 transition-colors mb-6"
+              className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-blue-300 transition-colors mb-6"
             >
               <ArrowLeft size={16} /> Back to Portfolio
             </a>
-            <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-amber-300 border border-amber-400/30 rounded-full mb-4 bg-amber-400/5">
+            <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase text-blue-300 border border-blue-400/30 rounded-full mb-4 bg-blue-400/5">
               Project Library
             </span>
             <h1 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">Things I've Built</h1>
@@ -64,7 +64,7 @@ export default function ProjectLibrary() {
                 onClick={() => setActiveFilter(cat.value)}
                 className={`px-4 py-2 text-sm rounded-xl transition-all cursor-pointer ${
                   activeFilter === cat.value
-                    ? "bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 font-semibold shadow-lg shadow-amber-400/20"
+                    ? "bg-gradient-to-r from-blue-400 to-sky-400 text-slate-950 font-semibold shadow-lg shadow-blue-400/20"
                     : "glass-card text-slate-400 hover:text-slate-100"
                 }`}
               >
@@ -95,7 +95,7 @@ export default function ProjectLibrary() {
 function ProjectCard({ project, onViewDetails }: { project: Project; onViewDetails: () => void }) {
   const statusColors: Record<string, string> = {
     Completed: "text-green-400 bg-green-400/10 border-green-400/30",
-    "In Progress": "text-yellow-400 bg-yellow-400/10 border-yellow-400/30",
+    "In Progress": "text-sky-400 bg-sky-400/10 border-sky-400/30",
     "Deploying Soon": "text-cyan-400 bg-cyan-400/10 border-cyan-400/30",
     Planning: "text-slate-500 bg-slate-800 border-slate-700",
   };
@@ -116,7 +116,7 @@ function ProjectCard({ project, onViewDetails }: { project: Project; onViewDetai
         </div>
       </div>
       <div className="p-5">
-        <h3 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-amber-300 transition-colors">{project.title}</h3>
+        <h3 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-blue-300 transition-colors">{project.title}</h3>
         <p className="text-sm text-slate-400 leading-relaxed mb-4 line-clamp-2">{project.description}</p>
         {project.technologies.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-4">
@@ -127,7 +127,7 @@ function ProjectCard({ project, onViewDetails }: { project: Project; onViewDetai
           </div>
         )}
         <div className="flex items-center gap-2 pt-2 border-t border-white/10">
-          <button onClick={onViewDetails} className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm text-amber-300 hover:bg-amber-400/10 rounded-lg transition-colors cursor-pointer">
+          <button onClick={onViewDetails} className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm text-blue-300 hover:bg-blue-400/10 rounded-lg transition-colors cursor-pointer">
             View Details <ChevronRight size={14} />
           </button>
           {project.github && (
@@ -175,7 +175,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
               )}
               {project.solution && (
                 <div className="p-4 rounded-lg border border-slate-700 bg-slate-800/30">
-                  <h4 className="text-sm font-semibold text-amber-300 mb-2">Solution</h4>
+                  <h4 className="text-sm font-semibold text-blue-300 mb-2">Solution</h4>
                   <p className="text-sm text-slate-400">{project.solution}</p>
                 </div>
               )}
@@ -187,7 +187,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
               <ul className="space-y-2">
                 {project.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-slate-400">
-                    <span className="text-amber-300 mt-0.5">•</span>{feature}
+                    <span className="text-blue-300 mt-0.5">•</span>{feature}
                   </li>
                 ))}
               </ul>
@@ -205,12 +205,12 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
           )}
           <div className="flex flex-wrap gap-3 pt-4 border-t border-slate-700">
             {project.github && (
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 border border-slate-700 hover:border-amber-400/50 text-slate-100 rounded-lg transition-colors">
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 border border-slate-700 hover:border-blue-400/50 text-slate-100 rounded-lg transition-colors">
                 <FolderGit2 size={16} /> View Code
               </a>
             )}
             {project.live && (
-              <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-semibold rounded-lg transition-all hover:scale-[1.03]">
+              <a href={project.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-400 to-sky-400 hover:from-blue-300 hover:to-sky-300 text-slate-950 font-semibold rounded-lg transition-all hover:scale-[1.03]">
                 <ExternalLink size={16} /> Live Demo
               </a>
             )}

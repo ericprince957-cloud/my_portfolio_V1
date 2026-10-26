@@ -21,11 +21,11 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               {portfolioConfig.logo ? (
-                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400/15 to-yellow-500/10 border border-amber-400/30 shadow-[0_0_16px_rgba(251,191,36,0.15)] p-1">
+                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400/15 to-sky-500/10 border border-blue-400/30 shadow-[0_0_16px_rgba(96,165,250,0.15)] p-1">
                   <img src={portfolioConfig.logo} alt="Vector Codes logo" width={32} height={32} className="w-8 h-8 rounded-lg object-contain" />
                 </span>
               ) : (
-                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400/20 to-yellow-500/20 border border-amber-400/30 flex items-center justify-center text-amber-400 font-mono text-sm font-bold">VC</span>
+                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-400/20 to-sky-500/20 border border-blue-400/30 flex items-center justify-center text-blue-400 font-mono text-sm font-bold">VC</span>
               )}
               <div>
                 <p className="font-semibold text-slate-100">{portfolioConfig.name}</p>

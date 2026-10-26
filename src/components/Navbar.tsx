@@ -21,11 +21,10 @@ import ThemeToggle from "./ThemeToggle";
 
 const desktopLinks = [
   { label: "Home", href: "#home" },
-  { label: "Work", href: "#success-stories" },
-  { label: "Library", href: "#projects" },
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Portfolio", href: "#success-stories" },
+  { label: "Library", href: "#projects" },
+  { label: "Testimonials", href: "#reviews" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -33,7 +32,7 @@ const dockItems = [
   { id: "home", label: "Home", href: "#home", icon: Home },
   { id: "success-stories", label: "Work", href: "#success-stories", icon: Star },
   { id: "projects", label: "Library", href: "#projects", icon: FolderGit2 },
-  { id: "pricing", label: "Pricing", href: "#pricing", icon: Tag },
+  { id: "reviews", label: "Reviews", href: "#reviews", icon: Tag },
   { id: "contact", label: "Contact", href: "#contact", icon: Mail },
 ];
 
@@ -67,7 +66,7 @@ function useActiveSection() {
 function LogoMark({ size = 32 }: { size?: number }) {
   return portfolioConfig.logo ? (
     <span
-      className="flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-400/15 to-yellow-500/10 border border-amber-400/30 shadow-[0_0_18px_rgba(251,191,36,0.18)] p-1 transition-shadow hover:shadow-[0_0_26px_rgba(251,191,36,0.35)]"
+      className="flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-400/15 to-sky-500/10 border border-blue-400/30 shadow-[0_0_18px_rgba(96,165,250,0.18)] p-1 transition-shadow hover:shadow-[0_0_26px_rgba(96,165,250,0.35)]"
       aria-hidden="true"
     >
       <img
@@ -81,7 +80,7 @@ function LogoMark({ size = 32 }: { size?: number }) {
     </span>
   ) : (
     <span
-      className="flex items-center justify-center rounded-xl bg-amber-400/10 border border-amber-400/30 text-amber-400 font-mono text-sm"
+      className="flex items-center justify-center rounded-xl bg-blue-400/10 border border-blue-400/30 text-blue-400 font-mono text-sm"
       style={{ width: size + 8, height: size + 8 }}
       aria-hidden="true"
     >
@@ -104,7 +103,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex justify-center">
           <div className="pointer-events-auto w-full md:w-auto md:px-2 md:py-1.5 glass-card rounded-full flex items-center justify-between md:justify-start md:gap-6 h-14 px-4">
             {/* Logo + brand */}
-            <a href="#home" className="flex items-center gap-2.5 text-lg font-bold text-slate-100 hover:text-amber-300 transition-colors">
+            <a href="#home" className="flex items-center gap-2.5 text-lg font-bold text-slate-100 hover:text-blue-300 transition-colors">
               <LogoMark size={30} />
               <span className="hidden sm:inline">{portfolioConfig.brandName}</span>
             </a>
@@ -117,7 +116,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-3 py-1.5 text-sm rounded-full transition-colors ${
                     active === link.href.slice(1)
-                      ? "text-slate-950 bg-gradient-to-r from-amber-400 to-yellow-400 font-semibold"
+                      ? "text-slate-950 bg-gradient-to-r from-blue-400 to-sky-400 font-semibold"
                       : "text-slate-400 hover:text-slate-100 hover:bg-white/10"
                   }`}
                 >
@@ -158,7 +157,7 @@ export default function Navbar() {
             href={portfolioConfig.social.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-1 -my-4 flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 shadow-[0_8px_24px_rgba(251,191,36,0.45)] transition-transform hover:scale-110 active:scale-95"
+            className="mx-1 -my-4 flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-sky-500 text-slate-950 shadow-[0_8px_24px_rgba(96,165,250,0.45)] transition-transform hover:scale-110 active:scale-95"
             aria-label="Chat on WhatsApp (opens in a new tab)"
           >
             <MessageCircle size={24} />
@@ -187,12 +186,12 @@ function DockButton({
       aria-current={active ? "true" : undefined}
       className={`relative flex flex-col items-center justify-center w-12 h-12 rounded-full transition-all ${
         active
-          ? "bg-gradient-to-br from-amber-400/25 to-yellow-400/10 border border-amber-400/40 text-amber-300"
+          ? "bg-gradient-to-br from-blue-400/25 to-sky-400/10 border border-blue-400/40 text-blue-300"
           : "text-slate-400 hover:text-slate-100 hover:bg-white/10 border border-transparent"
       }`}
     >
       <item.icon size={20} />
-      <span className={`text-[9px] font-medium mt-0.5 ${active ? "text-amber-300" : ""}`}>{item.label}</span>
+      <span className={`text-[9px] font-medium mt-0.5 ${active ? "text-blue-300" : ""}`}>{item.label}</span>
     </a>
   );
 }
