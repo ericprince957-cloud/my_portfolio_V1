@@ -73,8 +73,15 @@ export default function Hero() {
             </h1>
 
             <p className="text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-blue-400 mb-5 uppercase animate-fade-in-up opacity-0 stagger-2">
-              Full-Stack Developer &amp; Web Designer — Vector Codes
+              Next.js &amp; React Developer — Fast, Conversion-Optimized Websites
             </p>
+
+            {/* Tech stack chips — recruiters/clients spot their keywords instantly */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-5 animate-fade-in-up opacity-0 stagger-3">
+              {["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase", "Vercel"].map((tech) => (
+                <span key={tech} className="px-2.5 py-1 text-xs text-blue-200/80 bg-blue-400/10 border border-blue-400/25 rounded-md">{tech}</span>
+              ))}
+            </div>
 
             <p className="text-slate-400 leading-relaxed max-w-lg mx-auto md:mx-0 mb-8 animate-fade-in-up opacity-0 stagger-3">
               {hero.subheadline} From concept to launch: premium, mobile-first websites that turn
@@ -96,7 +103,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 glass-card hover:bg-white/10 text-slate-100 font-semibold rounded-full transition-all hover:scale-105"
               >
-                <MessageCircle size={18} /> Contact Me
+                <MessageCircle size={18} /> Let's Talk
               </a>
             </div>
           </div>

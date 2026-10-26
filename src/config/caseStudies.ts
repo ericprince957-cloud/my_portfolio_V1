@@ -20,6 +20,8 @@ export interface CaseStudy {
   headline: string;
   problem: string;
   solution: string;
+  /** Architecture decision + why — proves engineering judgment, not just tools. */
+  architecture: string;
   results: string[]; // Real wins only — no fabrication
   techStack: string[];
   lesson: string; // "Lessons Learned" badge
@@ -38,6 +40,8 @@ export const caseStudies: CaseStudy[] = [
       "A 30-year law practice had no website and no professional email — clients couldn't verify the firm online, and inquiries relied purely on word-of-mouth.",
     solution:
       "Built a secure, mobile-first digital chambers with 1-click WhatsApp consultation booking, professional domain email (info@ugoouzoho.com.ng), and precise location mapping.",
+    architecture:
+      "Static-first build for instant loads on Nigerian mobile networks, with wa.me deep links so booking has zero friction — no forms, no login. Cloudflare handles DNS + email routing for 100% deliverability.",
     results: [
       "Secured full payment within 48 hours of launch",
       "Zero spam or deliverability issues via Cloudflare email routing",
@@ -67,6 +71,8 @@ export const caseStudies: CaseStudy[] = [
       "An Abuja auto dealership was locked into Instagram — inventory disappeared down the feed, and serious buyers had no way to book inspections.",
     solution:
       "Designed a premium 'Digital Showroom' concept with a dynamic inventory gallery, 'Book Inspection' CTAs, and a viral-ready content strategy.",
+    architecture:
+      "Mobile-first design system with fluid grids that reflow from phone to showroom display; every CTA opens native WhatsApp — the channel Nigerian car buyers already trust.",
     results: [
       "Client approved the design immediately",
       "Posted the concept on WhatsApp Status before development even began",
@@ -92,6 +98,8 @@ export const caseStudies: CaseStudy[] = [
       "The brand needed a storefront that reflected its tech positioning — fast, modern, and detailed enough to convert visitors into inquiries.",
     solution:
       "Delivered a conversion-focused, mobile-first website built exactly to the client's specifications — fast-loading and structured to turn visitors into buyers.",
+    architecture:
+      "Semantic HTML + optimized assets for fast first paint, with structured data so products surface correctly in search.",
     results: [
       "5-star Google review from the founder",
       "Client praised delivery and attention to client details",

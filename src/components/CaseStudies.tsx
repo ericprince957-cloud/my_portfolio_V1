@@ -7,6 +7,7 @@ import {
   Lightbulb,
   CheckCircle2,
   Layers,
+  Cpu,
   Sparkles,
   AlertTriangle,
   ArrowRight,
@@ -72,6 +73,13 @@ function CaseStudyCard({ study, delay }: { study: CaseStudy; delay: number }) {
               <Lightbulb size={15} /> The Solution
             </h4>
             <p className="text-sm text-slate-400 leading-relaxed">{study.solution}</p>
+          </div>
+
+          <div>
+            <h4 className="flex items-center gap-2 text-sm font-semibold text-slate-100 mb-2">
+              <Cpu size={15} /> Why This Architecture
+            </h4>
+            <p className="text-sm text-slate-400 leading-relaxed">{study.architecture}</p>
           </div>
 
           <div>

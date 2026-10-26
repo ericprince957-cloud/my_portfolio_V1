@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import AboutPage from "./pages/About";
 import ServicesPage from "./pages/Services";
 import ContactPage from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 /**
  * ============================================================
@@ -57,8 +58,10 @@ export default function App() {
           <ProjectLibrary />
         ) : route === "#/contact" ? (
           <ContactPage />
-        ) : (
+        ) : route === "#/" ? (
           <Home />
+        ) : (
+          <NotFound />
         )}
       </main>
       <Footer />

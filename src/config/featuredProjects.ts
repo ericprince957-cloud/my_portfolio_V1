@@ -33,6 +33,10 @@ export interface FeaturedProject {
   result: string;
   link: string;
   linkLabel: string;
+  /** Optional: GitHub repo URL — shows a "View Code" button on the card when set. */
+  github?: string;
+  /** Optional: 30s walkthrough video/GIF URL — TODO: add screen recordings per project. */
+  demo?: string;
 }
 
 export const featuredProjects: FeaturedProject[] = [
@@ -50,6 +54,8 @@ export const featuredProjects: FeaturedProject[] = [
     result: "Client secured full payment within 48 hours of launch.",
     link: "https://www.ugoouzoho.com.ng/",
     linkLabel: "View Live Site",
+    // TODO: set the GitHub repo URL to enable the "View Code" button
+    github: "",
   },
   {
     id: "zizi-milarge",
@@ -66,6 +72,8 @@ export const featuredProjects: FeaturedProject[] = [
       "Client approved design immediately and posted concept on WhatsApp Status before development began.",
     link: "https://zizi-milarge.vercel.app/",
     linkLabel: "View Concept",
+    // TODO: set the GitHub repo URL to enable the "View Code" button
+    github: "",
   },
   {
     id: "techlaza",
@@ -81,6 +89,8 @@ export const featuredProjects: FeaturedProject[] = [
       "Client left a 5-star Google review praising the delivery and attention to client details.",
     link: "https://techlaza.com.ng/",
     linkLabel: "View Live Site",
+    // TODO: set the GitHub repo URL to enable the "View Code" button
+    github: "",
   },
   {
     id: "cumberland-hvac",
@@ -96,6 +106,8 @@ export const featuredProjects: FeaturedProject[] = [
       "Moved the firm from word-of-mouth only to a 24/7 digital storefront that books services via WhatsApp.",
     link: "https://www.cumberlandhvac.com.ng",
     linkLabel: "View Live Site",
+    // TODO: set the GitHub repo URL to enable the "View Code" button
+    github: "",
   },
 ];
 

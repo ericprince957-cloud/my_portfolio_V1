@@ -4,7 +4,7 @@ import {
   type FeaturedProject,
 } from "../config/featuredProjects";
 import { ScrollReveal } from "./ui";
-import { ExternalLink, Quote, CheckCircle2, Star } from "lucide-react";
+import { ExternalLink, Quote, CheckCircle2, Star, Github } from "lucide-react";
 
 /**
  * ============================================================
@@ -78,15 +78,28 @@ function ProjectCard({ project, delay }: { project: FeaturedProject; delay: numb
             <span>Result: {project.result}</span>
           </p>
 
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-950 bg-gradient-to-r from-blue-400 to-sky-400 hover:from-blue-300 hover:to-sky-300 rounded-lg transition-all hover:scale-[1.03] hover:shadow-lg hover:shadow-blue-400/20"
-            aria-label={`${project.linkLabel} for ${project.client} (opens in a new tab)`}
-          >
-            {project.linkLabel} <ExternalLink size={15} />
-          </a>
+          <div className="mt-auto flex flex-wrap gap-3">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 min-w-[140px] inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-950 bg-gradient-to-r from-blue-400 to-sky-400 hover:from-blue-300 hover:to-sky-300 rounded-lg transition-all hover:scale-[1.03] hover:shadow-lg hover:shadow-blue-400/20"
+              aria-label={`${project.linkLabel} for ${project.client} (opens in a new tab)`}
+            >
+              {project.linkLabel} <ExternalLink size={15} />
+            </a>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-100 glass-card hover:bg-white/10 rounded-lg transition-all"
+                aria-label={`View source code for ${project.client} (opens in a new tab)`}
+              >
+                <Github size={15} /> View Code
+              </a>
+            )}
+          </div>
         </div>
       </article>
     </ScrollReveal>
