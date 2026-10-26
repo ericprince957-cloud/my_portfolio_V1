@@ -25,11 +25,19 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0;
   };
 
+  /**
+   * Submit = open WhatsApp with the visitor's message pre-filled.
+   * They land in the chat with everything typed out — all they
+   * need to do is press send. Falls back to a form endpoint if
+   * one is configured in the config.
+   */
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
     setStatus("loading");
+
     try {
+      // Optional: also POST to a form endpoint (Formspree, etc.) if configured
       if (contact.formEndpoint) {
         const response = await fetch(contact.formEndpoint, {
           method: "POST",
@@ -38,11 +46,27 @@ export default function Contact() {
         });
         if (!response.ok) throw new Error("Submission failed");
       }
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Build the pre-filled WhatsApp message from what they filled in
+      const waNumber = contactInfo.whatsapp.replace(/[^0-9]/g, "");
+      const lines = [
+        "Hi Vector, I saw your portfolio and I'd like to discuss a project with you.",
+        "",
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Regarding: ${formData.subject}`,
+        "",
+        formData.message,
+      ];
+      const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
+
+      // Open WhatsApp in a new tab with the message ready to send
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
       setErrors({});
-      setTimeout(() => setStatus("idle"), 5000);
+      setTimeout(() => setStatus("idle"), 8000);
     } catch {
       setStatus("error");
       setTimeout(() => setStatus("idle"), 5000);
@@ -113,11 +137,11 @@ export default function Contact() {
                 {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message}</p>}
               </div>
               <button type="submit" disabled={status === "loading"} className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-600 hover:to-indigo-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-[1.02] cursor-pointer">
-                {status === "loading" ? (<><Loader2 size={16} className="animate-spin" /> Sending...</>) : (<><Send size={16} /> Start a Conversation</>)}
+                {status === "loading" ? (<><Loader2 size={16} className="animate-spin" /> Opening WhatsApp...</>) : (<><MessageCircle size={16} /> Start a Conversation on WhatsApp</>)}
               </button>
               {status === "success" && (
                 <div className="flex items-center gap-2 p-3 rounded-lg bg-green-400/10 border border-green-400/30 text-green-400 text-sm animate-fade-in">
-                  <CheckCircle size={16} /> Message sent successfully! I'll get back to you soon.
+                  <CheckCircle size={16} /> WhatsApp opened with your message ready — just press send!
                 </div>
               )}
               {status === "error" && (
@@ -126,7 +150,7 @@ export default function Contact() {
                 </div>
               )}
               {!contact.formEndpoint && status === "idle" && (
-                <p className="text-xs text-slate-500 text-center">💡 Tip: Use the quick contact buttons on the right for instant replies.</p>
+                <p className="text-xs text-slate-500 text-center">💡 Your message opens in WhatsApp pre-typed — you just press send.</p>
               )}
             </form>
           </ScrollReveal>
