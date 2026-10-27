@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { portfolioConfig } from "../config";
 import { ScrollReveal, SectionHeading } from "./ui";
 import { MapPin, Code, Target, Rocket, TrendingUp } from "lucide-react";
@@ -10,51 +9,10 @@ const infoCards = [
   { icon: Rocket, label: "Current Direction", value: portfolioConfig.currentDirection },
 ];
 
-const journeySteps = [
-  { title: "Started With the Fundamentals", description: "HTML, CSS, basic web structure and styling.", period: "Foundation" },
-  { title: "Moved Into Programming", description: "Python, programming logic, functions, data structures and file handling.", period: "Growth" },
-  { title: "Started Building Applications", description: "APIs, JSON, CSV, modules, authentication concepts, automation and practical applications.", period: "Expansion" },
-  { title: "Working With Real Projects", description: "Web applications, GitHub repositories, payment-related integrations, APIs and deployed projects.", period: "Application" },
-  { title: "Current Direction", description: "Becoming a stronger full-stack developer by combining frontend development with Python/backend development.", period: "Now" },
-];
 
-/**
- * Animated counter component
- */
-function AnimatedCounter({ value, label }: { value: string; label: string }) {
-  const [count, setCount] = useState(0);
-  const numericValue = parseInt(value.replace(/[^0-9]/g, ""));
-  const suffix = value.replace(/[0-9]/g, "");
-
-  useEffect(() => {
-    const duration = 2000;
-    const steps = 60;
-    const increment = numericValue / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= numericValue) {
-        setCount(numericValue);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [numericValue]);
-
-  return (
-    <div className="text-center p-6 glass-card rounded-2xl hover:scale-105 transition-transform">
-      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-        {count}{suffix}
-      </div>
-      <div className="text-sm text-slate-400 mt-2">{label}</div>
-    </div>
-  );
-}
 
 export default function About() {
-  const { about, stats } = portfolioConfig;
+  const { about } = portfolioConfig;
   
   return (
     <section id="about" className="py-20 md:py-28 relative">
@@ -106,38 +64,7 @@ export default function About() {
           </ScrollReveal>
         </div>
 
-        {/* Stats Counter */}
-        <ScrollReveal delay={300}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {stats.map((stat) => (
-              <AnimatedCounter key={stat.label} value={stat.value} label={stat.label} />
-            ))}
-          </div>
-        </ScrollReveal>
-
-        {/* Developer Journey Timeline */}
-        <div className="mt-24">
-          <ScrollReveal>
-            <h3 className="text-2xl font-bold text-slate-100 text-center mb-12">Development Journey</h3>
-          </ScrollReveal>
-          <div className="relative">
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400/50 via-slate-700 to-transparent md:-translate-x-px" aria-hidden="true" />
-            <div className="space-y-8">
-              {journeySteps.map((step, i) => (
-                <ScrollReveal key={i} delay={i * 100}>
-                  <div className={`relative flex flex-col md:flex-row items-start gap-4 md:gap-8 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                    <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-cyan-400 rounded-full border-2 border-slate-900 -translate-x-1.5 mt-1.5 z-10" />
-                    <div className={`ml-10 md:ml-0 md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                      <div className="glass-card rounded-xl p-5 hover:border-cyan-400/30 transition-colors">
-                        <span className="text-xs font-medium text-cyan-400 tracking-wider uppercase">{step.period}</span>
-                        <h4 className="text-lg font-semibold text-slate-100 mt-1 mb-2">{step.title}</h4>
-                        <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
+        {/* Developer Journey + stats removed — About now focuses on bio, focus areas and approach. */}
           </div>
         </div>
       </div>
