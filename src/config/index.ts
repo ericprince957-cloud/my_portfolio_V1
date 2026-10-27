@@ -25,7 +25,9 @@ export const portfolioConfig = {
   specialty: "High-converting websites for Fashion, Logistics, and Tech brands using Glassmorphism & Mobile-First design.",
 
   // ─── PROFILE IMAGE ───────────────────────────────────────
-  profileImage: "[placeholder]",
+  // Hosted headshot (PNG). TODO: convert to WebP and self-host at /public/headshot.webp for optimal load time.
+  profileImage:
+    "https://i.supaimg.com/1de2246f-c5c0-49ee-90b4-e66f91808884/5d7d4918-d19d-4c9a-bec1-3d595c5709ac.png",
 
   // ─── BRAND LOGO ──────────────────────────────────────────
   // TODO: convert to WebP and self-host at /public/logo.webp for optimal load time.
