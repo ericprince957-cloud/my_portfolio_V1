@@ -65,8 +65,6 @@ export default function About() {
         </div>
 
         {/* Developer Journey + stats removed — About now focuses on bio, focus areas and approach. */}
-          </div>
-        </div>
       </div>
     </section>
   );
