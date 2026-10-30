@@ -1,16 +1,33 @@
-# my_portfolio_V1
-Prince Eric Portfolio
+# Vector Codes — Company Website
 
+Official website of **Vector Codes**, a Nigerian web development and digital solutions company founded by Prince Eric.
+
+Live: https://vectorcodes.vercel.app
 
 ---
 
-## 🛠️ Codebase & Performance
+## Stack
 
-This portfolio is itself a production-grade code sample:
+- Next.js 14 (App Router) + TypeScript
+- Tailwind CSS v4
+- Framer Motion (subtle animations)
+- Lucide React (icons)
+- Deployed on Vercel
 
-- **Stack:** Vite + React 18 + TypeScript + Tailwind CSS v4, zero-dependency hash router (5 pages), deployed on Vercel.
-- **Structure:** `src/config` holds ALL content (projects, case studies, copy) — components are modular; `src/pages` assembles routes; `src/components` is pure UI; `api/` holds serverless functions (Telegram channel feed).
-- **Content-edit:** update projects, testimonials, stats or links by editing the config files — no code changes needed.
-- **Web Vitals:** lazy-loaded images, async decoding, preconnected fonts with `display=swap`, CDN-cached API responses, no heavy libraries.
-- **SEO:** JSON-LD structured data (ProfessionalService + CollectionPage), Open Graph + Twitter cards, semantic HTML.
-- **Accessibility:** keyboard-navigable, focus-visible outlines, `prefers-reduced-motion` respected, ARIA labels throughout.
+## Structure
+
+- app/ — pages (Home, About, Services, Projects, Project case studies, Contact), layout, metadata, sitemap, robots
+- components/ — Navbar, Footer, Hero, ServiceCard, ProjectCard, CTASection, ContactForm, ProjectsBrowser
+- data/ — projects.ts and services.ts hold ALL content (edit these to update the site, no component changes needed)
+
+## Editing content
+
+- Add or update a project: edit data/projects.ts
+- Add or update a service: edit data/services.ts
+- Site metadata: app/layout.tsx
+
+## Contact
+
+- Email: vectorcodes15@gmail.com
+- WhatsApp: +234 708 454 7988
+- GitHub: https://github.com/ericprince957-cloud
