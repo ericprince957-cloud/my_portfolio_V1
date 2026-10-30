@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import Reveal from "@/components/Reveal";
 import { services } from "@/data/services";
 import { projects, verifiedReview } from "@/data/projects";
-import { Target, Smartphone, Gauge, LifeBuoy, Quote, Star, Search, Compass, Code2, EyeCheck, Rocket } from "lucide-react";
+import { Target, Smartphone, Gauge, LifeBuoy, Quote, Star, Search, Compass, Code2, ClipboardCheck, Rocket } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Vector Codes — Web Development Company in Nigeria",
@@ -42,7 +42,7 @@ const processSteps = [
   { icon: Search, step: "01", title: "Discovery", text: "We understand your business, audience and goals." },
   { icon: Compass, step: "02", title: "Strategy & Design", text: "We plan the website structure and user experience." },
   { icon: Code2, step: "03", title: "Development", text: "We build and test your website." },
-  { icon: EyeCheck, step: "04", title: "Review", text: "You review the website and request agreed changes." },
+  { icon: ClipboardCheck, step: "04", title: "Review", text: "You review the website and request agreed changes." },
   { icon: Rocket, step: "05", title: "Launch", text: "We deploy your website and assist with launch." },
 ];
 
