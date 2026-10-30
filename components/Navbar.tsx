@@ -25,10 +25,9 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6" aria-label="Main navigation">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-8 w-8 items-center justify-center rounded-md border border-gold/40 bg-surface">
-            <span className="font-serif text-xs font-bold text-gold">VC</span>
-          </span>
+        <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="Vector Codes logo" width="32" height="32" className="h-8 w-8" />
           <span className="text-sm font-bold tracking-[0.18em] text-white">
             VECTOR <span className="text-gold">CODES</span>
           </span>

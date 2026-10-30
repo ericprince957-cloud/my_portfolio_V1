@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#080808"/>
-  <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="13" fill="#D4AF37">VC</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="vcblue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#93C5FD" />
+      <stop offset="0.5" stop-color="#3B82F6" />
+      <stop offset="1" stop-color="#1E40AF" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="32" fill="#080808"/>
+  <path d="M17 17 L32 45" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M32 45 L47 17" fill="none" stroke="url(#vcblue)" stroke-width="6" stroke-linecap="round"/>
 </svg>
