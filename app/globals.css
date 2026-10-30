@@ -42,51 +42,93 @@ body {
   border-radius: 4px;
 }
 
+/* ── Smooth easing (shared) ──────────────────────────────── */
+/* Premium ease-out-expo feel: fast start, long gentle settle */
+:root {
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 /* ── Components ─────────────────────────────────────────── */
 
 .card {
   background-color: #141414;
   border: 1px solid rgba(255, 255, 255, 0.10);
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.35s var(--ease-smooth), transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
 }
 
 .card:hover {
   border-color: rgba(212, 175, 55, 0.45);
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.06);
 }
 
 .gold-btn {
   background-color: #D4AF37;
   color: #080808;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
 }
 
 .gold-btn:hover {
   background-color: #E5C76B;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
+}
+
+.gold-btn:active {
+  transform: translateY(0);
+  transition-duration: 0.1s;
 }
 
 .ghost-btn {
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition: border-color 0.3s var(--ease-smooth), background-color 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth);
 }
 
 .ghost-btn:hover {
   border-color: rgba(212, 175, 55, 0.6);
   background-color: rgba(212, 175, 55, 0.06);
+  transform: translateY(-1px);
+}
+
+.ghost-btn:active {
+  transform: translateY(0);
+  transition-duration: 0.1s;
+}
+
+/* Nav links — smooth color + underline glide */
+.nav-link {
+  position: relative;
+  transition: color 0.25s var(--ease-smooth);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 100%;
+  background-color: #D4AF37;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-smooth);
+}
+
+.nav-link:hover::after,
+.nav-link[data-active="true"]::after {
+  transform: scaleX(1);
 }
 
 /* ── Animations (controlled, subtle) ─────────────────────── */
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-up {
-  animation: fadeUp 0.7s ease-out both;
+  animation: fadeUp 0.8s var(--ease-smooth) both;
 }
 
 .delay-1 { animation-delay: 0.08s; }
