@@ -47,9 +47,15 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
           <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.2fr]">
             <div className="card rounded-2xl p-8 text-center">
-              <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-gold/40 bg-card font-serif text-3xl font-bold text-gold">
-                PE
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://avatars.githubusercontent.com/u/237650729?v=4"
+                alt="Prince Eric — Founder & Lead Developer of Vector Codes"
+                width={160}
+                height={160}
+                loading="lazy"
+                className="mx-auto h-24 w-24 rounded-full border border-gold/40 object-cover"
+              />
               <h2 className="mt-5 text-xl font-bold text-white">Prince Eric</h2>
               <p className="mt-1 text-sm text-gold">Founder & Lead Developer</p>
               <p className="mt-2 text-xs text-subtle">Vector Codes</p>
