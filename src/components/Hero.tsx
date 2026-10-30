@@ -1,6 +1,6 @@
 import { portfolioConfig } from "../config";
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, MessageCircle, Sofa, Building2, GraduationCap, ExternalLink, X } from "lucide-react";
+import { ArrowRight, MessageCircle, Scale, Building2, Hotel, GraduationCap, Stethoscope, Briefcase, ExternalLink, X } from "lucide-react";
 
 /**
  * ============================================================
@@ -35,9 +35,12 @@ export default function Hero() {
     return () => obs.disconnect();
   }, []);
   const niches = [
-    { icon: Sofa, label: "Furniture" },
+    { icon: Scale, label: "Law Firms" },
     { icon: Building2, label: "Real Estate" },
-    { icon: GraduationCap, label: "Education" },
+    { icon: Hotel, label: "Hotels" },
+    { icon: GraduationCap, label: "Private Schools" },
+    { icon: Stethoscope, label: "Clinics" },
+    { icon: Briefcase, label: "Established SMEs" },
   ];
 
   return (

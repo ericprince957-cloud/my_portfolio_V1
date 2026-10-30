@@ -47,9 +47,9 @@ const pricingCategories: PricingCategory[] = [
     icon: "🚀",
     services: [
       {
-        title: "One-Page Landing Site",
-        price: "₦40,000 — ₦70,000",
-        description: "A clean, fast, single-page site perfect for promoting a product, service, event, or personal brand.",
+        title: "Starter Website",
+        price: "₦30,000 — ₦50,000",
+        description: "A clean, fast, mobile-first web presence for businesses that need to look professional immediately — one to two pages that convert visitors into WhatsApp enquiries.",
         includes: [
           "Responsive design (mobile + desktop)",
           "Up to 4–6 sections",
@@ -57,14 +57,14 @@ const pricingCategories: PricingCategory[] = [
           "Basic SEO setup",
           "Delivery in 3–7 days",
         ],
-        whatsappMessage: "Hi Vector, I'm interested in the One-Page Landing Site package (₦40,000 – ₦70,000). I'd like to discuss my project.",
-        emailSubject: "Inquiry: One-Page Landing Site",
-        emailBody: "Hi Vector,\n\nI saw your pricing and I'm interested in the One-Page Landing Site package (₦40,000 – ₦70,000).\n\nHere's what I need:\n- Project type:\n- Brief description:\n- Timeline:\n\nLooking forward to your response.",
+        whatsappMessage: "Hi Vector, I'm interested in the Starter Website package (₦30,000 – ₦50,000). I'd like to discuss my project.",
+        emailSubject: "Inquiry: Starter Website",
+        emailBody: "Hi Vector,\n\nI saw your pricing and I'm interested in the Starter Website package (₦30,000 – ₦50,000).\n\nHere's what I need:\n- Project type:\n- Brief description:\n- Timeline:\n\nLooking forward to your response.",
       },
       {
-        title: "Business Site (3–5 Pages)",
+        title: "Business Website (5–7 Pages)",
         price: "₦80,000 — ₦150,000",
-        description: "A professional multi-page website for your business with Home, About, Services, and Contact pages.",
+        description: "A professional multi-page website for law firms, real estate agencies, hotels, schools and clinics — built to turn visitors into booked consultations and reservations.",
         includes: [
           "Home, About, Services, Contact pages",
           "Mobile-responsive design",
@@ -73,26 +73,26 @@ const pricingCategories: PricingCategory[] = [
           "Basic SEO setup",
           "Delivery in 1–3 weeks",
         ],
-        whatsappMessage: "Hi Vector, I'm interested in the Business Site package (₦80,000 – ₦150,000). I need a professional website for my business.",
-        emailSubject: "Inquiry: Business Site (3–5 Pages)",
-        emailBody: "Hi Vector,\n\nI saw your pricing and I'm interested in the Business Site package (₦80,000 – ₦150,000).\n\nMy business details:\n- Business name:\n- Industry:\n- Pages needed:\n- Timeline:\n\nLooking forward to your response.",
+        whatsappMessage: "Hi Vector, I'm interested in the Business Website package (₦80,000 – ₦150,000). I need a professional website for my business.",
+        emailSubject: "Inquiry: Business Website",
+        emailBody: "Hi Vector,\n\nI saw your pricing and I'm interested in the Business Website package (₦80,000 – ₦150,000).\n\nMy business details:\n- Business name:\n- Industry:\n- Pages needed:\n- Timeline:\n\nLooking forward to your response.",
         popular: true,
       },
       {
-        title: "Business Site + Features",
-        price: "₦120,000 — ₦200,000",
-        description: "A full business site with extras like a gallery, booking form, or WhatsApp order button for businesses that need more functionality.",
+        title: "Advanced Platform",
+        price: "₦200,000+",
+        description: "Multi-vendor marketplaces, booking platforms, school portals and e-commerce with Paystack — custom dashboards, admin panels and PWA functionality.",
         includes: [
-          "Everything in Business Site",
-          "Image gallery or portfolio section",
-          "Booking form or WhatsApp order button",
-          "Service pricing display",
-          "Testimonials section",
-          "Delivery in 2–4 weeks",
+          "Everything in Business Website",
+          "Multi-vendor / admin dashboards",
+          "Paystack payment integration",
+          "PWA — installable & offline-friendly",
+          "Custom features scoped to your business",
+          "Delivery in 4–8 weeks",
         ],
-        whatsappMessage: "Hi Vector, I'm interested in the Business Site + Features package (₦120,000 – ₦200,000). I need a site with extra features like a booking form or gallery.",
-        emailSubject: "Inquiry: Business Site + Features",
-        emailBody: "Hi Vector,\n\nI saw your pricing and I'm interested in the Business Site + Features package (₦120,000 – ₦200,000).\n\nFeatures I need:\n- Gallery / Booking form / Order button:\n- Business type:\n- Timeline:\n\nLooking forward to your response.",
+        whatsappMessage: "Hi Vector, I'm interested in the Advanced Platform tier (₦200,000+). I'd like to discuss a platform build for my business.",
+        emailSubject: "Inquiry: Advanced Platform",
+        emailBody: "Hi Vector,\n\nI saw your pricing and I'm interested in the Advanced Platform tier (₦200,000+).\n\nWhat I need:\n- Platform type (marketplace / portal / store):\n- Key features:\n- Timeline:\n\nLooking forward to your response.",
       },
       {
         title: "Online Store with Paystack",
@@ -267,7 +267,7 @@ export default function Pricing() {
           <SectionHeading
             badge="Pricing"
             title="Transparent Pricing"
-            description="Clear, honest pricing for small businesses, schools, and startups in Nigeria. No hidden fees. Hosting and domain paid separately at cost."
+            description="Three positioning tiers for professional clients — law firms, real estate, hotels, private schools, clinics and established SMEs. Every project is quoted bespoke based on scope. No hidden fees; hosting and domain paid separately at cost."
           />
         </ScrollReveal>
 
@@ -375,7 +375,7 @@ export default function Pricing() {
                   </li>
                   <li className="flex items-start gap-2">
                     <ArrowRight size={12} className="text-indigo-400 mt-1 flex-shrink-0" />
-                    <span>Prices are estimates for standard projects. Complex requirements may affect the final quote.</span>
+                    <span><strong className="text-slate-300">These tiers are positioning targets, not fixed market prices</strong> — your quote depends on scope, features and timeline.</span>
                   </li>
                 </ul>
               </div>

@@ -20,9 +20,9 @@ export const portfolioConfig = {
   subtitle: "Web Developer & Software Developer",
   location: "Abia State, Nigeria",
   school: "ABSU Student",
-  focus: "Real Estate, Furniture & Education",
+  focus: "Law Firms, Real Estate, Hotels, Private Schools, Medical Clinics & Established SMEs",
   currentDirection: "Full-Stack Development",
-  specialty: "High-converting websites for Nigerian SMEs in Real Estate, Furniture, and Education — mobile-first, WhatsApp-integrated, and fast on Nigerian 4G.",
+  specialty: "Premium websites and platforms for law firms, real estate companies, hotels, private schools, medical clinics and established SMEs — mobile-first, WhatsApp-integrated, and fast on Nigerian 4G.",
 
   // ─── PROFILE IMAGE ───────────────────────────────────────
   // Hosted headshot (PNG). TODO: convert to WebP and self-host at /public/headshot.webp for optimal load time.
@@ -63,7 +63,7 @@ export const portfolioConfig = {
   // ─── HERO SECTION ────────────────────────────────────────
   hero: {
     headline: "I Build High-Converting Websites for Nigerian Businesses.",
-    subheadline: "Stop losing customers to 'DM for price.' Get a mobile-first website that turns visitors into WhatsApp orders.",
+    subheadline: "Premium, mobile-first websites that turn visitors into WhatsApp bookings — built for law firms, real estate, hotels, private schools, clinics and established SMEs.",
     primaryCTA: "View My Work",
     secondaryCTA: "Chat on WhatsApp",
     secondaryCTALink: "https://wa.me/2347084547988?text=Hi%20Vector!%20I%20need%20a%20high-converting%20website%20for%20my%20business.",

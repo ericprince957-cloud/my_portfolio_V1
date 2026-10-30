@@ -1,6 +1,6 @@
 import { portfolioConfig } from "../config";
 import { ScrollReveal, SectionHeading } from "./ui";
-import { Github, Globe, Code2, Database, Layers, Target, TrendingUp, MessageSquare, Sofa, Building2, GraduationCap, Gauge, Smartphone, Zap, MapPin } from "lucide-react";
+import { Github, Globe, Code2, Database, Layers, Target, TrendingUp, MessageSquare, Scale, Building2, Hotel, GraduationCap, Smartphone, Zap, MapPin } from "lucide-react";
 
 export function GitHubSection() {
   return (
@@ -104,10 +104,10 @@ export function Experience() {
 // Services refined to highlight OUTCOMES for Nigerian SMEs
 // and professional service providers (not just features).
 const services = [
-  { icon: Sofa, title: "Furniture Showrooms", description: "Digital catalogs with WhatsApp ordering — buyers see dimensions and prices without ever typing 'DM for price'." },
-  { icon: Building2, title: "Real Estate Platforms", description: "Multi-vendor marketplaces with PWA support — agents post daily listings, buyers enquire instantly." },
-  { icon: GraduationCap, title: "School Portals", description: "Admissions sites with fee structures and event calendars that keep parents informed year-round." },
-  { icon: Gauge, title: "Speed Audits", description: "Optimizing sites to load under 2 seconds on Nigerian 4G networks — because slow sites lose customers." },
+  { icon: Scale, title: "Law Firms & Medical Clinics", description: "Trust-focused websites for professional practices — attorney and doctor profiles, consultation booking, and speed that signals credibility." },
+  { icon: Building2, title: "Real Estate Platforms", description: "Multi-vendor marketplaces with PWA support — agents post daily listings, buyers enquire via WhatsApp instantly." },
+  { icon: Hotel, title: "Hotels & Hospitality", description: "Booking-ready sites with room galleries, rates and direct WhatsApp reservations that cut OTA commissions." },
+  { icon: GraduationCap, title: "Private School Portals", description: "Admissions sites with fee structures, event calendars and staff profiles that reassure fee-paying parents." },
 ];
 
 export function Services() {
@@ -116,7 +116,7 @@ export function Services() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/[0.02] to-transparent" aria-hidden="true" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <SectionHeading badge="Services" title="Built for Your Industry" description="Websites engineered around how Nigerian customers actually buy — on their phones, through WhatsApp." />
+          <SectionHeading badge="Services" title="Built for Clients Who Mean Business" description="Websites engineered for law firms, real estate, hotels, private schools, clinics and established SMEs — markets that invest in professional digital solutions." />
         </ScrollReveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {services.map((service, i) => (
