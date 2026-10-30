@@ -38,8 +38,8 @@ export default function ProjectsBrowser() {
 
       {/* Grid */}
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {visible.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+        {visible.map((project, i) => (
+          <ProjectCard key={project.slug} project={project} index={i} />
         ))}
       </div>
 

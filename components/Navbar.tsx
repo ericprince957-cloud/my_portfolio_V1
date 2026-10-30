@@ -40,11 +40,10 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
+              data-active={isActive(link.href)}
               className={
-                "text-sm transition-colors " +
-                (isActive(link.href)
-                  ? "text-gold"
-                  : "text-subtle hover:text-white")
+                "nav-link text-sm " +
+                (isActive(link.href) ? "text-gold" : "text-subtle hover:text-white")
               }
             >
               {link.label}
