@@ -1,5 +1,6 @@
 import { portfolioConfig } from "../config";
-import { ArrowRight, MessageCircle, Sofa, Building2, GraduationCap } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { ArrowRight, MessageCircle, Sofa, Building2, GraduationCap, ExternalLink, X } from "lucide-react";
 
 /**
  * ============================================================
@@ -13,6 +14,26 @@ import { ArrowRight, MessageCircle, Sofa, Building2, GraduationCap } from "lucid
  */
 export default function Hero() {
   const { hero } = portfolioConfig;
+  const [open, setOpen] = useState(false);
+  const [inView, setInView] = useState(false);
+  const phoneRef = useRef<HTMLDivElement>(null);
+
+  // Slide the phone up from the ground when scrolled into view
+  useEffect(() => {
+    const el = phoneRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
   const niches = [
     { icon: Sofa, label: "Furniture" },
     { icon: Building2, label: "Real Estate" },
@@ -79,26 +100,35 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ── RIGHT: iPHONE 15 PRO MOCKUP — LUXE INTERIORS DEMO ── */}
+          {/* ── RIGHT: iPHONE "ON THE GROUND" → VIEW WEBSITE ──────
+              The phone rests on a ground shadow. It slides up
+              when scrolled into view (screen off). "View Website"
+              powers it on in a fullscreen overlay with the live
+              Luxe Interiors demo loaded in its browser. */}
           <div className="flex justify-center md:justify-end">
-            <div className="relative animate-float">
+            <div
+              ref={phoneRef}
+              className={`relative transition-all duration-700 ease-out ${
+                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+            >
+              {/* Glow behind */}
               <div className="absolute -inset-8 rounded-[3.5rem] bg-blue-500/15 blur-2xl" aria-hidden="true" />
 
-              {/* Titanium frame */}
+              {/* Titanium frame — screen OFF until "View Website" */}
               <div className="relative w-[270px] sm:w-[300px] rounded-[3rem] bg-[#0A2540] p-[10px] shadow-2xl shadow-blue-500/10 border border-blue-400/20">
                 {/* Dynamic Island */}
                 <div className="absolute left-1/2 top-[22px] -translate-x-1/2 w-24 h-[22px] bg-[#0A2540] rounded-full z-10 flex items-center justify-center" aria-hidden="true">
                   <span className="w-2 h-2 rounded-full bg-[#1d2f45]" />
                 </div>
 
-                {/* Screen — live Luxe Interiors demo (lazy-loaded) */}
-                <div className="rounded-[2.5rem] overflow-hidden bg-white aspect-[9/19] relative">
-                  <iframe
-                    src="https://luxeinteriors-ten.vercel.app/"
-                    title="Luxe Interiors — mobile furniture catalog demo"
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full border-0"
-                  />
+                {/* Dark screen with app preview */}
+                <div className="rounded-[2.5rem] overflow-hidden aspect-[9/19] relative bg-gradient-to-b from-[#0d1526] to-[#05080f] flex flex-col items-center justify-center gap-3 border border-white/5">
+                  <span className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/30 to-sky-400/20 border border-blue-400/30 flex items-center justify-center">
+                    <span className="font-display text-2xl font-bold text-blue-300">LI</span>
+                  </span>
+                  <p className="font-display text-lg font-semibold text-slate-200">Luxe Interiors</p>
+                  <p className="text-[11px] text-slate-500 tracking-wide uppercase">Furniture Catalog Demo</p>
                 </div>
 
                 {/* Side buttons */}
@@ -106,13 +136,73 @@ export default function Hero() {
                 <div className="absolute -left-[2px] top-40 w-[3px] h-16 bg-[#0A2540] rounded-full" aria-hidden="true" />
               </div>
 
-              <p className="text-center text-xs text-slate-500 mt-4 tracking-wide">
-                Luxe Interiors — live furniture catalog demo
-              </p>
+              {/* GROUND — shadow the phone stands on */}
+              <div className="mx-auto mt-5 w-3/4 h-5 rounded-[100%] bg-black/60 blur-md" aria-hidden="true" />
+              <div className="mx-auto mt-1 w-2/3 h-3 rounded-[100%] bg-blue-500/15 blur-sm" aria-hidden="true" />
+
+              {/* View Website option */}
+              <div className="text-center mt-5">
+                <button
+                  type="button"
+                  onClick={() => setOpen(true)}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-400 hover:to-sky-400 text-white text-sm font-semibold rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30"
+                >
+                  View Website <ExternalLink size={15} />
+                </button>
+                <p className="text-xs text-slate-500 mt-2">Opens the live demo inside the phone</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* ── PHONE OVERLAY — powered on, live browser ──────────── */}
+      {open && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Luxe Interiors live demo"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="relative animate-fade-in-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="absolute -top-3 -right-3 z-20 w-10 h-10 rounded-full bg-slate-900 border border-white/20 text-slate-200 flex items-center justify-center hover:bg-red-500/80 hover:border-red-400/50 transition-colors"
+              aria-label="Close demo"
+            >
+              <X size={18} />
+            </button>
+
+            {/* Titanium frame */}
+            <div className="relative w-[300px] sm:w-[330px] rounded-[3rem] bg-[#0A2540] p-[10px] shadow-2xl shadow-blue-500/20 border border-blue-400/25">
+              {/* Dynamic Island */}
+              <div className="absolute left-1/2 top-[20px] -translate-x-1/2 w-24 h-[20px] bg-[#0A2540] rounded-full z-10 flex items-center justify-center" aria-hidden="true">
+                <span className="w-2 h-2 rounded-full bg-[#1d2f45]" />
+              </div>
+
+              {/* Browser screen — loads only when opened */}
+              <div className="rounded-[2.5rem] overflow-hidden bg-white h-[75vh] relative">
+                <iframe
+                  src="https://luxeinteriors-ten.vercel.app/"
+                  title="Luxe Interiors — live furniture catalog demo"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
+            </div>
+
+            <p className="text-center text-xs text-slate-400 mt-4">
+              Live demo — tap and browse it like a real phone
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
