@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Closing CTA */}
       <section className="py-20 md:py-28 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#C5A065]/[0.04] to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/[0.03] to-transparent" aria-hidden="true" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4 font-display">
             Ready to stop losing customers to "DM for price"?
