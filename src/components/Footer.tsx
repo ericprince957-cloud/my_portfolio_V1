@@ -1,5 +1,5 @@
 import { portfolioConfig } from "../config";
-import { Github, Heart, MessageCircle, Send, Mail, Twitter, Linkedin } from "lucide-react";
+import { Github, MessageCircle, Send, Mail, Twitter, Linkedin } from "lucide-react";
 
 const footerLinks = [
   { label: "Home", href: "#/" },
@@ -30,7 +30,7 @@ export default function Footer() {
                 <p className="text-xs text-slate-500">{portfolioConfig.brandName}</p>
               </div>
             </div>
-            <p className="text-sm text-slate-400 mt-3 max-w-xs">Building premium digital experiences for Nigerian businesses. High-speed, mobile-first websites that convert.</p>
+            <p className="text-sm text-slate-400 mt-3 max-w-xs">High-converting, mobile-first websites for Nigerian SMEs in Real Estate, Furniture & Education. WhatsApp-integrated and fast on 4G.</p>
           </div>
           <div>
             <h3 className="text-sm font-semibold text-slate-100 mb-4">Navigation</h3>
@@ -77,8 +77,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500">© 2026 {portfolioConfig.brandName}. Built with <Heart size={10} className="text-cyan-400 inline" /> & ☕.</p>
-          <p className="text-xs text-slate-500">All rights reserved.</p>
+          <p className="text-xs text-slate-500">© 2024 Vector Codes. Founded by Prince Eric.</p>
+          <p className="text-xs text-slate-500">Abia State, Nigeria 🇳🇬</p>
         </div>
       </div>
     </footer>

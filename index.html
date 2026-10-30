@@ -1,45 +1,33 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
   <head>
-    <script>
-      // Load theme before render to prevent flash
-      (function() {
-        const theme = localStorage.getItem('theme');
-        if (theme === 'light') {
-          document.documentElement.classList.remove('dark');
-          document.documentElement.classList.add('light');
-        }
-      })();
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vector Codes | Expert Web Developer in Abia State</title>
-    <meta name="description" content="Looking for a top web developer in Abia? Vector Codes builds fast, mobile-friendly websites, e-commerce stores, and custom software for businesses in Aba & Umuahia." />
+    <title>Vector Codes | Premium Web Dev for Nigerian SMEs</title>
+    <meta name="description" content="Vector Codes builds high-converting, mobile-first websites for Nigerian businesses in Real Estate, Furniture & Education. WhatsApp-integrated, Paystack-ready, fast on 4G." />
     <meta name="author" content="Vector Codes (Uche Prince Eric)" />
-    
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Vector Codes | Premium Web Developer" />
-    <meta property="og:description" content="Building premium digital experiences for Nigerian businesses. High-converting websites for Fashion, Logistics & Tech brands." />
+    <meta property="og:title" content="Vector Codes | Premium Web Dev for Nigerian SMEs" />
+    <meta property="og:description" content="Stop losing customers to 'DM for price.' Get a mobile-first website that turns visitors into WhatsApp orders." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vectorcodes.dev" />
-    
+    <meta property="og:url" content="https://vectorcodes.vercel.app" />
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vector Codes | Premium Web Developer" />
-    <meta name="twitter:description" content="Building premium digital experiences for Nigerian businesses. High-converting websites for Fashion, Logistics & Tech brands." />
-    
-    <!-- Favicon SVG -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0f'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='14' fill='%236366f1'%3EVC%3C/text%3E%3C/svg%3E" />
-    
-    <!-- Fonts -->
+    <meta name="twitter:title" content="Vector Codes | Premium Web Dev for Nigerian SMEs" />
+    <meta name="twitter:description" content="High-converting websites for Real Estate, Furniture & Education businesses in Nigeria." />
+
+    <!-- Favicon SVG (navy + gold) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A2540'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia, serif' font-weight='bold' font-size='14' fill='%23C5A065'%3EVC%3C/text%3E%3C/svg%3E" />
+
+    <!-- Fonts: Playfair Display (headings) + Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    
+
     <!-- ============================================================
-         STRUCTURED DATA — Portfolio + Professional Service
-         Boosts SEO / rich results. Update the URLs and names
-         if the live domain changes.
+         STRUCTURED DATA — ProfessionalService + Portfolio
          ============================================================ -->
     <script type="application/ld+json">
     {
@@ -47,11 +35,11 @@
       "@graph": [
         {
           "@type": "ProfessionalService",
-          "@id": "https://vectorcodes.dev/#business",
+          "@id": "https://vectorcodes.vercel.app/#business",
           "name": "Vector Codes",
           "alternateName": "Vector Codes (Uche Prince Eric)",
-          "description": "Web development, digital strategy and professional email solutions for Nigerian SMEs and professional service providers.",
-          "url": "https://vectorcodes.dev",
+          "description": "High-converting, mobile-first websites for Nigerian SMEs in Real Estate, Furniture and Education. WhatsApp-integrated and optimized for Nigerian 4G networks.",
+          "url": "https://vectorcodes.vercel.app",
           "email": "vectorcodes15@gmail.com",
           "telephone": "+2347084547988",
           "areaServed": { "@type": "Country", "name": "Nigeria" },
@@ -69,52 +57,45 @@
             "@type": "OfferCatalog",
             "name": "Services",
             "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development", "description": "Fast, secure websites that convert visitors into WhatsApp inquiries." } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Strategy", "description": "Helping Nigerian businesses move from social media chaos to professional digital assets." } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email Solutions", "description": "Professional domain emails that build instant trust with clients." } }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Furniture Showrooms", "description": "Digital catalogs with WhatsApp ordering." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Real Estate Platforms", "description": "Multi-vendor marketplaces with PWA support." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "School Portals", "description": "Admissions sites with fee structures and event calendars." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Speed Audits", "description": "Optimizing sites to load under 2s on Nigerian 4G networks." } }
             ]
           }
         },
         {
           "@type": "CollectionPage",
-          "@id": "https://vectorcodes.dev/#portfolio",
-          "name": "Vector Codes Portfolio — Recent Success Stories",
-          "url": "https://vectorcodes.dev/#success-stories",
-          "about": { "@id": "https://vectorcodes.dev/#business" },
+          "@id": "https://vectorcodes.vercel.app/#portfolio",
+          "name": "Vector Codes — Featured Projects",
+          "url": "https://vectorcodes.vercel.app/#success-stories",
+          "about": { "@id": "https://vectorcodes.vercel.app/#business" },
           "mainEntity": {
             "@type": "ItemList",
             "itemListElement": [
               {
                 "@type": "CreativeWork",
                 "position": 1,
-                "name": "Premium Legal Website for Port Harcourt Firm",
-                "description": "Secure, mobile-first digital chblues for Ugoo Uzoho & Company with professional email, WhatsApp consultation booking and location mapping. Client secured full payment within 48 hours of launch.",
-                "url": "https://www.ugoouzoho.com.ng/",
-                "creator": { "@id": "https://vectorcodes.dev/#business" }
+                "name": "SafeKey Estates — Real Estate Marketplace",
+                "description": "Custom WordPress marketplace where agents post daily listings with direct WhatsApp integration and Paystack payments, bypassing hosting limits for 20MB video uploads.",
+                "url": "https://safekeypro.com.ng",
+                "creator": { "@id": "https://vectorcodes.vercel.app/#business" }
               },
               {
                 "@type": "CreativeWork",
                 "position": 2,
-                "name": "Digital Showroom Concept for Abuja Auto Dealer",
-                "description": "Premium digital showroom concept for Zizi Milarge with dynamic inventory gallery, 'Book Inspection' CTAs and WhatsApp lead generation.",
-                "url": "https://zizi-milarge.vercel.app/",
-                "creator": { "@id": "https://vectorcodes.dev/#business" }
+                "name": "Luxe Interiors — Furniture Catalog",
+                "description": "Mobile-first showroom for upholstery brands with dimension badges, price visibility, and automated WhatsApp ordering to reduce DM fatigue.",
+                "url": "https://luxeinteriors-ten.vercel.app",
+                "creator": { "@id": "https://vectorcodes.vercel.app/#business" }
               },
               {
                 "@type": "CreativeWork",
                 "position": 3,
-                "name": "Conversion-Focused Website for Nigerian Tech Brand",
-                "description": "Modern, mobile-first storefront for Techlaza built exactly to the client's specifications. Client left a 5-star Google review praising the delivery.",
-                "url": "https://techlaza.com.ng/",
-                "creator": { "@id": "https://vectorcodes.dev/#business" }
-              },
-              {
-                "@type": "CreativeWork",
-                "position": 4,
-                "name": "Service Booking Website for Delta State HVAC Company",
-                "description": "Professional digital presence for Cumberland Tech (Nig.) — industrial & domestic AC services in Effurun, Warri — with service catalog, WhatsApp quote booking and Delta State coverage areas.",
-                "url": "https://www.cumberlandhvac.com.ng",
-                "creator": { "@id": "https://vectorcodes.dev/#business" }
+                "name": "Ugoo Uzoho & Co. — Legal Portfolio",
+                "description": "Professional law firm website optimized for speed and trust, with attorney profiles and consultation booking.",
+                "url": "https://www.ugoouzoho.com.ng/",
+                "creator": { "@id": "https://vectorcodes.vercel.app/#business" }
               }
             ]
           }
@@ -122,10 +103,10 @@
       ]
     }
     </script>
-    
+
     <style>
       html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; }
-      html { background-color: #0a0a0f; color: #f0f0f5; }
+      html { background-color: #f7f8fa; color: #0A2540; }
       /* Prevent FOUC */
       #root { min-height: 100vh; }
     </style>

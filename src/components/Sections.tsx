@@ -1,6 +1,6 @@
 import { portfolioConfig } from "../config";
 import { ScrollReveal, SectionHeading } from "./ui";
-import { Github, Globe, Code2, Database, Layers, Wrench, Lightbulb, MessageSquare, BookOpen, Target, TrendingUp, CheckCircle } from "lucide-react";
+import { Github, Globe, Code2, Database, Layers, Target, TrendingUp, MessageSquare, Sofa, Building2, GraduationCap, Gauge, Smartphone, Zap, MapPin } from "lucide-react";
 
 export function GitHubSection() {
   return (
@@ -104,12 +104,10 @@ export function Experience() {
 // Services refined to highlight OUTCOMES for Nigerian SMEs
 // and professional service providers (not just features).
 const services = [
-  { icon: Globe, title: "Web Development", description: "Building fast, secure websites that convert visitors into WhatsApp inquiries." },
-  { icon: Lightbulb, title: "Digital Strategy", description: "Helping Nigerian businesses move from social media chaos to professional digital assets." },
-  { icon: MessageSquare, title: "Email Solutions", description: "Setting up professional domain emails that build instant trust with clients." },
-  { icon: Layers, title: "E-commerce Development", description: "Secure online stores built to help Abia merchants sell products smoothly." },
-  { icon: Database, title: "Digital Branding & Strategy", description: "Full-scale digital identities that make your business stand out online." },
-  { icon: Wrench, title: "Website Improvements", description: "Fixing layout problems, responsiveness issues, broken components and frontend functionality." },
+  { icon: Sofa, title: "Furniture Showrooms", description: "Digital catalogs with WhatsApp ordering — buyers see dimensions and prices without ever typing 'DM for price'." },
+  { icon: Building2, title: "Real Estate Platforms", description: "Multi-vendor marketplaces with PWA support — agents post daily listings, buyers enquire instantly." },
+  { icon: GraduationCap, title: "School Portals", description: "Admissions sites with fee structures and event calendars that keep parents informed year-round." },
+  { icon: Gauge, title: "Speed Audits", description: "Optimizing sites to load under 2 seconds on Nigerian 4G networks — because slow sites lose customers." },
 ];
 
 export function Services() {
@@ -118,9 +116,9 @@ export function Services() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/[0.02] to-transparent" aria-hidden="true" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <SectionHeading badge="Services" title="Our Web Development Services in Abia" description="Professional web development services for businesses in Aba, Umuahia, and across Abia State." />
+          <SectionHeading badge="Services" title="Built for Your Industry" description="Websites engineered around how Nigerian customers actually buy — on their phones, through WhatsApp." />
         </ScrollReveal>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 80}>
               <div className="glass-card rounded-2xl p-6 h-full group hover:scale-[1.02] transition-all">
@@ -139,11 +137,10 @@ export function Services() {
 }
 
 const whyWorkWithMe = [
-  { icon: Code2, title: "I Build", description: "I prefer learning through actual projects rather than only tutorials." },
-  { icon: TrendingUp, title: "I Keep Improving", description: "Projects are treated as opportunities to identify weaknesses and improve." },
-  { icon: CheckCircle, title: "I Care About Functionality", description: "A website should not only look good; its features should work." },
-  { icon: BookOpen, title: "I Learn the Fundamentals", description: "I aim to understand the technology instead of depending entirely on AI-generated code." },
-  { icon: MessageSquare, title: "I Communicate Clearly", description: "Project requirements, progress and limitations should be communicated directly." },
+  { icon: Smartphone, title: "Mobile-First", description: "Designed for the 90% of Nigerians browsing on phones — your site is built for the device your customers actually use." },
+  { icon: MessageSquare, title: "WhatsApp Integrated", description: "Every site turns traffic into direct messages — orders and enquiries land in your WhatsApp, not a form inbox." },
+  { icon: Zap, title: "Fast Delivery", description: "Custom demos ready in 3 days, so you can see your website before you fully commit." },
+  { icon: MapPin, title: "Local Expertise", description: "Built for Nigerian payment gateways (Paystack) and how Nigerian customers actually browse and buy." },
 ];
 
 export function WhyWorkWithMe() {
@@ -151,9 +148,9 @@ export function WhyWorkWithMe() {
     <section className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <SectionHeading badge="Working Style" title="Why Work With Me" description="How I approach development and collaboration." />
+          <SectionHeading badge="Why Vector Codes" title="Why Vector Codes?" description="What you get that page builders and template freelancers don't deliver." />
         </ScrollReveal>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {whyWorkWithMe.map((item, i) => (
             <ScrollReveal key={item.title} delay={i * 80}>
               <div className="glass-card rounded-2xl p-5 h-full hover:scale-[1.02] transition-all">

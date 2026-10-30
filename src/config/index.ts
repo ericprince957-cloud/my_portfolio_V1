@@ -20,9 +20,9 @@ export const portfolioConfig = {
   subtitle: "Web Developer & Software Developer",
   location: "Abia State, Nigeria",
   school: "ABSU Student",
-  focus: "Fashion, Logistics & Tech Brands",
+  focus: "Real Estate, Furniture & Education",
   currentDirection: "Full-Stack Development",
-  specialty: "High-converting websites for Fashion, Logistics, and Tech brands using Glassmorphism & Mobile-First design.",
+  specialty: "High-converting websites for Nigerian SMEs in Real Estate, Furniture, and Education — mobile-first, WhatsApp-integrated, and fast on Nigerian 4G.",
 
   // ─── PROFILE IMAGE ───────────────────────────────────────
   // Hosted headshot (PNG). TODO: convert to WebP and self-host at /public/headshot.webp for optimal load time.
@@ -62,11 +62,11 @@ export const portfolioConfig = {
 
   // ─── HERO SECTION ────────────────────────────────────────
   hero: {
-    headline: "Building Premium Digital Experiences for Nigerian Businesses.",
-    subheadline: "Trusted by 5+ happy clients. I help Fashion, Logistics & Tech brands scale with high-speed, mobile-first websites.",
+    headline: "I Build High-Converting Websites for Nigerian Businesses.",
+    subheadline: "Stop losing customers to 'DM for price.' Get a mobile-first website that turns visitors into WhatsApp orders.",
     primaryCTA: "View My Work",
-    secondaryCTA: "Contact on WhatsApp",
-    secondaryCTALink: "https://wa.me/2347084547988",
+    secondaryCTA: "Chat on WhatsApp",
+    secondaryCTALink: "https://wa.me/2347084547988?text=Hi%20Vector!%20I%20need%20a%20high-converting%20website%20for%20my%20business.",
   },
 
   // ─── ABOUT SECTION ───────────────────────────────────────
