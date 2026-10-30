@@ -4,6 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import ProjectCard from "@/components/ProjectCard";
 import CTASection from "@/components/CTASection";
+import Reveal from "@/components/Reveal";
 import { services } from "@/data/services";
 import { projects, verifiedReview } from "@/data/projects";
 import { Target, Smartphone, Gauge, LifeBuoy, Quote, Star, Search, Compass, Code2, EyeCheck, Rocket } from "lucide-react";
@@ -120,8 +121,8 @@ export default function HomePage() {
             description="From business websites to custom platforms — solutions designed to establish credibility and support how your business actually operates."
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+            {services.map((service, i) => (
+              <ServiceCard key={service.slug} service={service} index={i} />
             ))}
           </div>
         </div>
@@ -136,8 +137,8 @@ export default function HomePage() {
             description="Client projects, internal products and platforms in development — presented honestly, with real links to real websites."
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {projects.slice(0, 6).map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+            {projects.slice(0, 6).map((project, i) => (
+              <ProjectCard key={project.slug} project={project} index={i} />
             ))}
           </div>
         </div>
@@ -148,14 +149,16 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
           <SectionHeading title="Why Businesses Choose Vector Codes" />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {whyBlocks.map((block) => (
-              <div key={block.title} className="card rounded-xl p-6">
+            {whyBlocks.map((block, i) => (
+              <Reveal key={block.title} className="h-full" delay={Math.min(i * 0.06, 0.3)}>
+              <div className="card h-full rounded-xl p-6">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-gold/30 bg-gold/5 text-gold">
                   <block.icon size={18} />
                 </span>
                 <h3 className="mt-4 text-base font-semibold text-white">{block.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-subtle">{block.text}</p>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -166,8 +169,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
           <SectionHeading title="A Clear Process. Better Results." />
           <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {processSteps.map((step) => (
-              <li key={step.step} className="card rounded-xl p-6">
+            {processSteps.map((step, i) => (
+              <Reveal key={step.step} className="h-full" delay={Math.min(i * 0.08, 0.4)}>
+              <li className="card h-full rounded-xl p-6">
                 <span className="flex items-center justify-between">
                   <step.icon size={18} className="text-gold" aria-hidden="true" />
                   <span className="font-serif text-lg font-bold text-gold/40">{step.step}</span>
@@ -175,6 +179,7 @@ export default function HomePage() {
                 <h3 className="mt-3 text-sm font-semibold text-white">{step.title}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-subtle">{step.text}</p>
               </li>
+              </Reveal>
             ))}
           </ol>
         </div>
