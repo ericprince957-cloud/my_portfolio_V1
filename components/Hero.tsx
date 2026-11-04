@@ -122,7 +122,7 @@ export default function Hero() {
           {/* Mockup composition */}
           <div className="fade-up delay-2 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3" aria-label="Examples of websites we build: law firm, automobile dealership and e-commerce interfaces">
             <BrowserMock label="Law Firm Website" variant="law" />
-            <BrowserMock label="Automobile Dealership" variant="auto" />
+            <BrowserMock label="Property Verification Platform" variant="auto" />
             <BrowserMock label="E-Commerce Website" variant="shop" />
           </div>
         </div>
