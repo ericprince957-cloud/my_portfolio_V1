@@ -45,6 +45,29 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "safekey-pro",
+    name: "SafeKey Pro",
+    industry: "Real Estate",
+    type: "Property Verification Platform",
+    category: "Client Project",
+    description:
+      "Nigeria's trusted property verification platform — a custom WordPress ecosystem with secure agent portals, multi-stage verification workflows and fraud prevention, built mobile-first for local networks.",
+    tech: ["WordPress (Custom Theme)", "PHP", "ACF", "REST API", "Vanilla JS", "Vercel"],
+    featured: true,
+    caseStudy: {
+      overview:
+        "SafeKey Pro is a property verification platform for the Nigerian real estate market, delivered for Techlaza in the role of Lead Developer & Technical Consultant. More than a listing site, it is trust infrastructure: every property passes through a structured verification workflow before it goes live.",
+      problem:
+        "The client needed more than a listing site — they needed a trust infrastructure for Nigerian real estate. Generic themes could not handle complex verification workflows, secure agent portals, or fraud prevention. The platform also required a mobile-first experience optimised for local networks and WhatsApp-centric user behaviour.",
+      solution:
+        "A custom WordPress ecosystem engineered from scratch: a unique Navy Blue & Emerald Green brand identity with a custom design system (1,080+ lines of hand-written CSS — no generic templates); a secure agent portal with role-based authentication so agents can submit properties without accessing sensitive admin areas; custom post types with approval states (Pending → Under Review → Verified → Live) to prevent fraudulent listings; a lightweight frontend loading in under 3 seconds on 3G with integrated WhatsApp ordering and Google Maps; and custom PHP helpers for Naira formatting, move-in cost calculators and dynamic verification badges.",
+      process:
+        "Engineered as a complete custom stack: custom WordPress theme development, ACF-driven content architecture, role-based authentication, REST API integration, vanilla JS interactions optimised for low-bandwidth mobile networks, and deployment to Vercel.",
+      result:
+        "Client trust earned: a fully functional, secure platform that exceeded expectations. The client awarded two additional projects — a multi-vendor e-commerce platform and a delivery logistics platform — based on this delivery. The architecture is designed to scale toward Paystack integration, vendor dashboards and automated payouts. As the client put it: \"When you deliver this well, we have more projects.\" — Samuel Chukwuemeka, Founder, Techlaza.",
+    },
+  },
+  {
     slug: "ugoo-uzoho",
     name: "Ugoo Uzoho & Company",
     industry: "Legal Services",

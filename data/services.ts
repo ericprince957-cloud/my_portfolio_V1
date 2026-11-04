@@ -5,6 +5,7 @@ import {
   LayoutDashboard,
   RefreshCw,
   Wrench,
+  Layers,
   type LucideIcon,
 } from "lucide-react";
 
@@ -30,6 +31,34 @@ export interface Service {
 }
 
 export const services: Service[] = [
+  {
+    slug: "platform-development",
+    title: "Platform Development",
+    short: "Scalable digital platforms — multi-vendor systems, custom dashboards and API integrations for ambitious Nigerian businesses.",
+    description:
+      "Beyond websites: we build scalable digital platforms that power real businesses — multi-vendor marketplaces, delivery and logistics systems, verification platforms, customer portals and API integrations. Platform projects are typically scoped from ₦150,000 to ₦500,000+ depending on complexity, with a detailed quote agreed before work begins.",
+    problems: [
+      "Your business has outgrown a basic website — you need software that runs operations.",
+      "You need multi-user systems: vendors, agents, staff or customers each with their own access.",
+      "Manual processes (orders, verification, payouts) are limiting your growth.",
+    ],
+    who: "Ambitious Nigerian businesses ready to invest in a platform that becomes core infrastructure — like SafeKey Pro, our property verification platform with secure agent portals and verification workflows.",
+    features: [
+      "Multi-vendor and multi-role systems",
+      "Secure, role-based authentication",
+      "Custom workflows and approval states",
+      "API integrations (Paystack, logistics, maps)",
+      "Vendor dashboards and automated payouts",
+      "Scalable architecture for future features",
+    ],
+    deliverables: [
+      "A fully functional digital platform",
+      "Agreed roles, workflows and integrations",
+      "Admin documentation and handover",
+      "Deployment and post-launch support",
+    ],
+    icon: Layers,
+  },
   {
     slug: "business-websites",
     title: "Business Website Development",
