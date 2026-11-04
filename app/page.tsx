@@ -68,7 +68,22 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <Hero />
+<Hero />
+
+      {/* ── SOCIAL PROOF (above the fold) ───────────────────── */}
+      <section className="border-b border-line bg-surface" aria-label="What clients say">
+        <div className="mx-auto max-w-4xl px-4 py-12 text-center sm:px-6 md:py-16">
+          <p className="text-base italic leading-relaxed text-white md:text-lg">
+            &ldquo;When you deliver this well, we have more projects.&rdquo;
+          </p>
+          <p className="mt-3 text-xs text-subtle">
+            Samuel Chukwuemeka — Founder, Techlaza (SafeKey Pro client)
+          </p>
+          <p className="mt-6 text-[11px] font-medium tracking-[0.18em] text-subtle uppercase">
+            Real work for real businesses — Techlaza &middot; SafeKey Pro &middot; Ugoo Uzoho &amp; Co.
+          </p>
+        </div>
+      </section>
 
       {/* ── TRUST / CREDIBILITY ─────────────────────────────── */}
       <section className="border-b border-line bg-surface" aria-labelledby="trust-heading">

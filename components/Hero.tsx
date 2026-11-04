@@ -104,12 +104,14 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
-              <Link
-                href="/contact"
+              <a
+                href="https://wa.me/2347084547988?text=Hi%20Prince%2C%20I'd%20like%20a%20free%2015-minute%20platform%20audit.%20(via%20homepage%20hero)"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="gold-btn inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
               >
-                Start a Project <ArrowRight size={16} />
-              </Link>
+                Free 15-Min Platform Audit <ArrowRight size={16} />
+              </a>
               <Link
                 href="/projects"
                 className="ghost-btn inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
