@@ -65,7 +65,7 @@ export default function AboutPage() {
                 align="left"
                 badge="Founder"
                 title="A student-founder building for real businesses."
-                description="Prince Eric is a student-founder and developer building digital products, business websites and technology solutions. He leads development at Vector Codes — designing, building and shipping every project with attention to performance, usability and the client's actual business needs."
+                description="Prince Eric is the founder of Vector Codes, specialising in custom web platforms that solve real business problems. He recently partnered with Techlaza to build SafeKey Pro — a property verification platform — and is leading the development of the upcoming multi-vendor marketplace and delivery logistics platform that followed."
               />
               <div className="mt-8">
                 <p className="text-xs font-semibold tracking-[0.18em] text-subtle uppercase">Technologies he works with</p>

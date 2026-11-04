@@ -13,8 +13,8 @@ import {
  * ============================================================
  * SERVICE DATA — VECTOR CODES
  * ============================================================
- * No fixed prices are published here by design. Quotes are
- * handled per project via the contact form or WhatsApp.
+ * Platform-tier price ranges may be shown; final quotes are
+ * always agreed per project via the contact form or WhatsApp.
  * ============================================================
  */
 

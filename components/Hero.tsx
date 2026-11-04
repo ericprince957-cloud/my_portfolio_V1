@@ -92,15 +92,15 @@ export default function Hero() {
             </span>
 
             <h1 className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl">
-              Building Digital Experiences.
+              We Build Scalable Digital Platforms.
               <br />
-              <span className="text-gold">Designed for Business Growth.</span>
+              <span className="text-gold">for Nigerian Businesses.</span>
             </h1>
 
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-subtle lg:mx-0">
-              We design and develop modern websites, e-commerce platforms and custom digital
-              solutions that help businesses establish credibility, reach more customers and
-              operate more effectively.
+              From business websites to multi-vendor platforms and verification systems — we design
+              and develop digital infrastructure that helps Nigerian businesses establish
+              credibility, operate better and grow.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">

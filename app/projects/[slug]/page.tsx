@@ -98,6 +98,27 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 </p>
               </div>
             )}
+
+            {/* Conversion CTA */}
+            <div className="card rounded-xl p-8 text-center">
+              <h2 className="text-xl font-bold text-white">
+                Want a platform that scales your business?
+              </h2>
+              <p className="mt-2 text-sm text-subtle">Let&rsquo;s build it together.</p>
+              <a
+                href={
+                  "https://wa.me/2347084547988?text=" +
+                  encodeURIComponent(
+                    "Hi Prince, I saw your " + project.name + " case study. I'd like to discuss a project."
+                  )
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gold-btn mt-6 inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-semibold"
+              >
+                Start the Conversation
+              </a>
+            </div>
           </div>
         ) : (
           <div>
