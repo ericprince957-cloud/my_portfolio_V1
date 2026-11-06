@@ -48,6 +48,7 @@ const processSteps = [
 
 export default function HomePage() {
   const clientCount = projects.filter((p) => p.category === "Client Project").length;
+  const products = projects.filter((p) => p.category !== "Client Project");
   const liveCount = projects.filter((p) => p.liveUrl).length;
 
   const jsonLd = {
@@ -156,6 +157,35 @@ export default function HomePage() {
               <ProjectCard key={project.slug} project={project} index={i} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── PRODUCTS & EXPERIMENTS ───────────────────────────── */}
+      <section className="border-b border-line" aria-labelledby="experiments-heading">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
+          <SectionHeading
+            badge="Building in Public"
+            title="Products & Experiments"
+            description="Client projects pay the bills — but a company should also build things of its own. These are the products and experiments we are developing, labelled honestly: internal products that are live, and products still in development."
+          />
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {products.map((project, i) => (
+              <ProjectCard key={project.slug} project={project} index={i} />
+            ))}
+          </div>
+
+          {/* VectorVault mission */}
+          <Reveal>
+            <figure className="card mx-auto mt-10 max-w-3xl rounded-xl p-8 text-center">
+              <p className="text-xs font-medium tracking-[0.2em] text-gold uppercase">Our Product Mission</p>
+              <blockquote className="mt-4 text-lg italic leading-relaxed text-white md:text-xl">
+                &ldquo;To build a simple, accessible code hosting and collaboration platform that serves the next generation of African developers.&rdquo;
+              </blockquote>
+              <figcaption className="mt-4 text-xs text-subtle">
+                Prince Eric — Founder, Vector Codes
+              </figcaption>
+            </figure>
+          </Reveal>
         </div>
       </section>
 

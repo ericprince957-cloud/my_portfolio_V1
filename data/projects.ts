@@ -142,12 +142,22 @@ export const projects: Project[] = [
     slug: "vectorvault",
     name: "VectorVault",
     industry: "Developer Tools",
-    type: "Code Hosting Platform",
+    type: "Code Hosting & Collaboration Platform",
     category: "In Development",
     description:
-      "A code hosting platform in active development — designed to give Nigerian developers a fast, reliable place to host and share their work.",
+      "Our in-house product in active development: a simple, accessible code hosting and collaboration platform built to serve the next generation of African developers.",
     tech: [],
     repoUrl: "https://github.com/ericprince957-cloud/vectorvault",
+    caseStudy: {
+      overview:
+        "VectorVault is a Vector Codes product in active development — not a finished platform, and we say so openly. The mission: to build a simple, accessible code hosting and collaboration platform that serves the next generation of African developers.",
+      problem:
+        "The code hosting tools most developers use are built for teams with fast networks, foreign payment systems and bandwidth to spare. Young African developers need something simple, accessible and dependable in their own context — a place to host, share and collaborate on their work without friction.",
+      solution:
+        "VectorVault is being designed around simplicity and accessibility first: straightforward repositories, easy sharing, and collaboration flows that work well on local networks — with the realities of African developers as a first-class design constraint, not an afterthought.",
+      process:
+        "The product is being built in public: the architecture and core features are taking shape in an open GitHub repository, and progress is shared as it happens. This section will be updated as the platform develops.",
+    },
   },
 ];
 
