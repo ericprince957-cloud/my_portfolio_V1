@@ -17,9 +17,10 @@ export const metadata: Metadata = {
     template: "%s | Vector Codes",
   },
   description:
-    "Vector Codes is a Nigerian web development company building business websites, e-commerce platforms, custom web applications and digital solutions for businesses across Nigeria.",
+    "Vector Codes is a Nigerian digital agency and software development company delivering business websites, e-commerce platforms, custom web applications and enterprise digital solutions across Nigeria.",
   keywords: [
-    "web development company in Nigeria",
+    "digital agency in Nigeria",
+    "software development company in Nigeria",
     "website designers in Nigeria",
     "website development in Abia State",
     "Nigerian web development agency",

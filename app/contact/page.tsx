@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
-import { Mail, MessageCircle, Github } from "lucide-react";
+import { Mail, MessageCircle, Github, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact — Start a Project",
+  title: "Contact — Request an Enterprise Proposal",
   description:
     "Contact Vector Codes — a Nigerian web development company. Tell us about your website, e-commerce or custom web application project.",
 };
@@ -17,11 +17,12 @@ export default function ContactPage() {
             Contact
           </span>
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-white md:text-5xl">
-            Let's Talk About Your <span className="text-gold">Next Project.</span>
+            Request an <span className="text-gold">Enterprise Proposal.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-subtle">
-            Fill in the form and we'll open WhatsApp with your details prefilled — or reach us
-            directly through any of the channels below.
+            Tell our team what you are building. Submit the brief below and we will respond with a
+            structured proposal — scope, timeline and a transparent quote — or reach us directly
+            through any of the channels below.
           </p>
         </div>
       </section>
@@ -46,8 +47,8 @@ export default function ContactPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:vectorcodes15@gmail.com" className="flex items-center gap-3 text-subtle transition-colors hover:text-gold">
-                    <Mail size={16} className="text-gold" /> vectorcodes15@gmail.com
+                  <a href="mailto:info@vectorcodes.ng" className="flex items-center gap-3 text-subtle transition-colors hover:text-gold">
+                    <Mail size={16} className="text-gold" /> info@vectorcodes.ng
                   </a>
                 </li>
                 <li>
@@ -66,11 +67,23 @@ export default function ContactPage() {
             <div className="card rounded-xl p-6">
               <h2 className="text-sm font-semibold text-white">What happens next?</h2>
               <ol className="mt-4 space-y-2.5 text-sm text-subtle">
-                <li>1. We review your project details.</li>
+                <li>1. Our team reviews your project brief.</li>
                 <li>2. We reply — usually within 24 hours.</li>
-                <li>3. We discuss scope, timeline and a quote.</li>
-                <li>4. We start building.</li>
+                <li>3. We agree scope, timeline and a transparent quote.</li>
+                <li>4. We assign a team and start building.</li>
+                <li>5. We ship — and stay on with a Support &amp; Maintenance SLA.</li>
               </ol>
+            </div>
+
+            <div className="card rounded-xl border-gold/30 p-6">
+              <h2 className="flex items-center gap-2 text-sm font-semibold text-white">
+                <ShieldCheck size={16} className="text-gold" /> Support &amp; Maintenance SLA
+              </h2>
+              <p className="mt-2 text-xs leading-relaxed text-subtle">
+                Corporate clients get ongoing technical support after launch — updates, fixes,
+                monitoring and agreed response times, so your platform keeps working the day it
+                goes live and beyond.
+              </p>
             </div>
           </aside>
         </div>

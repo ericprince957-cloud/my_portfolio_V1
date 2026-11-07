@@ -6,7 +6,7 @@ import { Quote } from "lucide-react";
 export const metadata: Metadata = {
   title: "About — Technology with Purpose",
   description:
-    "Vector Codes is a Nigerian digital solutions company building modern websites and practical digital products. Meet Prince Eric, Founder & Lead Developer.",
+    "Vector Codes is a Nigerian digital solutions company building modern websites and practical digital products. Meet Prince Eric, Technical Director & Founder.",
 };
 
 const techStack = [
@@ -34,10 +34,12 @@ export default function AboutPage() {
             <span className="text-gold">Building for What's Next.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-subtle">
-            Vector Codes is a Nigerian digital solutions brand focused on building modern websites
-            and practical digital products. We work with small and medium-sized businesses, startups,
-            professional firms and established companies across Nigeria — helping them establish
-            credibility and operate more effectively online.
+            Vector Codes is a Nigerian digital agency and software development company. Our team designs
+            and engineers the platforms, storefronts and corporate experiences African businesses
+            grow on — for small and medium-sized businesses, startups, professional firms and
+            established companies across Nigeria. We deliver engineering excellence, reliability
+            and measurable business growth — and we stay after launch, with Support &amp; Maintenance
+            SLA options on every project.
           </p>
         </div>
       </section>
@@ -50,22 +52,22 @@ export default function AboutPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://avatars.githubusercontent.com/u/237650729?v=4"
-                alt="Prince Eric — Founder & Lead Developer of Vector Codes"
+                alt="Prince Eric — Technical Director & Founder of Vector Codes"
                 width={160}
                 height={160}
                 loading="lazy"
                 className="mx-auto h-24 w-24 rounded-full border border-gold/40 object-cover"
               />
               <h2 className="mt-5 text-xl font-bold text-white">Prince Eric</h2>
-              <p className="mt-1 text-sm text-gold">Founder & Lead Developer</p>
+              <p className="mt-1 text-sm text-gold">Technical Director & Founder</p>
               <p className="mt-2 text-xs text-subtle">Vector Codes</p>
             </div>
             <div>
               <SectionHeading
                 align="left"
                 badge="Founder"
-                title="A student-founder building for real businesses."
-                description="Prince Eric is the founder of Vector Codes, specialising in custom web platforms that solve real business problems. He recently partnered with Techlaza to build SafeKey Pro — a property verification platform — and is leading the development of the upcoming multi-vendor marketplace and delivery logistics platform that followed."
+                title="Founder-led. Team-delivered. Built to business standards."
+                description="Prince Eric, Technical Director & Founder of Vector Codes, leads our engineering team with a focus on engineering excellence, reliability and business growth — not just writing code. He recently directed the SafeKey Pro delivery for Techlaza, a property verification platform, and is leading the upcoming multi-vendor marketplace and delivery logistics platform that followed."
               />
               <div className="mt-8">
                 <p className="text-xs font-semibold tracking-[0.18em] text-subtle uppercase">Technologies he works with</p>

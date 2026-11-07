@@ -143,7 +143,7 @@ export default function IndustryLanding({
           <div className="mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 md:py-28">
             <Quote size={22} className="mx-auto text-gold/60" aria-hidden="true" />
             <h2 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-4xl">
-              Free 15-Minute {industryLabel} Platform Audit
+              Book a {industryLabel} Technical Consultation
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-subtle">
               Tell us what you are trying to build. We will tell you honestly what it takes — scope, timeline and a transparent quote.
@@ -155,7 +155,7 @@ export default function IndustryLanding({
                 rel="noopener noreferrer"
                 className="gold-btn inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold"
               >
-                Book a Strategy Call <ArrowRight size={16} />
+                Book a Technical Consultation <ArrowRight size={16} />
               </a>
               <Link href="/projects" className="ghost-btn inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold">
                 See Our Work First

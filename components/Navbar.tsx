@@ -49,12 +49,12 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://wa.me/2347084547988?text=Hi%20Prince%2C%20I%20saw%20your%20SafeKey%20Pro%20case%20study.%20I'd%20like%20to%20discuss%20a%20project.%20(via%20navbar)"
+            href="https://wa.me/2347084547988?text=Hi%20Prince%2C%20I'd%20like%20to%20book%20a%20technical%20consultation%20with%20the%20Vector%20Codes%20team."
             target="_blank"
             rel="noopener noreferrer"
             className="gold-btn inline-flex items-center gap-1.5 rounded-full px-5 py-2 text-sm font-semibold"
           >
-            Free Platform Audit <ArrowRight size={14} />
+            Book a Consultation <ArrowRight size={14} />
           </a>
         </div>
 
@@ -97,13 +97,13 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="https://wa.me/2347084547988?text=Hi%20Prince%2C%20I%20saw%20your%20SafeKey%20Pro%20case%20study.%20I'd%20like%20to%20discuss%20a%20project.%20(via%20navbar)"
+                href="https://wa.me/2347084547988?text=Hi%20Prince%2C%20I'd%20like%20to%20book%20a%20technical%20consultation%20with%20the%20Vector%20Codes%20team."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="gold-btn mt-3 inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-3 text-sm font-semibold"
               >
-                Free Platform Audit <ArrowRight size={14} />
+                Book a Consultation <ArrowRight size={14} />
               </a>
             </div>
           </motion.div>

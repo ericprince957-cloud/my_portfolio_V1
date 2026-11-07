@@ -5,9 +5,9 @@ import ServiceCard from "@/components/ServiceCard";
 import ProjectCard from "@/components/ProjectCard";
 import CTASection from "@/components/CTASection";
 import Reveal from "@/components/Reveal";
-import { services } from "@/data/services";
+import { services, pillars } from "@/data/services";
 import { projects, verifiedReview } from "@/data/projects";
-import { Target, Smartphone, Gauge, LifeBuoy, Quote, Star, Search, Compass, Code2, ClipboardCheck, Rocket } from "lucide-react";
+import { Target, Smartphone, Gauge, LifeBuoy, Quote, Star, Search, Compass, Code2, ClipboardCheck, Rocket, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Vector Codes — Web Development Company in Nigeria",
@@ -83,6 +83,12 @@ export default function HomePage() {
           <p className="mt-6 text-[11px] font-medium tracking-[0.18em] text-subtle uppercase">
             Real work for real businesses — Techlaza &middot; SafeKey Pro &middot; Ugoo Uzoho &amp; Co.
           </p>
+          <div className="mx-auto mt-6 flex max-w-md items-center justify-center gap-2 rounded-xl border border-gold/30 bg-gold/5 px-4 py-2.5">
+            <ShieldCheck size={16} className="shrink-0 text-gold" aria-hidden="true" />
+            <p className="text-left text-[11px] leading-relaxed text-subtle">
+              <span className="font-semibold text-white">Support &amp; Maintenance SLA</span> — ongoing technical support after launch, with agreed response times.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -132,13 +138,26 @@ export default function HomePage() {
       <section className="border-b border-line" aria-labelledby="services-heading">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
           <SectionHeading
-            badge="Services"
-            title="Digital Solutions for Modern Businesses"
-            description="From business websites to custom platforms — solutions designed to establish credibility and support how your business actually operates."
+            badge="Capability Pillars"
+            title="Three Pillars. One Standard of Engineering."
+            description="Our team is organised into three delivery pillars — so whatever your project is, it is handled by people who do that kind of work every day."
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, i) => (
-              <ServiceCard key={service.slug} service={service} index={i} />
+          <div className="mt-12 space-y-12">
+            {pillars.map((pillar) => (
+              <div key={pillar.name}>
+                <div className="flex items-center gap-3">
+                  <h3 className="text-sm font-semibold tracking-[0.18em] text-gold uppercase">{pillar.name}</h3>
+                  <span className="h-px flex-1 bg-line" aria-hidden="true" />
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-subtle">{pillar.blurb}</p>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {services
+                    .filter((service) => service.pillar === pillar.name)
+                    .map((service, i) => (
+                      <ServiceCard key={service.slug} service={service} index={i} />
+                    ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -182,7 +201,7 @@ export default function HomePage() {
                 &ldquo;To build a simple, accessible code hosting and collaboration platform that serves the next generation of African developers.&rdquo;
               </blockquote>
               <figcaption className="mt-4 text-xs text-subtle">
-                Prince Eric — Founder, Vector Codes
+                Prince Eric — Technical Director & Founder, Vector Codes
               </figcaption>
             </figure>
           </Reveal>
