@@ -39,9 +39,8 @@ export default function OfflinePage() {
             <RotateCw size={15} /> Retry Connection
           </button>
           <a
-            href="https://wa.me/2347084547988?text=" +
-            encodeURIComponent("Hi Prince, I was browsing the Vector Codes site and I'd like to discuss a project.")
-            }
+            href={"https://wa.me/2347084547988?text=" +
+            encodeURIComponent("Hi Prince, I was browsing the Vector Codes site and I'd like to discuss a project.")}
             target="_blank"
             rel="noopener noreferrer"
             className="ghost-btn inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
