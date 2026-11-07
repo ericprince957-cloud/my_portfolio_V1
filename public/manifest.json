@@ -1,0 +1,30 @@
+{
+  "name": "Vector Codes — Digital Agency & Software Development Company",
+  "short_name": "Vector Codes",
+  "description": "Nigerian digital agency building websites, e-commerce platforms and custom web applications for businesses across Nigeria.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity"
+  ]
+}

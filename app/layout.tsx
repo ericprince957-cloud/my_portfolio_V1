@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PWAInstallBanner from "@/components/PWAInstallBanner";
+import MobileNav from "@/components/MobileNav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,6 +38,12 @@ export const metadata: Metadata = {
     description:
       "We design and develop modern websites, e-commerce platforms and custom digital solutions that help businesses establish credibility and grow.",
   },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Vector Codes",
+  },
   twitter: {
     card: "summary",
     title: "Vector Codes — Nigerian Digital Solutions Company",
@@ -57,6 +65,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <div className="h-16 md:hidden" aria-hidden="true" />
+        <MobileNav />
+        <PWAInstallBanner />
       </body>
     </html>
   );
