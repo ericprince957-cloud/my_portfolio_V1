@@ -58,7 +58,7 @@ export default function HomePage() {
     description:
       "Nigerian web development company building business websites, e-commerce platforms and custom web applications.",
     url: "https://vectorcodes.vercel.app",
-    email: "vectorcodes15@gmail.com",
+    email: "hello@vectorcodes.com.ng",
     telephone: "+2347084547988",
     address: { "@type": "PostalAddress", addressRegion: "Abia State", addressCountry: "NG" },
     areaServed: { "@type": "Country", name: "Nigeria" },

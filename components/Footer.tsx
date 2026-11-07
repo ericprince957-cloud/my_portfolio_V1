@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { Mail, MessageCircle, Github, Globe } from "lucide-react";
+import { Mail, MessageCircle, Github, Globe, MapPin } from "lucide-react";
 
 const quickLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+    { href: "/", label: "Home" },
+    { href: "/solutions", label: "Solutions" },
+    { href: "/projects", label: "Case Studies" },
+    { href: "/process", label: "Our Process" },
+    { href: "/company", label: "Company" },
+    { href: "/contact", label: "Contact" },
+    { href: "/privacy", label: "Privacy & NDPR" },
+  ];
 
 export default function Footer() {
   return (
@@ -78,6 +80,10 @@ export default function Footer() {
                   <Github size={14} /> GitHub
                 </a>
               </li>
+            <li className="flex items-center gap-2">
+              <MapPin size={14} className="shrink-0 text-gold/70" aria-hidden="true" />
+              <span className="text-xs text-subtle">Abia State, Nigeria</span>
+            </li>
             </ul>
           </div>
         </div>
