@@ -18,8 +18,11 @@ import {
  * ============================================================
  */
 
+export type Pillar = "Core Infrastructure" | "Digital Commerce" | "Corporate Presence";
+
 export interface Service {
   slug: string;
+  pillar: Pillar;
   title: string;
   short: string;
   description: string;
@@ -30,9 +33,28 @@ export interface Service {
   icon: LucideIcon;
 }
 
+export const pillars: { name: Pillar; blurb: string }[] = [
+  {
+    name: "Core Infrastructure",
+    blurb:
+      "The engineering core: custom web applications, business portals, dashboards and API integrations — software your operations run on.",
+  },
+  {
+    name: "Digital Commerce",
+    blurb:
+      "Revenue infrastructure: advanced e-commerce, multi-vendor marketplaces and custom WordPress ecosystems engineered to sell at scale.",
+  },
+  {
+    name: "Corporate Presence",
+    blurb:
+      "The front door: scalable corporate websites, complete redesigns and performance optimisation that make your business credible at first glance.",
+  },
+];
+
 export const services: Service[] = [
   {
     slug: "platform-development",
+    pillar: "Digital Commerce",
     title: "Platform Development",
     short: "Scalable digital platforms — multi-vendor systems, custom dashboards and API integrations for ambitious Nigerian businesses.",
     description:
@@ -61,6 +83,7 @@ export const services: Service[] = [
   },
   {
     slug: "business-websites",
+    pillar: "Corporate Presence",
     title: "Business Website Development",
     short: "Professional, responsive websites that establish credibility and help businesses attract customers.",
     description:
@@ -88,6 +111,7 @@ export const services: Service[] = [
   },
   {
     slug: "ecommerce",
+    pillar: "Digital Commerce",
     title: "E-commerce Development",
     short: "Online stores designed to showcase products, manage orders and support online payments.",
     description:
@@ -115,6 +139,7 @@ export const services: Service[] = [
   },
   {
     slug: "web-applications",
+    pillar: "Core Infrastructure",
     title: "Custom Web Applications",
     short: "Purpose-built web applications designed around specific business requirements.",
     description:
@@ -142,6 +167,7 @@ export const services: Service[] = [
   },
   {
     slug: "portals-dashboards",
+    pillar: "Core Infrastructure",
     title: "Business Portals & Dashboards",
     short: "Digital platforms that simplify workflows, organise information and improve operations.",
     description:
@@ -169,6 +195,7 @@ export const services: Service[] = [
   },
   {
     slug: "website-redesign",
+    pillar: "Corporate Presence",
     title: "Website Redesign",
     short: "Transform outdated websites into modern, fast and professional digital experiences.",
     description:
@@ -196,8 +223,9 @@ export const services: Service[] = [
   },
   {
     slug: "maintenance",
-    title: "Website Maintenance",
-    short: "Ongoing updates, technical support, performance improvements and website maintenance.",
+    pillar: "Corporate Presence",
+    title: "Support & Maintenance — SLA-Backed",
+    short: "SLA-backed ongoing support — updates, fixes, monitoring and improvements with agreed response times after launch.",
     description:
       "Websites need care after launch. We provide ongoing maintenance — updates, fixes, backups and improvements — so your website keeps working the day it went live and beyond.",
     problems: [
@@ -211,7 +239,8 @@ export const services: Service[] = [
       "Security and plugin updates",
       "Backups and monitoring",
       "Small fixes and improvements",
-      "Priority support",
+      "Priority support with agreed response times",
+      "Support & Maintenance SLA available for corporate clients",
     ],
     deliverables: [
       "Agreed maintenance scope",
