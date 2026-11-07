@@ -47,8 +47,8 @@ export default function ContactPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@vectorcodes.ng" className="flex items-center gap-3 text-subtle transition-colors hover:text-gold">
-                    <Mail size={16} className="text-gold" /> info@vectorcodes.ng
+                  <a href="mailto:hello@vectorcodes.com.ng" className="flex items-center gap-3 text-subtle transition-colors hover:text-gold">
+                    <Mail size={16} className="text-gold" /> hello@vectorcodes.com.ng
                   </a>
                 </li>
                 <li>

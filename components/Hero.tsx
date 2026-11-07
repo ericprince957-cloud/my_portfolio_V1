@@ -92,31 +92,29 @@ export default function Hero() {
             </span>
 
             <h1 className="mt-6 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl">
-              We Build Scalable Digital Platforms.
+              Engineering <span className="text-gold">Digital Trust</span>
               <br />
-              <span className="text-gold">for Nigerian Businesses.</span>
+              for Nigerian Commerce.
             </h1>
 
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-subtle lg:mx-0">
-              From business websites to multi-vendor platforms and verification systems — we design
-              and develop digital infrastructure that helps Nigerian businesses establish
-              credibility, operate better and grow.
+              From real estate verification platforms to automated ordering systems, Vector Codes
+              architects secure, scalable digital infrastructure that drives measurable
+              business growth.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
-              <a
-                href="https://wa.me/2347084547988?text=Hi%20Prince%2C%20I'd%20like%20to%20book%20a%20technical%20consultation%20with%20the%20Vector%20Codes%20team."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/solutions"
                 className="gold-btn inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
               >
-                Book a Technical Consultation <ArrowRight size={16} />
-              </a>
+                Explore Our Solutions <ArrowRight size={16} />
+              </Link>
               <Link
                 href="/projects"
                 className="ghost-btn inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
               >
-                Explore Our Work
+                View Case Studies
               </Link>
             </div>
           </div>

@@ -46,8 +46,8 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white">Contact</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-subtle">
               <li>
-                <a href="mailto:info@vectorcodes.ng" className="inline-flex items-center gap-2 transition-colors hover:text-gold">
-                  <Mail size={14} /> info@vectorcodes.ng
+                <a href="mailto:hello@vectorcodes.com.ng" className="inline-flex items-center gap-2 transition-colors hover:text-gold">
+                  <Mail size={14} /> hello@vectorcodes.com.ng
                 </a>
               </li>
               <li>

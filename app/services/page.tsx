@@ -130,7 +130,7 @@ export default function ServicesPage() {
               rel="noopener noreferrer"
               className="gold-btn inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold"
             >
-              Book a Technical Consultation <ArrowRight size={15} />
+              Schedule Free Audit <ArrowRight size={15} />
             </a>
             <Link
               href="/contact"

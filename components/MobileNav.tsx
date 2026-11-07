@@ -6,8 +6,8 @@ import { Home, LayoutGrid, FileText, Mail } from "lucide-react";
 
 const items = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/services", label: "Services", icon: LayoutGrid },
-  { href: "/projects", label: "Work", icon: FileText },
+  { href: "/solutions", label: "Solutions", icon: LayoutGrid },
+  { href: "/projects", label: "Cases", icon: FileText },
   { href: "/contact", label: "Contact", icon: Mail },
 ];
 

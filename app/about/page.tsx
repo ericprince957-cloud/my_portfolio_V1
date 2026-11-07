@@ -6,7 +6,7 @@ import { Quote } from "lucide-react";
 export const metadata: Metadata = {
   title: "About — Technology with Purpose",
   description:
-    "Vector Codes is a Nigerian digital solutions company building modern websites and practical digital products. Meet Prince Eric, Technical Director & Founder.",
+    "Vector Codes is a Nigerian digital solutions company building modern websites and practical digital products. Meet Prince Eric, Founder & Lead Architect.",
 };
 
 const techStack = [
@@ -52,14 +52,14 @@ export default function AboutPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://avatars.githubusercontent.com/u/237650729?v=4"
-                alt="Prince Eric — Technical Director & Founder of Vector Codes"
+                alt="Prince Eric — Founder & Lead Architect of Vector Codes"
                 width={160}
                 height={160}
                 loading="lazy"
                 className="mx-auto h-24 w-24 rounded-full border border-gold/40 object-cover"
               />
               <h2 className="mt-5 text-xl font-bold text-white">Prince Eric</h2>
-              <p className="mt-1 text-sm text-gold">Technical Director & Founder</p>
+              <p className="mt-1 text-sm text-gold">Founder & Lead Architect</p>
               <p className="mt-2 text-xs text-subtle">Vector Codes</p>
             </div>
             <div>
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 align="left"
                 badge="Founder"
                 title="Founder-led. Team-delivered. Built to business standards."
-                description="Prince Eric, Technical Director & Founder of Vector Codes, leads our engineering team with a focus on engineering excellence, reliability and business growth — not just writing code. He recently directed the SafeKey Pro delivery for Techlaza, a property verification platform, and is leading the upcoming multi-vendor marketplace and delivery logistics platform that followed."
+                description="Prince Eric, Founder & Lead Architect of Vector Codes, leads our engineering team with a focus on engineering excellence, reliability and business growth — not just writing code. He recently directed the SafeKey Pro delivery for Techlaza, a property verification platform, and is leading the upcoming multi-vendor marketplace and delivery logistics platform that followed."
               />
               <div className="mt-8">
                 <p className="text-xs font-semibold tracking-[0.18em] text-subtle uppercase">Technologies he works with</p>

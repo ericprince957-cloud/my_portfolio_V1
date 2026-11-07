@@ -201,7 +201,7 @@ export default function HomePage() {
                 &ldquo;To build a simple, accessible code hosting and collaboration platform that serves the next generation of African developers.&rdquo;
               </blockquote>
               <figcaption className="mt-4 text-xs text-subtle">
-                Prince Eric — Technical Director & Founder, Vector Codes
+                Prince Eric — Founder & Lead Architect, Vector Codes
               </figcaption>
             </figure>
           </Reveal>
