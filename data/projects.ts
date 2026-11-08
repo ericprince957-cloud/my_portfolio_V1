@@ -51,20 +51,21 @@ export const projects: Project[] = [
     type: "Property Verification Platform",
     category: "Client Project",
     description:
-      "Nigeria's trusted property verification platform — a custom WordPress ecosystem with secure agent portals, multi-stage verification workflows and fraud prevention, built mobile-first for local networks.",
-    tech: ["WordPress (Custom Theme)", "PHP", "ACF", "REST API", "Vanilla JS", "Vercel"],
+      "Nigeria's property verification platform — a trust infrastructure with a dynamic verification engine, secure agent portals and fraud-proof architecture, delivered for Techlaza and now live at safekeypro.com.ng.",
+    tech: ["WordPress 7.1.4", "PHP 8.2", "MySQL", "Shield Security Pro", "LiteSpeed Enterprise"],
+    liveUrl: "https://safekeypro.com.ng/",
     featured: true,
     caseStudy: {
       overview:
-        "SafeKey Pro is a property verification platform for the Nigerian real estate market, delivered for Techlaza in the role of Lead Developer & Technical Consultant. More than a listing site, it is trust infrastructure: every property passes through a structured verification workflow before it goes live.",
+        "SafeKey Pro is Nigeria's property verification platform, delivered for Techlaza (Samuel) in the role of Lead Architect & Technical Partner. The outcome: a fully functional verification platform that led directly to a multi-vendor e-commerce contract. More than a listing site, it is trust infrastructure for Nigerian real estate.",
       problem:
-        "The client needed more than a listing site — they needed a trust infrastructure for Nigerian real estate. Generic themes could not handle complex verification workflows, secure agent portals, or fraud prevention. The platform also required a mobile-first experience optimised for local networks and WhatsApp-centric user behaviour.",
+        "Nigerian real estate suffers from fraud. Generic listing sites cannot verify agents or prevent fake listings, so buyers have no reliable way to know who to trust. Samuel needed a trust infrastructure, not just a website.",
       solution:
-        "A custom WordPress ecosystem engineered from scratch: a unique Navy Blue & Emerald Green brand identity with a custom design system (1,080+ lines of hand-written CSS — no generic templates); a secure agent portal with role-based authentication so agents can submit properties without accessing sensitive admin areas; custom post types with approval states (Pending → Under Review → Verified → Live) to prevent fraudulent listings; a lightweight frontend loading in under 3 seconds on 3G with integrated WhatsApp ordering and Google Maps; and custom PHP helpers for Naira formatting, move-in cost calculators and dynamic verification badges.",
+        "A custom verification platform engineered around four pillars. Custom Verification Engine: a dynamic badge system (Unverified → Under Review → Verified) driven by admin validation. Secure Agent Portal: role-based access control that lets agents submit properties without any wp-admin exposure. Fraud-Proof Architecture: nonce-secured forms, XML-RPC disabled and user enumeration blocked. Mobile-First Discovery: advanced filtering plus WhatsApp integration, designed for how Nigerian users actually browse.",
       process:
-        "Engineered as a complete custom stack: custom WordPress theme development, ACF-driven content architecture, role-based authentication, REST API integration, vanilla JS interactions optimised for low-bandwidth mobile networks, and deployment to Vercel.",
+        "Architected end-to-end as Lead Architect & Technical Partner: verification workflow design, role-based authentication and agent portal build, security hardening with Shield Security Pro, performance work on LiteSpeed Enterprise, and mobile-first frontend development.",
       result:
-        "Client trust earned: a fully functional, secure platform that exceeded expectations. The client awarded two additional projects — a multi-vendor e-commerce platform and a delivery logistics platform — based on this delivery. The architecture is designed to scale toward Paystack integration, vendor dashboards and automated payouts. As the client put it: \"When you deliver this well, we have more projects.\" — Samuel Chukwuemeka, Founder, Techlaza.",
+        "Platform live at safekeypro.com.ng with core flows operational: registration, login, submission and search. The client awarded two additional projects — a multi-vendor marketplace and a delivery logistics platform — and an NDPA-compliant legal framework was implemented. As the client put it: \"When you deliver this well, we have more projects.\" — Samuel, Techlaza.",
     },
   },
   {
