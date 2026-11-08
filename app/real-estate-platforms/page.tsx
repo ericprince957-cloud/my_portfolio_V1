@@ -18,7 +18,7 @@ export default function RealEstatePlatformsPage() {
       refPath="/real-estate-platforms"
       showcaseSlug="safekey-pro"
       showcaseTitle="SafeKey Pro — Nigeria's Trusted Property Verification Platform"
-      showcaseText="The platform we built for Techlaza: a custom WordPress ecosystem with secure agent portals, a Pending → Under Review → Verified → Live workflow, and a lightweight frontend that loads in under 3 seconds on 3G."
+      showcaseText="The platform we built for Techlaza — live at safekeypro.com.ng: a dynamic verification engine (Unverified → Under Review → Verified), a secure agent portal with role-based access, and fraud-proof architecture with nonce-secured forms. The delivery earned us two follow-on contracts."
       pains={[
         "Fraudulent listings erode buyer trust and put your brand at risk.",
         "Agents and property owners submit listings with no accountability or oversight.",
