@@ -6,8 +6,8 @@ import ProjectCard from "@/components/ProjectCard";
 import CTASection from "@/components/CTASection";
 import Reveal from "@/components/Reveal";
 import { services, pillars } from "@/data/services";
-import { projects, verifiedReview } from "@/data/projects";
-import { Target, Smartphone, Gauge, LifeBuoy, Quote, Star, Search, Compass, Code2, ClipboardCheck, Rocket, ShieldCheck } from "lucide-react";
+import { projects } from "@/data/projects";
+import { Target, Smartphone, Gauge, LifeBuoy, Search, Compass, Code2, ClipboardCheck, Rocket, ShieldCheck, MessageCircle, FileText, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Vector Codes — Web Development Company in Nigeria",
@@ -47,9 +47,7 @@ const processSteps = [
 ];
 
 export default function HomePage() {
-  const clientCount = projects.filter((p) => p.category === "Client Project").length;
   const products = projects.filter((p) => p.category !== "Client Project");
-  const liveCount = projects.filter((p) => p.liveUrl).length;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -92,45 +90,77 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── TRUST / CREDIBILITY ─────────────────────────────── */}
-      <section className="border-b border-line bg-surface" aria-labelledby="trust-heading">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+      {/* ── START A PROJECT (CONVERSION) ────────────────────── */}
+      <section className="border-b border-line bg-surface" aria-labelledby="start-heading">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
           <SectionHeading
-            title="Built with Purpose. Delivered with Care."
-            description="No invented logos, certifications or statistics. Real completed projects, real client relationships and verified feedback only."
+            badge="Start a Project"
+            title="Have an Idea? Let&rsquo;s Scope It — Free."
+            description="Tell us what you want to build. Within one conversation you will know exactly what it takes — the technical approach, the timeline and the cost. No jargon, no obligation."
           />
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-3">
-            <div className="card rounded-xl p-6 text-center">
-              <p className="text-3xl font-bold text-gold">{clientCount}</p>
-              <p className="mt-1 text-sm text-subtle">Client projects delivered</p>
-            </div>
-            <div className="card rounded-xl p-6 text-center">
-              <p className="text-3xl font-bold text-gold">{liveCount}</p>
-              <p className="mt-1 text-sm text-subtle">Live websites & platforms</p>
-            </div>
-            <div className="card rounded-xl p-6 text-center">
-              <p className="text-3xl font-bold text-gold">100%</p>
-              <p className="mt-1 text-sm text-subtle">Mobile-optimised builds</p>
-            </div>
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            {[
+              {
+                icon: MessageCircle,
+                step: "01",
+                title: "Message Us on WhatsApp",
+                text: "One message is all it takes. Tell us what you want to build in plain language — no technical details required.",
+              },
+              {
+                icon: FileText,
+                step: "02",
+                title: "Get a Free Technical Audit",
+                text: "We review your idea, current website or market and map out what your project genuinely needs — and what it does not.",
+              },
+              {
+                icon: ClipboardCheck,
+                step: "03",
+                title: "Receive a Clear Proposal",
+                text: "Scope, timeline and price in writing. If it makes sense for your business, we start. If not, you keep the audit — free.",
+              },
+            ].map((step, i) => (
+              <Reveal key={step.step} className="h-full" delay={Math.min(i * 0.08, 0.3)}>
+                <div className="card h-full rounded-xl p-6">
+                  <span className="flex items-center justify-between">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-gold/30 bg-gold/5 text-gold">
+                      <step.icon size={18} aria-hidden="true" />
+                    </span>
+                    <span className="font-serif text-lg font-bold text-gold/40">{step.step}</span>
+                  </span>
+                  <h3 className="mt-4 text-base font-semibold text-white">{step.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-subtle">{step.text}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
-
-          {/* Verified review — real Google review */}
-          <figure className="card mx-auto mt-8 max-w-2xl rounded-xl p-8 text-center">
-            <Quote size={22} className="mx-auto text-gold/60" aria-hidden="true" />
-            <blockquote className="mt-4 text-base italic leading-relaxed text-subtle">
-              "{verifiedReview.quote}"
-            </blockquote>
-            <div className="mt-4 flex justify-center gap-1" aria-label="5 out of 5 stars">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} size={14} className="fill-gold text-gold" aria-hidden="true" />
-              ))}
+          <Reveal>
+            <div className="card mx-auto mt-10 max-w-3xl rounded-xl p-8 text-center md:p-10">
+              <h3 id="start-heading" className="text-xl font-bold text-white md:text-2xl">
+                Your project starts with <span className="text-gold">one message.</span>
+              </h3>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-subtle">
+                We reply during business hours — usually the same day. Every conversation starts with a free technical audit, whether you end up working with us or not.
+              </p>
+              <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <a
+                  href="https://wa.me/2347084547988?text=Hi%20Prince%2C%20I%20visited%20the%20Vector%20Codes%20website%20and%20I%20would%20like%20a%20free%20technical%20audit%20for%20my%20project."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gold px-6 py-3 text-sm font-semibold text-black transition hover:bg-gold/90"
+                >
+                  <MessageCircle size={16} aria-hidden="true" />
+                  Start on WhatsApp — Free Audit Included
+                </a>
+                <a
+                  href="mailto:hello@vectorcodes.com.ng"
+                  className="inline-flex items-center gap-2 rounded-lg border border-line px-6 py-3 text-sm font-medium text-subtle transition hover:border-gold/40 hover:text-white"
+                >
+                  <Mail size={16} aria-hidden="true" />
+                  hello@vectorcodes.com.ng
+                </a>
+              </div>
             </div>
-            <figcaption className="mt-3">
-              <span className="text-sm font-semibold text-white">{verifiedReview.author}</span>
-              <span className="block text-xs text-subtle">{verifiedReview.role} — {verifiedReview.source}</span>
-            </figcaption>
-          </figure>
+          </Reveal>
         </div>
       </section>
 
