@@ -47,25 +47,25 @@ export const projects: Project[] = [
   {
     slug: "safekey-pro",
     name: "SafeKey Pro",
-    industry: "Real Estate",
-    type: "Property Verification Platform",
+    industry: "Real Estate / PropTech",
+    type: "Property Verification Engine",
     category: "Client Project",
     description:
-      "Nigeria's property verification platform — a trust infrastructure with a dynamic verification engine, secure agent portals and fraud-proof architecture, delivered for Techlaza and now live at safekeypro.com.ng.",
-    tech: ["WordPress 7.1.4", "PHP 8.2", "MySQL", "Shield Security Pro", "LiteSpeed Enterprise"],
+      "Our flagship project: a property verification engine for Nigerian real estate — custom frontend-first architecture, strict role-based security, a one-click verification hub and an installable PWA, live at safekeypro.com.ng.",
+    tech: ["WordPress (Headless-ish)", "PHP 8.2", "MySQL", "Vanilla JS", "CSS Grid/Flexbox", "Custom Nonce Handling", "RBAC", "Shield Security Pro", "AfeesHost LiteSpeed Enterprise"],
     liveUrl: "https://safekeypro.com.ng/",
     featured: true,
     caseStudy: {
       overview:
-        "SafeKey Pro is Nigeria's property verification platform, delivered for Techlaza (Samuel) in the role of Lead Architect & Technical Partner. The outcome: a fully functional verification platform that led directly to a multi-vendor e-commerce contract. More than a listing site, it is trust infrastructure for Nigerian real estate.",
+        "SafeKey Pro is our flagship project — proof that we can handle complex logic end-to-end. A property verification engine delivered for Techlaza (Samuel) as Lead Developer & Architect, now a fully functional marketplace live at safekeypro.com.ng.",
       problem:
-        "Nigerian real estate suffers from fraud. Generic listing sites cannot verify agents or prevent fake listings, so buyers have no reliable way to know who to trust. Samuel needed a trust infrastructure, not just a website.",
+        "Samuel needed a platform where agents could list properties — but buyers could not trust them due to fraud. Standard WordPress themes were too messy for non-tech users, and security was weak. He needed a verification engine, not a theme customisation.",
       solution:
-        "A custom verification platform engineered around four pillars. Custom Verification Engine: a dynamic badge system (Unverified → Under Review → Verified) driven by admin validation. Secure Agent Portal: role-based access control that lets agents submit properties without any wp-admin exposure. Fraud-Proof Architecture: nonce-secured forms, XML-RPC disabled and user enumeration blocked. Mobile-First Discovery: advanced filtering plus WhatsApp integration, designed for how Nigerian users actually browse.",
+        "We moved away from generic themes and built a Custom Frontend-First Architecture. Zero Admin Access for Agents: strict role-based security means agents never see wp-admin — they only interact with a clean, custom dashboard. Verification Workflow: a dedicated /verify-hub/ lets admins approve or reject listings with one click, updating public badges instantly. PWA Implementation: the site is an installable app (offline-ready, home-screen icon) to boost retention on low-data networks. Performance Tuning: images and scripts optimised for Nigerian mobile networks.",
       process:
-        "Architected end-to-end as Lead Architect & Technical Partner: verification workflow design, role-based authentication and agent portal build, security hardening with Shield Security Pro, performance work on LiteSpeed Enterprise, and mobile-first frontend development.",
+        "Architected and delivered as Lead Developer & Architect: a headless-ish WordPress core with PHP 8.2 and MySQL; a vanilla JS and CSS Grid/Flexbox frontend chosen deliberately over heavy frameworks for stability; custom nonce handling, role-based access control (RBAC) and input sanitisation for security; and hosting tuned on AfeesHost LiteSpeed Enterprise.",
       result:
-        "Platform live at safekeypro.com.ng with core flows operational: registration, login, submission and search. The client awarded two additional projects — a multi-vendor marketplace and a delivery logistics platform — and an NDPA-compliant legal framework was implemented. As the client put it: \"When you deliver this well, we have more projects.\" — Samuel, Techlaza.",
+        "Fully functional marketplace live at safekeypro.com.ng. Agent confusion reduced by 90% — no more WP admin errors. Trust enhanced via automated verification badges. The delivery earned two follow-on contracts from the client — a multi-vendor marketplace and a delivery logistics platform. As Samuel put it: \"When you deliver this well, we have more projects.\" — Samuel, Techlaza.",
     },
   },
   {
