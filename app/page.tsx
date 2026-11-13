@@ -56,7 +56,7 @@ export default function HomePage() {
     description:
       "Nigerian web development company building business websites, e-commerce platforms and custom web applications.",
     url: "https://vectorcodes.vercel.app",
-    email: "hello@vectorcodes.com.ng",
+    email: "vectorcodes15@gmail.com",
     telephone: "+2347084547988",
     address: { "@type": "PostalAddress", addressRegion: "Abia State", addressCountry: "NG" },
     areaServed: { "@type": "Country", name: "Nigeria" },
@@ -152,11 +152,11 @@ export default function HomePage() {
                   Start on WhatsApp — Free Audit Included
                 </a>
                 <a
-                  href="mailto:hello@vectorcodes.com.ng"
+                  href="mailto:vectorcodes15@gmail.com"
                   className="inline-flex items-center gap-2 rounded-lg border border-line px-6 py-3 text-sm font-medium text-subtle transition hover:border-gold/40 hover:text-white"
                 >
                   <Mail size={16} aria-hidden="true" />
-                  hello@vectorcodes.com.ng
+                  vectorcodes15@gmail.com
                 </a>
               </div>
             </div>

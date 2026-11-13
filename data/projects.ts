@@ -16,7 +16,7 @@
  * ============================================================
  */
 
-export type ProjectCategory = "Client Project" | "Internal Product" | "In Development";
+export type ProjectCategory = "Client Project" | "Internal Product" | "In Development" | "Demo";
 
 export interface CaseStudy {
   overview: string;
@@ -140,6 +140,28 @@ export const projects: Project[] = [
     liveUrl: "https://pixelvault-zeta.vercel.app/",
   },
   {
+    slug: "seunbloom-chic",
+    name: "Seunbloom Chic",
+    industry: "Fashion",
+    type: "Fashion Brand Website Demonstration",
+    category: "Demo",
+    description:
+      "A demonstration concept for a fashion brand — showing our approach to industry-specific, professional website experiences.",
+    tech: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://seunbloom-chic.vercel.app/",
+  },
+  {
+    slug: "law-firm-demo",
+    name: "Law Firm Website Demo",
+    industry: "Legal Services",
+    type: "Corporate Website Demonstration",
+    category: "Demo",
+    description:
+      "A demonstration concept for a law firm website — professional service presentation, corporate information architecture and a trust-focused layout.",
+    tech: ["Next.js", "Tailwind CSS"],
+    liveUrl: "https://client-demo-law-firm.vercel.app/",
+  },
+  {
     slug: "vectorvault",
     name: "VectorVault",
     industry: "Developer Tools",
@@ -166,6 +188,7 @@ export const projectCategories: ProjectCategory[] = [
   "Client Project",
   "Internal Product",
   "In Development",
+  "Demo",
 ];
 
 export function getProject(slug: string): Project | undefined {

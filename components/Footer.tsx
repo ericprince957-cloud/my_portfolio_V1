@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MessageCircle, Github, Globe, MapPin } from "lucide-react";
+import { Mail, MessageCircle, Send, Github, Globe, MapPin } from "lucide-react";
 
 const quickLinks = [
     { href: "/", label: "Home" },
@@ -48,8 +48,8 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white">Contact</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-subtle">
               <li>
-                <a href="mailto:hello@vectorcodes.com.ng" className="inline-flex items-center gap-2 transition-colors hover:text-gold">
-                  <Mail size={14} /> hello@vectorcodes.com.ng
+                <a href="mailto:vectorcodes15@gmail.com" className="inline-flex items-center gap-2 transition-colors hover:text-gold">
+                  <Mail size={14} /> vectorcodes15@gmail.com
                 </a>
               </li>
               <li>
@@ -71,6 +71,16 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <li>
+                  <a
+                    href="https://t.me/Vectorcodes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 transition-colors hover:text-gold"
+                  >
+                    <Send size={14} /> Telegram: @Vectorcodes
+                  </a>
+                </li>
                 <a
                   href="https://github.com/ericprince957-cloud"
                   target="_blank"

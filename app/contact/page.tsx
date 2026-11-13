@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
-import { Mail, MessageCircle, Github, ShieldCheck } from "lucide-react";
+import { Mail, MessageCircle, Send, Github, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact — Request an Enterprise Proposal",
@@ -47,8 +47,18 @@ export default function ContactPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:hello@vectorcodes.com.ng" className="flex items-center gap-3 text-subtle transition-colors hover:text-gold">
-                    <Mail size={16} className="text-gold" /> hello@vectorcodes.com.ng
+                  <a href="mailto:vectorcodes15@gmail.com" className="flex items-center gap-3 text-subtle transition-colors hover:text-gold">
+                    <Mail size={16} className="text-gold" /> vectorcodes15@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://t.me/Vectorcodes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-subtle transition-colors hover:text-gold"
+                  >
+                    <Send size={16} className="text-gold" /> Telegram: @Vectorcodes
                   </a>
                 </li>
                 <li>

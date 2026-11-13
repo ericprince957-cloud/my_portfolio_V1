@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           <h2 className="text-base font-semibold text-white">Your rights</h2>
           <p className="mt-2">
             You may request access to, correction of, or deletion of your personal data at any time by
-            emailing <span className="text-gold">hello@vectorcodes.com.ng</span>. We respond within a
+            emailing <span className="text-gold">vectorcodes15@gmail.com</span>. We respond within a
             reasonable period as required by the NDPR.
           </p>
         </div>
