@@ -101,7 +101,7 @@ export const projects: Project[] = [
     description:
       "A verified directory that helps Abia State University students discover and trade with trusted campus sellers.",
     tech: [],
-    liveUrl: "https://absu-trusted-trade.vercel.app/",
+    liveUrl: "https://absu-maketplace.vercel.app/",
     featured: true,
   },
   {
