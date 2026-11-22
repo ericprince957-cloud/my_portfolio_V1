@@ -94,15 +94,27 @@ export const projects: Project[] = [
   },
   {
     slug: "absu-verified-sellers",
-    name: "ABSU Verified Sellers",
-    industry: "Student Marketplace",
-    type: "Verified Student Seller Directory",
+    name: "ABSU Trade",
+    industry: "Marketplace / EdTech",
+    type: "Student Marketplace & E-commerce Platform",
     category: "Internal Product",
     description:
-      "A verified directory that helps Abia State University students discover and trade with trusted campus sellers.",
-    tech: [],
-    liveUrl: "https://absu-maketplace.vercel.app/",
+      "A digital marketplace built for the ABSU community — connecting Abia State University students with trusted sellers, with verification, reporting and moderation built in. Live at absutrade.com.ng.",
+    tech: ["Next.js", "Supabase", "Vercel", "Paystack (planned)"],
+    liveUrl: "https://absutrade.com.ng",
     featured: true,
+    caseStudy: {
+      overview:
+        "ABSU Trade is a student-focused online marketplace designed to connect students of Abia State University (ABSU) with trusted sellers within their university community — an independent Vector Codes product, built and launched.",
+      problem:
+        "Students often struggle to find reliable sellers and access products within their university community. At the same time, student entrepreneurs need a better way to showcase their products and reach potential customers.",
+      solution:
+        "A dedicated marketplace that makes product discovery and seller participation easy: student-focused product discovery, seller registration and onboarding, seller verification and trust-focused features, product listings and management, reporting for suspicious sellers, administrative moderation, a mobile-friendly experience, and SEO optimisation for Google search and AI discoverability.",
+      process:
+        "Built with Next.js on a Supabase backend, deployed on Vercel, mobile-first from day one. Paystack payment integration is planned for the next phase.",
+      result:
+        "ABSU Trade establishes a dedicated digital marketplace for the ABSU community — an opportunity for student entrepreneurs to showcase their businesses and for students to discover products without depending on scattered WhatsApp groups and informal channels.",
+    },
   },
   {
     slug: "techlaza",
