@@ -5,7 +5,7 @@ import { projects } from "@/data/projects";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Web Design & Development Portfolio | Vector Codes",
+  title: "Web Design & Development Portfolio",
   description:
     "Explore client websites, e-commerce projects and digital platforms built by Vector Codes for businesses and organisations.",
 };
