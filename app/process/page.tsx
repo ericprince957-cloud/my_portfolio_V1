@@ -5,7 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Our Website Development Process | Vector Codes",
+  title: "Our Website Development Process",
   description:
     "See how Vector Codes plans, builds and launches business websites and digital platforms for Nigerian organisations.",
 };
