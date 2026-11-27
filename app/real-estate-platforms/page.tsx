@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustryLanding from "@/components/IndustryLanding";
 
 export const metadata: Metadata = {
-  title: "Real Estate Platform Development | Vector Codes",
+  title: "Real Estate Platform Development",
   description:
     "Real estate platforms with property listings, secure agent portals and verification workflows for Nigerian businesses.",
 };
