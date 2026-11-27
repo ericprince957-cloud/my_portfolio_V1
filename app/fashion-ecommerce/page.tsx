@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustryLanding from "@/components/IndustryLanding";
 
 export const metadata: Metadata = {
-  title: "Fashion E-commerce Website Design | Vector Codes",
+  title: "Fashion E-commerce Website Design",
   description:
     "Online stores for Nigerian fashion brands, with product catalogues, secure payments and inventory management.",
 };
