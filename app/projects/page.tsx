@@ -3,9 +3,9 @@ import ProjectsBrowser from "@/components/ProjectsBrowser";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Projects — Our Work",
+  title: "Web Design & Development Portfolio | Vector Codes",
   description:
-    "Selected work from Vector Codes: business websites, e-commerce stores, student platforms, internal business systems and digital products — with honest project statuses.",
+    "Explore client websites, e-commerce projects and digital platforms built by Vector Codes for businesses and organisations.",
 };
 
 const currentSystems = [
