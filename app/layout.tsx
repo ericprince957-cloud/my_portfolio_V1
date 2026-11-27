@@ -15,28 +15,28 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://vectorcodes.vercel.app"),
   title: {
-    default: "Vector Codes — Web Development Company in Nigeria",
+    default: "Website Design Company in Nigeria | Vector Codes",
     template: "%s | Vector Codes",
   },
   description:
-    "Vector Codes is a Nigerian digital agency and software development company delivering business websites, e-commerce platforms, custom web applications and enterprise digital solutions across Nigeria.",
+    "Vector Codes designs business websites, online stores and custom web applications for Nigerian businesses. Get a clear proposal and free project review.",
   keywords: [
-    "digital agency in Nigeria",
-    "software development company in Nigeria",
-    "website designers in Nigeria",
-    "website development in Abia State",
-    "Nigerian web development agency",
-    "business website development",
-    "e-commerce website development",
-    "custom web applications in Nigeria",
+    "website design company in Nigeria",
+    "web design Nigeria",
+    "website designer Nigeria",
+    "website development Nigeria",
+    "business website design",
+    "ecommerce website development",
+    "custom web application development",
+    "web development company Nigeria",
   ],
   openGraph: {
     type: "website",
     siteName: "Vector Codes",
     url: "https://vectorcodes.vercel.app",
-    title: "Vector Codes — Nigerian Digital Solutions Company",
+    title: "Website Design Company in Nigeria | Vector Codes",
     description:
-      "We design and develop modern websites, e-commerce platforms and custom digital solutions that help businesses establish credibility and grow.",
+      "Business websites, e-commerce stores and custom web applications built for Nigerian businesses.",
   },
   manifest: "/manifest.json",
   appleWebApp: {
