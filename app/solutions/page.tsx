@@ -6,9 +6,9 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Solutions — Digital Infrastructure, Automation, Growth & Trust",
+  title: "Digital Solutions for Nigerian Businesses | Vector Codes",
   description:
-    "Four engineering solutions from Vector Codes: Digital Infrastructure, Business Automation, Growth & Visibility, and Trust & Security — architected for Nigerian businesses.",
+    "Websites, e-commerce, business automation and custom platforms designed to support Nigerian businesses.",
 };
 
 const pillars = [
