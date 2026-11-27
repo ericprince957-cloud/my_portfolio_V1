@@ -10,9 +10,9 @@ import { projects } from "@/data/projects";
 import { Target, Smartphone, Gauge, LifeBuoy, Search, Compass, Code2, ClipboardCheck, Rocket, ShieldCheck, MessageCircle, FileText, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Vector Codes — Web Development Company in Nigeria",
+  title: "Website Design Company in Nigeria | Vector Codes",
   description:
-    "Vector Codes is a Nigerian web development company building business websites, e-commerce platforms and custom web applications for SMEs, startups and established companies across Nigeria.",
+    "Vector Codes builds professional business websites, online stores and custom web applications for Nigerian SMEs, startups and growing companies.",
 };
 
 const whyBlocks = [
@@ -51,7 +51,7 @@ export default function HomePage() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["Organization", "ProfessionalService"],
     name: "Vector Codes",
     description:
       "Nigerian web development company building business websites, e-commerce platforms and custom web applications.",
