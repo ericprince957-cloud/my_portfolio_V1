@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE + "/contact", changeFrequency: "yearly", priority: 0.8 },
     { url: BASE + "/privacy", changeFrequency: "yearly", priority: 0.3 },
   ];
-  const projectPages: MetadataRoute.Sitemap = projects.map((p) => ({
+  const projectPages: MetadataRoute.Sitemap = projects.filter((p) => Boolean(p.caseStudy)).map((p) => ({
     url: BASE + "/projects/" + p.slug,
     changeFrequency: "monthly",
     priority: 0.6,
