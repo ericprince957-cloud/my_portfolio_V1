@@ -51,7 +51,7 @@ export const projects: Project[] = [
     type: "Property Verification Engine",
     category: "Client Project",
     description:
-      "A property verification platform delivered for Techlaza, with secure agent access, admin-led listing approvals and a mobile-first experience. Live at safekeypro.com.ng.",
+      "Property verification platform delivered for Techlaza, with secure agent access and admin-led listing approvals. Live at safekeypro.com.ng.",
     tech: ["WordPress (Headless-ish)", "PHP 8.2", "MySQL", "Vanilla JS", "CSS Grid/Flexbox", "Custom Nonce Handling", "RBAC", "Shield Security Pro", "AfeesHost LiteSpeed Enterprise"],
     liveUrl: "https://safekeypro.com.ng/",
     featured: true,
