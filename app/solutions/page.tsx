@@ -25,7 +25,7 @@ const pillars = [
       "Custom portals and dashboards",
       "Multi-vendor and platform architecture",
     ],
-    proof: "Proven by SafeKey Pro — a property verification platform with secure agent portals and approval workflows.",
+    proof: "Demonstrated in SafeKey Pro, a property verification platform delivered for Techlaza with secure agent portals and approval workflows.",
   },
   {
     id: "business-automation",
@@ -40,7 +40,7 @@ const pillars = [
       "Approval and verification workflows",
       "Internal dashboards for operations",
     ],
-    proof: "Automated verification states on SafeKey Pro replaced manual listing checks with a structured pipeline.",
+    proof: "SafeKey Pro, delivered for Techlaza, uses verification states to organise listing review in a structured workflow.",
   },
   {
     id: "growth-visibility",
