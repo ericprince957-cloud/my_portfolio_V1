@@ -51,13 +51,13 @@ export const projects: Project[] = [
     type: "Property Verification Engine",
     category: "Client Project",
     description:
-      "Our flagship project: a property verification engine for Nigerian real estate — custom frontend-first architecture, strict role-based security, a one-click verification hub and an installable PWA, live at safekeypro.com.ng.",
+      "A property verification platform delivered for Techlaza, with secure agent access, admin-led listing approvals and a mobile-first experience. Live at safekeypro.com.ng.",
     tech: ["WordPress (Headless-ish)", "PHP 8.2", "MySQL", "Vanilla JS", "CSS Grid/Flexbox", "Custom Nonce Handling", "RBAC", "Shield Security Pro", "AfeesHost LiteSpeed Enterprise"],
     liveUrl: "https://safekeypro.com.ng/",
     featured: true,
     caseStudy: {
       overview:
-        "SafeKey Pro is our flagship project — proof that we can handle complex logic end-to-end. A property verification engine delivered for Techlaza (Samuel) as Lead Developer & Architect, now a fully functional marketplace live at safekeypro.com.ng.",
+        "SafeKey Pro is a property verification platform delivered for Techlaza. Vector Codes handled the platform architecture and development, including secure agent access and listing approval workflows.",
       problem:
         "Samuel needed a platform where agents could list properties — but buyers could not trust them due to fraud. Standard WordPress themes were too messy for non-tech users, and security was weak. He needed a verification engine, not a theme customisation.",
       solution:
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     type: "Student Marketplace & E-commerce Platform",
     category: "Internal Product",
     description:
-      "A digital marketplace built for the ABSU community — connecting Abia State University students with trusted sellers, with verification, reporting and moderation built in. Live at absutrade.com.ng.",
+      "A student marketplace for Abia State University, with seller verification, reporting and moderation. Built by Vector Codes and live at absutrade.com.ng.",
     tech: ["Next.js", "Supabase", "Vercel", "Paystack (planned)"],
     liveUrl: "https://absutrade.com.ng",
     featured: true,
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     type: "Digital Platform",
     category: "Internal Product",
     description:
-      "A digital platform for browsing and discovering digital products — clean interface, fast navigation, mobile-first.",
+      "A mobile-first digital products discovery platform from Vector Codes.",
     tech: [],
     liveUrl: "https://pixelvault-zeta.vercel.app/",
   },
@@ -180,7 +180,7 @@ export const projects: Project[] = [
     type: "Code Hosting & Collaboration Platform",
     category: "In Development",
     description:
-      "Our in-house product in active development: a simple, accessible code hosting and collaboration platform built to serve the next generation of African developers.",
+      "VectorVault is a Vector Codes product in development: a simple code hosting and collaboration platform for African developers.",
     tech: [],
     repoUrl: "https://github.com/ericprince957-cloud/vectorvault",
     caseStudy: {
