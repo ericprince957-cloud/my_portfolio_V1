@@ -5,9 +5,9 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Our Process — Discovery, Strategy, Build, Scale",
+  title: "Our Website Development Process | Vector Codes",
   description:
-    "How Vector Codes delivers: Free Digital Audit, Custom Proposal, Strategic Build and Launch + Scale. We don't deliver and disappear — we architect for long-term partnership.",
+    "See how Vector Codes plans, builds and launches business websites and digital platforms for Nigerian organisations.",
 };
 
 const steps = [
