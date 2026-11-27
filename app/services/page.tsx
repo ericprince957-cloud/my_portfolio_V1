@@ -118,6 +118,16 @@ export default function ServicesPage() {
           </section>
         ))}
 
+        <section className="mt-20 border-t border-line pt-12" aria-labelledby="industry-services">
+          <h2 id="industry-services" className="text-2xl font-bold text-white">Website solutions by industry</h2>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-subtle">Explore how we approach common digital needs in retail, food service and real estate.</p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <Link href="/fashion-ecommerce" className="card rounded-xl p-5 hover:border-gold/40"><h3 className="font-semibold text-white">Fashion e-commerce websites</h3><p className="mt-2 text-xs leading-relaxed text-subtle">Online stores for clothing brands, product catalogues and checkout.</p></Link>
+            <Link href="/food-business-websites" className="card rounded-xl p-5 hover:border-gold/40"><h3 className="font-semibold text-white">Restaurant and food business websites</h3><p className="mt-2 text-xs leading-relaxed text-subtle">Digital menus, ordering and booking experiences for food businesses.</p></Link>
+            <Link href="/real-estate-platforms" className="card rounded-xl p-5 hover:border-gold/40"><h3 className="font-semibold text-white">Real estate platform development</h3><p className="mt-2 text-xs leading-relaxed text-subtle">Property listings, agent portals and verification workflows.</p></Link>
+          </div>
+        </section>
+
         <div className="mt-16 text-center">
           <p className="text-sm text-subtle">Not sure which pillar your project falls under?</p>
           <div className="mt-4 flex flex-wrap justify-center gap-4">
