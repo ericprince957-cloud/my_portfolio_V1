@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import IndustryLanding from "@/components/IndustryLanding";
 
 export const metadata: Metadata = {
-  title: "Food Business Websites — Restaurants, Kitchens & Food Brands",
+  title: "Restaurant & Food Business Websites | Vector Codes",
   description:
-    "Websites and ordering platforms for Nigerian food businesses — digital menus, reservations, delivery-ready online ordering and WhatsApp-first ordering flows. Built by Vector Codes.",
+    "Restaurant websites with digital menus, WhatsApp ordering and booking options for Nigerian food businesses.",
 };
 
 export default function FoodBusinessPage() {
