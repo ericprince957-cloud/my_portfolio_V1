@@ -4,9 +4,9 @@ import { services, pillars } from "@/data/services";
 import { Check, ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services — Core Infrastructure, Digital Commerce & Corporate Presence",
+  title: "Website & Web App Development Services | Vector Codes",
   description:
-    "Vector Codes is a Nigerian digital agency organised into three engineering pillars: Core Infrastructure, Digital Commerce and Corporate Presence. Request an enterprise proposal.",
+    "Explore website design, e-commerce, custom web apps and business dashboards from Vector Codes, a Nigerian web development company.",
 };
 
 export default function ServicesPage() {
