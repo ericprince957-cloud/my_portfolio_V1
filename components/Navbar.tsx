@@ -14,6 +14,7 @@ const solutionLinks = [
 ];
 
 const links = [
+  { href: "/services", label: "Services" },
   { href: "/projects", label: "Case Studies" },
   { href: "/process", label: "Our Process" },
   { href: "/company", label: "Company" },
