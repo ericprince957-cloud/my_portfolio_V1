@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import IndustryLanding from "@/components/IndustryLanding";
 
 export const metadata: Metadata = {
-  title: "Real Estate Platforms — Property Verification & Listings",
+  title: "Real Estate Platform Development | Vector Codes",
   description:
-    "Property listing and verification platforms for Nigerian real estate — secure agent portals, verification workflows and fraud prevention. Built by Vector Codes, creators of SafeKey Pro.",
+    "Real estate platforms with property listings, secure agent portals and verification workflows for Nigerian businesses.",
 };
 
 export default function RealEstatePlatformsPage() {
