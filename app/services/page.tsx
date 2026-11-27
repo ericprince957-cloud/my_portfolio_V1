@@ -4,7 +4,7 @@ import { services, pillars } from "@/data/services";
 import { Check, ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Website & Web App Development Services | Vector Codes",
+  title: "Website & Web App Development Services",
   description:
     "Explore website design, e-commerce, custom web apps and business dashboards from Vector Codes, a Nigerian web development company.",
 };
