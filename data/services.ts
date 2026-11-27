@@ -64,7 +64,7 @@ export const services: Service[] = [
       "You need multi-user systems: vendors, agents, staff or customers each with their own access.",
       "Manual processes (orders, verification, payouts) are limiting your growth.",
     ],
-    who: "Ambitious Nigerian businesses ready to invest in a platform that becomes core infrastructure — like SafeKey Pro, our property verification platform with secure agent portals and verification workflows.",
+    who: "Ambitious Nigerian businesses ready to invest in a platform that becomes core infrastructure — including property verification systems like SafeKey Pro, delivered for Techlaza.",
     features: [
       "Multi-vendor and multi-role systems",
       "Secure, role-based authentication",
