@@ -6,7 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Digital Solutions for Nigerian Businesses | Vector Codes",
+  title: "Digital Solutions for Nigerian Businesses",
   description:
     "Websites, e-commerce, business automation and custom platforms designed to support Nigerian businesses.",
 };
