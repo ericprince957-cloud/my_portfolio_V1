@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ProjectsBrowser from "@/components/ProjectsBrowser";
+import Link from "next/link";
+import { projects } from "@/data/projects";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -89,6 +91,18 @@ export default function ProjectsPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+        <section className="mb-12" aria-labelledby="featured-case-studies">
+          <h2 id="featured-case-studies" className="text-xl font-bold text-white">Selected client case studies</h2>
+          <p className="mt-2 text-sm text-subtle">Explore examples of websites and digital platforms delivered for clients.</p>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.filter((project) => project.category === "Client Project" && project.caseStudy).map((project) => (
+              <li key={project.slug} className="card rounded-lg p-4">
+                <Link href={"/projects/" + project.slug} className="text-sm font-semibold text-white hover:text-gold">{project.name} <span aria-hidden="true">→</span></Link>
+                <p className="mt-1 text-xs text-subtle">{project.type}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
         <ProjectsBrowser />
       </div>
     </>
