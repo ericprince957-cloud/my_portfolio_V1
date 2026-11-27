@@ -3,10 +3,12 @@ import { Mail, MessageCircle, Send, Github, Globe, MapPin } from "lucide-react";
 
 const quickLinks = [
     { href: "/", label: "Home" },
+    { href: "/services", label: "Services" },
     { href: "/solutions", label: "Solutions" },
     { href: "/projects", label: "Case Studies" },
     { href: "/process", label: "Our Process" },
     { href: "/company", label: "Company" },
+    { href: "/about", label: "About the Founder" },
     { href: "/contact", label: "Contact" },
     { href: "/privacy", label: "Privacy & NDPR" },
   ];
