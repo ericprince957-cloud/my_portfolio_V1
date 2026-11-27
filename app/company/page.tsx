@@ -14,7 +14,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Vector Codes | Nigerian Digital Solutions Company",
+  title: "Company Mission & Values",
   description:
     "Meet Vector Codes, a Nigerian web development company building business websites, online stores and custom digital platforms.",
 };
