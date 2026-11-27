@@ -14,6 +14,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   return {
     title: project.name + " — Case Study",
     description: project.description,
+    robots: project.caseStudy ? { index: true, follow: true } : { index: false, follow: true },
   };
 }
 
